@@ -1,7 +1,9 @@
 # No Tipe releases
 
-Private distribution channel for No Tipe. This repository contains signed application packages, signatures and updater manifests only.
+Public downloads for No Tipe. This repository contains application installers, signed updater packages, signatures and release metadata. Application source code remains private in a separate repository.
 
-Application source is stored separately in the private Darlingfxx02/no-tipe repository. Access to this repository does not require access to source.
+[Download No Tipe](https://notipe.tech/access/) · [All releases](https://github.com/Darlingfxx02/no-tipe-releases/releases)
 
-Updates must be signed with the public key embedded in the installed app. Signing credentials and access tokens are never uploaded.
+No Tipe is free for personal and professional use with a proprietary license. The application includes its license and third-party notices. Local models are downloaded separately; cloud providers use your own API keys.
+
+Updater packages are signed with the public key embedded in No Tipe. Signing credentials and access tokens are never uploaded. Updater signatures are separate from Apple notarization and Windows Authenticode publisher certificates; consult each release's installation notes.
