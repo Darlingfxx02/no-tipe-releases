@@ -3,13 +3,13 @@
 <p align="center">
   <picture>
   <source media="(max-width: 600px)" srcset="assets/hero-en-mobile.png" />
-  <img src="assets/hero-en.png" alt="No Tipe — your voice, ready to write. Free desktop dictation for macOS and Windows, with local and cloud models." width="100%" />
+  <img src="assets/hero-en.png" alt="No Type — your voice, ready to write. Free desktop dictation for macOS and Windows, with local and cloud models." width="100%" />
 </picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Tipe 0.1.4 for macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Tipe 0.1.4 for Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.4 for macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.4 for Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="248" /></a>
 </p>
 
@@ -20,7 +20,7 @@
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/issues">Feedback</a>
 </p>
 
-**No Tipe turns speech into text for your apps.** Press a shortcut, say what you have in mind, and get text in the focused field. Choose local or cloud models, shape the output with writing modes, and make the little recorder your own.
+**No Type turns speech into text for your apps.** Press a shortcut, say what you have in mind, and get text in the focused field. Choose local or cloud models, shape the output with writing modes, and make the little recorder your own.
 
 Free for personal and professional use. Supporting the author is optional; every feature is available without a donation. Cloud providers charge separately under their own pricing.
 
@@ -37,7 +37,7 @@ Windows defaults to Right Ctrl: hold it while speaking and release to finish. Up
 
 ## A home for your words
 
-<img src="assets/overview-en.png" alt="No Tipe dashboard with recent transcripts, insights, writing modes, dictionary, snippets, and models." width="100%" />
+<img src="assets/overview-en.png" alt="No Type dashboard with recent transcripts, insights, writing modes, dictionary, snippets, and models." width="100%" />
 
 <sub>Actual application interface. History and statistics in these images are demo data; time saved is an estimate.</sub>
 
@@ -71,7 +71,7 @@ A mode defines what happens to your transcript. Edit its instructions to remove 
 
 ### How you use dictation
 
-<img src="assets/insights.png" alt="No Tipe insights: speaking speed, corrections, word count, usage by app, and an activity calendar. Demo data." width="100%" />
+<img src="assets/insights.png" alt="No Type insights: speaking speed, corrections, word count, usage by app, and an activity calendar. Demo data." width="100%" />
 
 </details>
 
@@ -79,7 +79,7 @@ A mode defines what happens to your transcript. Edit its instructions to remove 
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/recorder-en-mobile.png" />
-  <img src="assets/recorder-en.png" alt="Four No Tipe recorder appearances: lavender Prism, green Aurora, a pixel companion, and a heart in response to petting." width="100%" />
+  <img src="assets/recorder-en.png" alt="Four No Type recorder appearances: lavender Prism, green Aurora, a pixel companion, and a heart in response to petting." width="100%" />
 </picture>
 
 Pick waves or a pixel companion, adjust the size, and choose a palette. The robot reacts when you pet it with your pointer. Place the recorder in a floating bubble or along the top edge of your screen.
@@ -104,7 +104,7 @@ Pick waves or a pixel companion, adjust the size, and choose a palette. The robo
 
 The Windows local text-model runtime requires AVX2. This release has no installers for Intel Mac, Windows ARM, or Linux. Find the newest version on the [releases page](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
-1. **Install the app.** On Mac, open the DMG and drag No Tipe to Applications. On Windows, run the EXE and follow the installer.
+1. **Install the app.** On Mac, open the DMG and drag No Type to Applications. On Windows, run the EXE and follow the installer.
 2. **Allow microphone access.** On macOS, also allow Accessibility for text insertion.
 3. **Choose speech recognition.** Download a local speech model inside the app, or connect a cloud provider with your own API key.
 4. **Set a shortcut and try dictation.** Focus a text field, press the shortcut, and say a couple of sentences.
@@ -122,13 +122,13 @@ The `.app.tar.gz`, `.sig`, and `latest.json` files serve the updater. Use the DM
 
 </details>
 
-## Support No Tipe
+## Support No Type
 
 <p align="center">
-  <a href="https://boosty.to/notipe"><img src="assets/mascot.gif" alt="The No Tipe pixel companion smiles, blinks, and turns into a heart." width="360" /></a>
+  <a href="https://boosty.to/notipe"><img src="assets/mascot.gif" alt="The No Type pixel companion smiles, blinks, and turns into a heart." width="360" /></a>
 </p>
 
-No Tipe is made by **Darlingfxx02**. If the app helps you work, support its development on Boosty with a one-time donation or a subscription. You can follow project updates there too.
+No Type is made by **Darlingfxx02**. If the app helps you work, support its development on Boosty with a one-time donation or a subscription. You can follow project updates there too.
 
 <p align="center">
   <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="290" /></a>
@@ -150,9 +150,9 @@ When you choose a cloud model, audio or text is sent to the selected provider. C
 </details>
 
 <details>
-<summary><strong>Is No Tipe free and open source?</strong></summary>
+<summary><strong>Is No Type free and open source?</strong></summary>
 
-No Tipe is free for personal and professional use under a [proprietary license](LICENSE). Its source code is closed. This repository contains installers, signed updater packages, release documentation, and presentation images.
+No Type is free for personal and professional use under a [proprietary license](LICENSE). Its source code is closed. This repository contains installers, signed updater packages, release documentation, and presentation images.
 
 Third-party dependencies retain their own licenses and notices, available in **Settings → General → License and notices**. See also the [third-party notices](THIRD-PARTY-NOTICES.md).
 
@@ -161,7 +161,7 @@ Third-party dependencies retain their own licenses and notices, available in **S
 <details>
 <summary><strong>How do I report a bug or suggest an idea?</strong></summary>
 
-Open an [Issue](https://github.com/Darlingfxx02/no-tipe-releases/issues) with the No Tipe version, OS version, selected model, and steps to reproduce. Include a screenshot or the exact error message when useful. Remove personal data and API keys before posting.
+Open an [Issue](https://github.com/Darlingfxx02/no-tipe-releases/issues) with the No Type version, OS version, selected model, and steps to reproduce. Include a screenshot or the exact error message when useful. Remove personal data and API keys before posting.
 
 </details>
 
