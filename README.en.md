@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.notipe.tech">Website</a> ·
+  <a href="https://www.notype.tech">Website</a> ·
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/latest">Latest release</a> ·
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases">All versions</a> ·
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/issues">Feedback</a>
@@ -136,7 +136,7 @@ No Tipe is made by **Darlingfxx02**. If the app helps you work, support its deve
 
 A donation does not unlock paid features: the app is free to use. Boosty handles payments.
 
-You can also help by giving this repository a ⭐, sharing the [website](https://www.notipe.tech), or [reporting a bug](https://github.com/Darlingfxx02/no-tipe-releases/issues).
+You can also help by giving this repository a ⭐, sharing the [website](https://www.notype.tech), or [reporting a bug](https://github.com/Darlingfxx02/no-tipe-releases/issues).
 
 ## Questions
 
