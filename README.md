@@ -8,5 +8,5 @@ No Tipe is free for personal and professional use with a proprietary license. Th
 
 Updater packages are signed with the public key embedded in No Tipe. Signing credentials and access tokens are never uploaded. Updater signatures are separate from Apple notarization and Windows Authenticode publisher certificates; consult each release's installation notes.
 
-- [macOS · Apple Silicon](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.1/NoTipe_0.1.1_darwin-aarch64.dmg)
-- [Windows · x64](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.2/NoTipe_0.1.2_windows-x86_64-setup.exe)
+- [macOS · Apple Silicon](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.3/NoTipe_0.1.3_darwin-aarch64.dmg)
+- [Windows · x64](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.3/NoTipe_0.1.3_windows-x86_64-setup.exe)
