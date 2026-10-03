@@ -14,7 +14,7 @@
 </p>
 
 <p align="center">
-  <a href="https://www.notipe.tech">Сайт проекта</a> ·
+  <a href="https://www.notype.tech">Сайт проекта</a> ·
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/latest">Последний релиз</a> ·
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases">Все версии</a> ·
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/issues">Обратная связь</a>
@@ -136,7 +136,7 @@ No Tipe делает **Darlingfxx02**. Если приложение помог�
 
 Донат не открывает платные функции: пользоваться приложением можно бесплатно. Оплату обрабатывает Boosty.
 
-Ещё один способ помочь — поставить ⭐ этому репозиторию, поделиться [сайтом](https://www.notipe.tech) или [рассказать об ошибке](https://github.com/Darlingfxx02/no-tipe-releases/issues).
+Ещё один способ помочь — поставить ⭐ этому репозиторию, поделиться [сайтом](https://www.notype.tech) или [рассказать об ошибке](https://github.com/Darlingfxx02/no-tipe-releases/issues).
 
 ## Вопросы
 
