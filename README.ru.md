@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg"><img src="assets/macos-ru.png" alt="Скачать No Type 0.1.4 для macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe"><img src="assets/windows-ru.png" alt="Скачать No Type 0.1.4 для Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_darwin-aarch64.dmg"><img src="assets/macos-ru.png" alt="Скачать No Type 0.1.5 для macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_windows-x86_64-setup.exe"><img src="assets/windows-ru.png" alt="Скачать No Type 0.1.5 для Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-ru.png" alt="Поддержать проект на Boosty" width="248" /></a>
 </p>
 
@@ -95,14 +95,14 @@
 
 ## Скачать и начать
 
-### Сборка 0.1.4
+### Сборка 0.1.5
 
-Проект переименован в **No Type**. Опубликованные установщики 0.1.4 пока сохраняют прежнее имя **No Tipe**.
+Приложение и установщики теперь называются **No Type**. Обновление сохраняет библиотеку, настройки и сохранённые ключи доступа.
 
 | Платформа | Требования | Установщик |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 или новее · Apple Silicon | [Скачать DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Скачать EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 или новее · Apple Silicon | [Скачать DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Скачать EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_windows-x86_64-setup.exe) |
 
 Локальный движок текстовых моделей на Windows требует AVX2. В текущем релизе нет установщиков для Intel Mac, Windows ARM и Linux. Самую новую версию всегда можно найти на [странице релизов](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
@@ -114,11 +114,11 @@
 <details>
 <summary><strong>Примечания к установке и обновлениям</strong></summary>
 
-Сборка macOS подписана Apple Development, но пока не нотарифицирована. Установщик Windows пока без сертификата издателя Authenticode. Поэтому при первой установке система может показать предупреждение. Подробности и ограничения приведены в [заметках к версии 0.1.4](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.4).
+Сборка macOS подписана Apple Development, но пока не нотарифицирована. Установщик Windows пока без сертификата издателя Authenticode. Поэтому при первой установке система может показать предупреждение. Подробности и ограничения приведены в [заметках к версии 0.1.5](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.5).
 
 Сборка и автоматические тесты Windows проверяются в CI; установка и диктовка на физическом компьютере Windows пока не проверены.
 
-Обновления можно проверять в **Settings → General → App updates**. Пакеты обновлений подписаны отдельно; эта подпись не заменяет нотарификацию Apple или сертификат издателя Windows. Обновление 0.1.4 сохраняет библиотеку, настройки и сохранённые ключи доступа.
+Обновления можно проверять в **Settings → General → App updates**. Пакеты обновлений подписаны отдельно; эта подпись не заменяет нотарификацию Apple или сертификат издателя Windows. Обновление 0.1.5 сохраняет библиотеку, настройки и сохранённые ключи доступа.
 
 Файлы `.app.tar.gz`, `.sig` и `latest.json` предназначены для механизма обновления. Для первой установки используйте DMG или EXE из таблицы выше.
 
