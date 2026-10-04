@@ -97,6 +97,8 @@ Pick waves or a pixel companion, adjust the size, and choose a palette. The robo
 
 ### Build 0.1.4
 
+The project is now **No Type**. Published 0.1.4 installers still use the earlier **No Tipe** name.
+
 | Platform | Requirements | Installer |
 | :--- | :--- | :--- |
 | **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg) |

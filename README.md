@@ -97,6 +97,8 @@
 
 ### Сборка 0.1.4
 
+Проект переименован в **No Type**. Опубликованные установщики 0.1.4 пока сохраняют прежнее имя **No Tipe**.
+
 | Платформа | Требования | Установщик |
 | :--- | :--- | :--- |
 | **macOS** | macOS 13 или новее · Apple Silicon | [Скачать DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg) |
