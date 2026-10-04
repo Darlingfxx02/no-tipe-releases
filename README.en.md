@@ -2,26 +2,10 @@
 
 # No Type
 
-**Speak a message. Get text in the app you’re using.** Free desktop dictation for designers, developers, and anyone who writes messages, emails, or notes on macOS and Windows.
-
-Choose local speech recognition or connect a cloud provider with your own API key. No No Type account is required. Local models need an initial download; cloud providers charge separately.
-
-[**Download for macOS or Windows**](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest) · [**Website**](https://notype.tech/?utm_source=github&utm_medium=readme&utm_campaign=first-users&utm_content=quickstart) · [**Give feedback**](https://github.com/Darlingfxx02/no-tipe-releases/issues/new/choose)
-
-<img src="assets/no-type-dictation.gif" alt="No Type walkthrough: focus a message field, start dictation with a shortcut, say a message about moving a meeting, and get recognized text. Scripted composition with synthetic speech and an actual local transcript." width="100%" />
-
-<sub>Scripted walkthrough using the actual recorder UI and a locally recognized synthetic voice sample. The message window is illustrative; the sequence is edited and is not a latency benchmark. [Watch with audio](https://github.com/Darlingfxx02/no-tipe-releases/blob/main/assets/no-type-dictation.mp4).</sub>
-
-## Try your first dictation
-
-1. **Install** the [latest release](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest): macOS 13+ on Apple Silicon, or Windows 10/11 x64. Read the [installation notes](#download-and-get-started) for signing and platform limitations.
-2. **Allow** microphone access. On macOS, enable Accessibility to insert text; otherwise use the copied result.
-3. **Select an English speech model** in the app: download a local model such as Whisper, or connect a cloud speech provider with your own API key. Turn enhancement and translation off for this first test.
-4. **Focus a text field**, use the shortcut shown in your settings, and say: “Let us move the meeting to tomorrow. I need to finish the design today.” Finish recording and check the text.
-
-Expected content: **“Let us move the meeting to tomorrow. I need to finish the design today.”** Punctuation and capitalization may vary by model. Try it in your usual email or notes app, then [tell us where you got stuck](https://github.com/Darlingfxx02/no-tipe-releases/issues/new?template=first-dictation.yml).
-
-
+<picture>
+  <source media="(max-width: 600px)" srcset="assets/hero-en-mobile.png" />
+  <img src="assets/hero-en.png" alt="No Type pixel companion on a dark background with a soft purple wave." width="100%" />
+</picture>
 
 <p align="center">
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.7/NoType_0.1.7_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.7 for macOS — Apple Silicon" width="248" /></a>
@@ -36,9 +20,11 @@ Expected content: **“Let us move the meeting to tomorrow. I need to finish the
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/issues">Feedback</a>
 </p>
 
+**No Type turns speech into text for your apps.** Press a shortcut, say what you have in mind, and get text in the focused field. Choose local or cloud models, shape the output with writing modes, and make the little recorder your own.
+
 Free for personal and professional use. Supporting the author is optional; every feature is available without a donation. Cloud providers charge separately under their own pricing.
 
-## From thought to text in three steps
+## How it works
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/flow-en-mobile.png" />
@@ -49,7 +35,7 @@ Hold your shortcut while speaking, or press it to start and stop. Change the sho
 
 Windows defaults to Right Ctrl: hold it while speaking and release to finish. Updates keep your saved shortcut.
 
-## A home for your words
+## Features
 
 <img src="assets/overview-en.png" alt="No Type dashboard with recent transcripts, insights, writing modes, dictionary, snippets, and models." width="100%" />
 
@@ -65,7 +51,7 @@ Windows defaults to Right Ctrl: hold it while speaking and release to finish. Up
 | **Insights** | Explore word counts, speaking speed, activity, and dictation usage across apps. |
 | **English and Russian UI** | Select a language or follow your system language. |
 
-## One phrase, different results
+## Writing modes
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/modes-en-mobile.png" />
@@ -89,7 +75,7 @@ A mode defines what happens to your transcript. Edit its instructions to remove 
 
 </details>
 
-## A little personality
+## Recorder
 
 <picture>
   <source media="(max-width: 600px)" srcset="assets/recorder-en-mobile.png" />
