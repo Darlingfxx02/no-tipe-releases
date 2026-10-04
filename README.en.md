@@ -3,8 +3,8 @@
 # No Type
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/hero-en-mobile.png" />
-  <img src="assets/hero-en.png" alt="No Type pixel companion on a dark background with a soft purple wave." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/hero-en-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/hero-en.png" alt="No Type pixel companion on a dark background with a soft purple wave." width="100%" />
 </picture>
 
 <p align="center">
@@ -27,8 +27,8 @@ Free for personal and professional use. Supporting the author is optional; every
 ## How it works
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/flow-en-mobile.png" />
-  <img src="assets/flow-en.png" alt="Choose a shortcut, dictate, and get text in the focused field. Use Option on macOS or a shortcut such as Ctrl + Alt + D on Windows." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/flow-en-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/flow-en.png" alt="Choose a shortcut, dictate, and get text in the focused field. Use Option on macOS or a shortcut such as Ctrl + Alt + D on Windows." width="100%" />
 </picture>
 
 Hold your shortcut while speaking, or press it to start and stop. Change the shortcut and recording behavior in settings. On macOS, text insertion needs Accessibility permission; without it, the result is copied to the clipboard.
@@ -37,7 +37,7 @@ Windows defaults to Right Ctrl: hold it while speaking and release to finish. Up
 
 ## Features
 
-<img src="assets/overview-en.png" alt="No Type dashboard with recent transcripts, insights, writing modes, dictionary, snippets, and models." width="100%" />
+<img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/overview-en.png" alt="No Type dashboard with recent transcripts, insights, writing modes, dictionary, snippets, and models." width="100%" />
 
 <sub>Actual application interface. History and statistics in these images are demo data; time saved is an estimate.</sub>
 
@@ -54,8 +54,8 @@ Windows defaults to Right Ctrl: hold it while speaking and release to finish. Up
 ## Writing modes
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/modes-en-mobile.png" />
-  <img src="assets/modes-en.png" alt="Illustrative example: one dictation becomes a short message, a work email, or a task list, depending on the writing mode." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/modes-en-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/modes-en.png" alt="Illustrative example: one dictation becomes a short message, a work email, or a task list, depending on the writing mode." width="100%" />
 </picture>
 
 A mode defines what happens to your transcript. Edit its instructions to remove repetition, preserve your tone, add paragraphs, or translate the text. Choose a local or cloud text model to process it.
@@ -78,8 +78,8 @@ A mode defines what happens to your transcript. Edit its instructions to remove 
 ## Recorder
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/recorder-en-mobile.png" />
-  <img src="assets/recorder-en.png" alt="Four No Type recorder appearances: lavender Prism, green Aurora, a pixel companion, and a heart in response to petting." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/recorder-en-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/recorder-en.png" alt="Four No Type recorder appearances: lavender Prism, green Aurora, a pixel companion, and a heart in response to petting." width="100%" />
 </picture>
 
 Pick waves or a pixel companion, adjust the size, and choose a palette. The robot reacts when you pet it with your pointer. Place the recorder in a floating bubble or along the top edge of your screen.

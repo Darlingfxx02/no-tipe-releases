@@ -3,8 +3,8 @@
 # No Type
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/hero-ru-mobile.png" />
-  <img src="assets/hero-ru.png" alt="Пиксельный помощник No Type на тёмном фоне с мягкой фиолетовой волной." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/hero-ru-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/hero-ru.png" alt="Пиксельный помощник No Type на тёмном фоне с мягкой фиолетовой волной." width="100%" />
 </picture>
 
 <p align="center">
@@ -27,8 +27,8 @@
 ## Как это работает
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/flow-ru-mobile.png" />
-  <img src="assets/flow-ru.png" alt="Настройте хоткей, продиктуйте текст и получите результат в активном поле. На macOS можно использовать Option, на Windows — например Ctrl + Alt + D." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/flow-ru-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/flow-ru.png" alt="Настройте хоткей, продиктуйте текст и получите результат в активном поле. На macOS можно использовать Option, на Windows — например Ctrl + Alt + D." width="100%" />
 </picture>
 
 Можно удерживать клавишу во время диктовки или включать и выключать запись нажатием. Сочетание и способ записи меняются в настройках. На macOS для вставки нужно разрешение «Универсальный доступ»; без него результат копируется в буфер обмена.
@@ -37,7 +37,7 @@
 
 ## Возможности
 
-<img src="assets/overview-ru.png" alt="Главный экран No Type: история диктовок, переход к статистике, режимы, словарь, сниппеты и модели." width="100%" />
+<img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/overview-ru.png" alt="Главный экран No Type: история диктовок, переход к статистике, режимы, словарь, сниппеты и модели." width="100%" />
 
 <sub>Реальный интерфейс приложения. История и статистика на изображениях — демонстрационные данные; экономия времени — оценка.</sub>
 
@@ -54,8 +54,8 @@
 ## Режимы письма
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/modes-ru-mobile.png" />
-  <img src="assets/modes-ru.png" alt="Пример: одна диктовка превращается в короткое сообщение, рабочее письмо или список задач — в зависимости от выбранного режима." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/modes-ru-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/modes-ru.png" alt="Пример: одна диктовка превращается в короткое сообщение, рабочее письмо или список задач — в зависимости от выбранного режима." width="100%" />
 </picture>
 
 Режим определяет, что делать с расшифровкой. В редакторе можно попросить убрать повторы, сохранить разговорный тон, разбить текст на абзацы или перевести его. Для обработки текста выбирается локальная или облачная текстовая модель.
@@ -78,8 +78,8 @@
 ## Рекордер
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/recorder-ru-mobile.png" />
-  <img src="assets/recorder-ru.png" alt="Четыре вида рекордера No Type: лавандовая палитра Prism, зелёная Aurora, пиксельный робот и сердечко после поглаживания." width="100%" />
+  <source media="(max-width: 600px)" srcset="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/recorder-ru-mobile.png" />
+  <img src="https://raw.githubusercontent.com/Darlingfxx02/no-tipe-releases/5ce178ee93c5db61b1e760dfd2f6cde1525b74bb/assets/recorder-ru.png" alt="Четыре вида рекордера No Type: лавандовая палитра Prism, зелёная Aurora, пиксельный робот и сердечко после поглаживания." width="100%" />
 </picture>
 
 Выберите волны или пиксельного помощника, настройте размер и палитру. Робот реагирует на поглаживание курсором. Рекордер можно разместить плавающим облачком или у верхней кромки экрана.
