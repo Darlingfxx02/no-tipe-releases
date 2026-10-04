@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.5 for macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.5 for Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.6 for macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.6 for Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="248" /></a>
 </p>
 
@@ -95,14 +95,14 @@ Pick waves or a pixel companion, adjust the size, and choose a palette. The robo
 
 ## Download and get started
 
-### Build 0.1.5
+### Build 0.1.6
 
 The app and installers now use the **No Type** name. Updates preserve your library, preferences and saved credentials.
 
 | Platform | Requirements | Installer |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_windows-x86_64-setup.exe) |
 
 The Windows local text-model runtime requires AVX2. This release has no installers for Intel Mac, Windows ARM, or Linux. Find the newest version on the [releases page](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
@@ -114,11 +114,11 @@ The Windows local text-model runtime requires AVX2. This release has no installe
 <details>
 <summary><strong>Installation and update notes</strong></summary>
 
-The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.5 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.5) for details and limitations.
+The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.6 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.6) for details and limitations.
 
-Windows builds and automated tests run in CI; installation and dictation on physical Windows hardware remain unverified.
+Windows Whisper uses a compatible GPU through Vulkan and retains CPU fallback when a GPU is unavailable. The runtime is included in the installer; no SDK installation is needed. Builds, recognition and the installer are tested in CI. Recognition on an RTX 3050 is checked separately; interactive installation and text delivery on physical Windows hardware remain unverified.
 
-Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.5 update preserves your library, settings, and saved credentials.
+Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.6 update preserves your library, settings, and saved credentials.
 
 The `.app.tar.gz`, `.sig`, and `latest.json` files serve the updater. Use the DMG or EXE in the table above for your first installation.
 
@@ -164,6 +164,8 @@ Third-party dependencies retain their own licenses and notices, available in **S
 <summary><strong>How do I report a bug or suggest an idea?</strong></summary>
 
 Open an [Issue](https://github.com/Darlingfxx02/no-tipe-releases/issues) with the No Type version, OS version, selected model, and steps to reproduce. Include a screenshot or the exact error message when useful. Remove personal data and API keys before posting.
+
+For diagnostics, enable **Settings → General → Diagnostics → Developer mode**, reproduce the error, then save the logs through **Console → Export logs**. Attach the TXT file to your bug report.
 
 </details>
 
