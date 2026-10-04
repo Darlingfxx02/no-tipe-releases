@@ -1,174 +1,174 @@
-<p align="right"><strong>Русский</strong> · <a href="README.en.md">English</a></p>
+<p align="right"><strong>English</strong> · <a href="README.ru.md">Русский</a></p>
 
 <p align="center">
   <picture>
-  <source media="(max-width: 600px)" srcset="assets/hero-ru-mobile.png" />
-  <img src="assets/hero-ru.png" alt="No Type — ваш голос, готовый текст. Бесплатная диктовка для macOS и Windows, локально и в облаке." width="100%" />
+  <source media="(max-width: 600px)" srcset="assets/hero-en-mobile.png" />
+  <img src="assets/hero-en.png" alt="No Type — your voice, ready to write. Free desktop dictation for macOS and Windows, with local and cloud models." width="100%" />
 </picture>
 </p>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg"><img src="assets/macos-ru.png" alt="Скачать No Type 0.1.4 для macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe"><img src="assets/windows-ru.png" alt="Скачать No Type 0.1.4 для Windows — x64" width="248" /></a>
-  <a href="https://boosty.to/notipe"><img src="assets/boosty-ru.png" alt="Поддержать проект на Boosty" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.4 for macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.4 for Windows — x64" width="248" /></a>
+  <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="248" /></a>
 </p>
 
 <p align="center">
-  <a href="https://www.notype.tech">Сайт проекта</a> ·
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/latest">Последний релиз</a> ·
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases">Все версии</a> ·
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/issues">Обратная связь</a>
+  <a href="https://www.notype.tech">Website</a> ·
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/latest">Latest release</a> ·
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases">All versions</a> ·
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/issues">Feedback</a>
 </p>
 
-**No Type превращает речь в текст для ваших приложений.** Нажмите горячую клавишу, продиктуйте мысль и получите текст в активном поле. Выбирайте локальные или облачные модели, задавайте стиль обработки и настраивайте маленький рекордер под себя.
+**No Type turns speech into text for your apps.** Press a shortcut, say what you have in mind, and get text in the focused field. Choose local or cloud models, shape the output with writing modes, and make the little recorder your own.
 
-Приложение бесплатно для личного и профессионального использования. Поддержка автора добровольная; все функции доступны без доната. Облачные провайдеры оплачиваются отдельно по их тарифам.
+Free for personal and professional use. Supporting the author is optional; every feature is available without a donation. Cloud providers charge separately under their own pricing.
 
-## От мысли до текста — три шага
+## From thought to text in three steps
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/flow-ru-mobile.png" />
-  <img src="assets/flow-ru.png" alt="Настройте хоткей, продиктуйте текст и получите результат в активном поле. На macOS можно использовать Option, на Windows — например Ctrl + Alt + D." width="100%" />
+  <source media="(max-width: 600px)" srcset="assets/flow-en-mobile.png" />
+  <img src="assets/flow-en.png" alt="Choose a shortcut, dictate, and get text in the focused field. Use Option on macOS or a shortcut such as Ctrl + Alt + D on Windows." width="100%" />
 </picture>
 
-Можно удерживать клавишу во время диктовки или включать и выключать запись нажатием. Сочетание и способ записи меняются в настройках. На macOS для вставки нужно разрешение «Универсальный доступ»; без него результат копируется в буфер обмена.
+Hold your shortcut while speaking, or press it to start and stop. Change the shortcut and recording behavior in settings. On macOS, text insertion needs Accessibility permission; without it, the result is copied to the clipboard.
 
-На Windows по умолчанию используется правый Ctrl: удерживайте его, пока говорите, и отпустите для завершения. Обновление сохраняет уже выбранные вами клавиши.
+Windows defaults to Right Ctrl: hold it while speaking and release to finish. Updates keep your saved shortcut.
 
-## Всё для работы со словами
+## A home for your words
 
-<img src="assets/overview-ru.png" alt="Главный экран No Type: история диктовок, переход к статистике, режимы, словарь, сниппеты и модели." width="100%" />
+<img src="assets/overview-en.png" alt="No Type dashboard with recent transcripts, insights, writing modes, dictionary, snippets, and models." width="100%" />
 
-<sub>Реальный интерфейс приложения. История и статистика на изображениях — демонстрационные данные; экономия времени — оценка.</sub>
+<sub>Actual application interface. History and statistics in these images are demo data; time saved is an estimate.</sub>
 
-| Возможность | Что можно сделать |
+| Feature | What you can do |
 | :--- | :--- |
-| **Локальные и облачные модели** | Скачать модель распознавания на компьютер или подключить облачный сервис со своим API-ключом. |
-| **Режимы письма** | Настроить инструкции для чата, писем, заметок и задач; включить улучшение, сокращение или перевод текста. |
-| **Личный словарь** | Добавить имена, термины и свои варианты исправлений. |
-| **Сниппеты** | Хранить часто используемые фрагменты текста. |
-| **История и аудио** | Возвращаться к диктовкам и повторять распознавание из сохранённой записи. |
-| **Статистика** | Смотреть количество слов, скорость речи, активность и распределение диктовок по приложениям. |
-| **Русский и английский интерфейс** | Выбрать язык вручную или следовать языку системы. |
+| **Local and cloud models** | Download a speech model to your computer or connect a cloud provider using your own API key. |
+| **Writing modes** | Set instructions for messages, emails, notes, and tasks; enable enhancement, shortening, or translation. |
+| **Personal dictionary** | Add names, terms, and your own corrections. |
+| **Snippets** | Keep frequently used text fragments at hand. |
+| **History and audio** | Revisit dictations and retry recognition from saved audio. |
+| **Insights** | Explore word counts, speaking speed, activity, and dictation usage across apps. |
+| **English and Russian UI** | Select a language or follow your system language. |
 
-## Одна фраза — разные результаты
+## One phrase, different results
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/modes-ru-mobile.png" />
-  <img src="assets/modes-ru.png" alt="Пример: одна диктовка превращается в короткое сообщение, рабочее письмо или список задач — в зависимости от выбранного режима." width="100%" />
+  <source media="(max-width: 600px)" srcset="assets/modes-en-mobile.png" />
+  <img src="assets/modes-en.png" alt="Illustrative example: one dictation becomes a short message, a work email, or a task list, depending on the writing mode." width="100%" />
 </picture>
 
-Режим определяет, что делать с расшифровкой. В редакторе можно попросить убрать повторы, сохранить разговорный тон, разбить текст на абзацы или перевести его. Для обработки текста выбирается локальная или облачная текстовая модель.
+A mode defines what happens to your transcript. Edit its instructions to remove repetition, preserve your tone, add paragraphs, or translate the text. Choose a local or cloud text model to process it.
 
-<sub>Тексты в схеме — иллюстративные примеры, а не результаты замера моделей.</sub>
+<sub>The diagram uses illustrative text examples, not model benchmark results.</sub>
 
 <details>
-<summary><strong>Посмотреть редактор инструкций и статистику</strong></summary>
+<summary><strong>See the instruction editor and insights</strong></summary>
 
-### Ваши инструкции для текста
+### Your instructions for the text
 
-<img src="assets/prompt-editor.png" alt="Редактор промпта: убрать повторы и слова-паразиты, сохранить тон, разбить текст на абзацы, не добавлять факты и обещания." width="100%" />
+<img src="assets/prompt-editor.png" alt="Prompt editor with example Russian instructions to remove fillers, preserve tone, add paragraphs, and avoid inventing facts or promises." width="100%" />
 
-### Как вы используете диктовку
+### How you use dictation
 
-<img src="assets/insights.png" alt="Статистика No Type: скорость речи, исправления, количество слов, использование по приложениям и календарь активности. Данные демонстрационные." width="100%" />
+<img src="assets/insights.png" alt="No Type insights: speaking speed, corrections, word count, usage by app, and an activity calendar. Demo data." width="100%" />
 
 </details>
 
-## Маленький рекордер, большой характер
+## A little personality
 
 <picture>
-  <source media="(max-width: 600px)" srcset="assets/recorder-ru-mobile.png" />
-  <img src="assets/recorder-ru.png" alt="Четыре вида рекордера No Type: лавандовая палитра Prism, зелёная Aurora, пиксельный робот и сердечко после поглаживания." width="100%" />
+  <source media="(max-width: 600px)" srcset="assets/recorder-en-mobile.png" />
+  <img src="assets/recorder-en.png" alt="Four No Type recorder appearances: lavender Prism, green Aurora, a pixel companion, and a heart in response to petting." width="100%" />
 </picture>
 
-Выберите волны или пиксельного помощника, настройте размер и палитру. Робот реагирует на поглаживание курсором. Рекордер можно разместить плавающим облачком или у верхней кромки экрана.
+Pick waves or a pixel companion, adjust the size, and choose a palette. The robot reacts when you pet it with your pointer. Place the recorder in a floating bubble or along the top edge of your screen.
 
 <details>
-<summary><strong>Посмотреть рекордер у верхней кромки в движении</strong></summary>
+<summary><strong>Watch the top-edge recorder in motion</strong></summary>
 
-<img src="assets/recorder-placement.gif" alt="Анимация: рекордер раскрывается у верхней кромки экрана. На Mac с вырезом робот расположен сбоку от notch; на Windows — в центре панели. Внизу показана настройка размера плавающего облачка." width="100%" />
+<img src="assets/recorder-placement.gif" alt="Animation of the recorder opening along the top edge. On a Mac with a notch, the robot sits beside the cutout; on Windows, it sits in the center. A floating-recorder size control is shown below." width="100%" />
 
-<sub>Визуализация текущего компонента рекордера на абстрактных фонах macOS и Windows.</sub>
+<sub>The current recorder component shown against abstract macOS and Windows backgrounds.</sub>
 
 </details>
 
-## Скачать и начать
+## Download and get started
 
-### Сборка 0.1.4
+### Build 0.1.4
 
-Проект переименован в **No Type**. Опубликованные установщики 0.1.4 пока сохраняют прежнее имя **No Tipe**.
+The project is now **No Type**. Published 0.1.4 installers still use the earlier **No Tipe** name.
 
-| Платформа | Требования | Установщик |
+| Platform | Requirements | Installer |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 или новее · Apple Silicon | [Скачать DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Скачать EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe) |
 
-Локальный движок текстовых моделей на Windows требует AVX2. В текущем релизе нет установщиков для Intel Mac, Windows ARM и Linux. Самую новую версию всегда можно найти на [странице релизов](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
+The Windows local text-model runtime requires AVX2. This release has no installers for Intel Mac, Windows ARM, or Linux. Find the newest version on the [releases page](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
-1. **Установите приложение.** На Mac откройте DMG и перенесите No Type в «Программы». На Windows запустите EXE и следуйте шагам установщика.
-2. **Разрешите доступ к микрофону.** На macOS также разрешите «Универсальный доступ» для вставки текста.
-3. **Выберите распознавание.** Скачайте локальную речевую модель в приложении или подключите облачного провайдера со своим API-ключом.
-4. **Настройте хоткей и попробуйте диктовку.** Откройте текстовое поле, нажмите сочетание и скажите пару предложений.
+1. **Install the app.** On Mac, open the DMG and drag No Type to Applications. On Windows, run the EXE and follow the installer.
+2. **Allow microphone access.** On macOS, also allow Accessibility for text insertion.
+3. **Choose speech recognition.** Download a local speech model inside the app, or connect a cloud provider with your own API key.
+4. **Set a shortcut and try dictation.** Focus a text field, press the shortcut, and say a couple of sentences.
 
 <details>
-<summary><strong>Примечания к установке и обновлениям</strong></summary>
+<summary><strong>Installation and update notes</strong></summary>
 
-Сборка macOS подписана Apple Development, но пока не нотарифицирована. Установщик Windows пока без сертификата издателя Authenticode. Поэтому при первой установке система может показать предупреждение. Подробности и ограничения приведены в [заметках к версии 0.1.4](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.4).
+The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.4 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.4) for details and limitations.
 
-Сборка и автоматические тесты Windows проверяются в CI; установка и диктовка на физическом компьютере Windows пока не проверены.
+Windows builds and automated tests run in CI; installation and dictation on physical Windows hardware remain unverified.
 
-Обновления можно проверять в **Settings → General → App updates**. Пакеты обновлений подписаны отдельно; эта подпись не заменяет нотарификацию Apple или сертификат издателя Windows. Обновление 0.1.4 сохраняет библиотеку, настройки и сохранённые ключи доступа.
+Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.4 update preserves your library, settings, and saved credentials.
 
-Файлы `.app.tar.gz`, `.sig` и `latest.json` предназначены для механизма обновления. Для первой установки используйте DMG или EXE из таблицы выше.
+The `.app.tar.gz`, `.sig`, and `latest.json` files serve the updater. Use the DMG or EXE in the table above for your first installation.
 
 </details>
 
-## Поддержать No Type
+## Support No Type
 
 <p align="center">
-  <a href="https://boosty.to/notipe"><img src="assets/mascot.gif" alt="Пиксельный помощник No Type улыбается, моргает и превращается в сердечко." width="360" /></a>
+  <a href="https://boosty.to/notipe"><img src="assets/mascot.gif" alt="The No Type pixel companion smiles, blinks, and turns into a heart." width="360" /></a>
 </p>
 
-No Type делает **Darlingfxx02**. Если приложение помогает вам в работе, поддержите его развитие на Boosty — разовым донатом или подпиской. Там же можно следить за новостями проекта.
+No Type is made by **Darlingfxx02**. If the app helps you work, support its development on Boosty with a one-time donation or a subscription. You can follow project updates there too.
 
 <p align="center">
-  <a href="https://boosty.to/notipe"><img src="assets/boosty-ru.png" alt="Поддержать проект на Boosty" width="290" /></a>
+  <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="290" /></a>
 </p>
 
-Донат не открывает платные функции: пользоваться приложением можно бесплатно. Оплату обрабатывает Boosty.
+A donation does not unlock paid features: the app is free to use. Boosty handles payments.
 
-Ещё один способ помочь — поставить ⭐ этому репозиторию, поделиться [сайтом](https://www.notype.tech) или [рассказать об ошибке](https://github.com/Darlingfxx02/no-tipe-releases/issues).
+You can also help by giving this repository a ⭐, sharing the [website](https://www.notype.tech), or [reporting a bug](https://github.com/Darlingfxx02/no-tipe-releases/issues).
 
-## Вопросы
+## Questions
 
 <details>
-<summary><strong>Нужен ли интернет? Куда отправляется диктовка?</strong></summary>
+<summary><strong>Do I need internet? Where does my dictation go?</strong></summary>
 
-Локальные модели сначала нужно скачать. При локальном распознавании аудио обрабатывается на вашем компьютере. Для полностью локальной обработки текста выберите также локальную текстовую модель или отключите улучшение и перевод.
+Local models need to be downloaded first. Local speech recognition processes audio on your computer. For fully local text processing, select a local text model too, or turn enhancement and translation off.
 
-При выборе облачной модели аудио или текст отправляются выбранному провайдеру. Облачные сервисы требуют интернет и ваш API-ключ; их тарифы и правила обработки данных определяет провайдер.
+When you choose a cloud model, audio or text is sent to the selected provider. Cloud services require internet and your API key; the provider sets its pricing and data handling terms.
 
 </details>
 
 <details>
-<summary><strong>Это бесплатное приложение с открытым исходным кодом?</strong></summary>
+<summary><strong>Is No Type free and open source?</strong></summary>
 
-No Type бесплатно для личного и профессионального использования и распространяется по [проприетарной лицензии](LICENSE). Исходный код закрыт. Этот репозиторий содержит установщики, подписанные пакеты обновлений, документацию релизов и изображения для их оформления.
+No Type is free for personal and professional use under a [proprietary license](LICENSE). Its source code is closed. This repository contains installers, signed updater packages, release documentation, and presentation images.
 
-Сторонние зависимости сохраняют собственные лицензии и уведомления; они доступны в приложении в **Settings → General → License and notices**. См. также [уведомления о сторонних материалах](THIRD-PARTY-NOTICES.md).
+Third-party dependencies retain their own licenses and notices, available in **Settings → General → License and notices**. See also the [third-party notices](THIRD-PARTY-NOTICES.md).
 
 </details>
 
 <details>
-<summary><strong>Как сообщить об ошибке или предложить идею?</strong></summary>
+<summary><strong>How do I report a bug or suggest an idea?</strong></summary>
 
-Создайте [Issue](https://github.com/Darlingfxx02/no-tipe-releases/issues) и укажите версию No Type, версию ОС, выбранную модель и шаги для повторения проблемы. Приложите скриншот или точный текст ошибки, если это поможет. Перед публикацией уберите из материалов личные данные и API-ключи.
+Open an [Issue](https://github.com/Darlingfxx02/no-tipe-releases/issues) with the No Type version, OS version, selected model, and steps to reproduce. Include a screenshot or the exact error message when useful. Remove personal data and API keys before posting.
 
 </details>
 
 ---
 
 <p align="center">
-  <sub>© 2026 Darlingfxx02 · <a href="LICENSE">Лицензия</a> · <a href="THIRD-PARTY-NOTICES.md">Сторонние материалы</a> · <a href="https://boosty.to/notipe">Boosty</a></sub>
+  <sub>© 2026 Darlingfxx02 · <a href="LICENSE">License</a> · <a href="THIRD-PARTY-NOTICES.md">Third-party notices</a> · <a href="https://boosty.to/notipe">Boosty</a></sub>
 </p>
