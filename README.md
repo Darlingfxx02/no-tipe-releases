@@ -24,8 +24,8 @@ Expected content: **“Let us move the meeting to tomorrow. I need to finish the
 
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.6 for macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.6 for Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.7/NoType_0.1.7_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.7 for macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.7/NoType_0.1.7_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.7 for Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="248" /></a>
 </p>
 
@@ -61,7 +61,7 @@ Windows defaults to Right Ctrl: hold it while speaking and release to finish. Up
 | **Writing modes** | Set instructions for messages, emails, notes, and tasks; enable enhancement, shortening, or translation. |
 | **Personal dictionary** | Add names, terms, and your own corrections. |
 | **Snippets** | Keep frequently used text fragments at hand. |
-| **History and audio** | Revisit dictations and retry recognition from saved audio. |
+| **History and audio** | Revisit dictations. Audio is retained for the ten latest recognition failures without text so you can retry them. |
 | **Insights** | Explore word counts, speaking speed, activity, and dictation usage across apps. |
 | **English and Russian UI** | Select a language or follow your system language. |
 
@@ -109,14 +109,14 @@ Pick waves or a pixel companion, adjust the size, and choose a palette. The robo
 
 ## Download and get started
 
-### Build 0.1.6
+### Build 0.1.7
 
-The app and installers now use the **No Type** name. Updates preserve your library, preferences and saved credentials.
+This update adds Parakeet v3, more reliable model downloads, optional usage statistics and recorder fixes. Updates preserve your library, preferences and saved credentials.
 
 | Platform | Requirements | Installer |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.7/NoType_0.1.7_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.7/NoType_0.1.7_windows-x86_64-setup.exe) |
 
 The Windows local text-model runtime requires AVX2. This release has no installers for Intel Mac, Windows ARM, or Linux. Find the newest version on the [releases page](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
@@ -128,11 +128,11 @@ The Windows local text-model runtime requires AVX2. This release has no installe
 <details>
 <summary><strong>Installation and update notes</strong></summary>
 
-The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.6 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.6) for details and limitations.
+The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.7 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.7) for details and limitations.
 
 Windows Whisper uses a compatible GPU through Vulkan and retains CPU fallback when a GPU is unavailable. The runtime is included in the installer; no SDK installation is needed. Builds, recognition and the installer are tested in CI. Recognition on an RTX 3050 is checked separately; interactive installation and text delivery on physical Windows hardware remain unverified.
 
-Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.6 update preserves your library, settings, and saved credentials.
+Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.7 update preserves your library, settings, and saved credentials.
 
 The `.app.tar.gz`, `.sig`, and `latest.json` files serve the updater. Use the DMG or EXE in the table above for your first installation.
 
@@ -162,6 +162,8 @@ You can also help by giving this repository a ⭐, sharing the [website](https:/
 Local models need to be downloaded first. Local speech recognition processes audio on your computer. For fully local text processing, select a local text model too, or turn enhancement and translation off.
 
 When you choose a cloud model, audio or text is sent to the selected provider. Cloud services require internet and your API key; the provider sets its pricing and data handling terms.
+
+Usage statistics are optional and require your consent during setup or in Settings. They include activity, chosen themes and languages, known-model usage, dictionary/snippet/mode counts and fixed error categories. Audio, dictation text, collection contents, API keys and raw error messages are excluded. Disabling sharing clears the queue and requests deletion of the installation’s server data when connected.
 
 </details>
 
