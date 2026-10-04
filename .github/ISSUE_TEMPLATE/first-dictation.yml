@@ -1,0 +1,52 @@
+name: First dictation feedback
+description: Tell us what happened when you tried No Type in your usual app.
+title: "[First dictation] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Try one short message in the app where you usually write. Share what worked or where you stopped. Do not include private dictation, recordings, or API keys.
+  - type: input
+    id: version
+    attributes:
+      label: No Type version
+      placeholder: "See Settings → General"
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Operating system and computer
+      placeholder: "macOS 15, Apple Silicon / Windows 11, x64"
+    validations:
+      required: true
+  - type: input
+    id: task
+    attributes:
+      label: What were you trying to write, and in which app?
+      placeholder: "A short project update in my email app"
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Speech model
+      description: Include the model name and whether it was local or cloud. Never paste an API key.
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened?
+      options:
+        - Text appeared in the field and was usable
+        - Recognition worked, but insertion failed
+        - Recognition failed
+        - I could not finish setup
+    validations:
+      required: true
+  - type: textarea
+    id: feedback
+    attributes:
+      label: What worked, or where did you get stuck?
+      description: Mention the step, visible error, or change that would help you use it again.
+    validations:
+      required: true

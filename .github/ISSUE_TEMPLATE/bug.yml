@@ -1,0 +1,35 @@
+name: Bug report
+description: Report an installation, recognition, or text insertion problem.
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Remove personal dictation, API keys, and other private information before submitting. This public repository distributes No Type builds; application source is private.
+  - type: input
+    id: environment
+    attributes:
+      label: No Type version and operating system
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Selected speech and text models
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected and actual result
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Error message or screenshot
+      description: Optional. Inspect screenshots and exported diagnostics for private information before attaching.

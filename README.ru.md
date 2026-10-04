@@ -1,11 +1,25 @@
 <p align="right"><a href="README.md">English</a> · <strong>Русский</strong></p>
 
-<p align="center">
-  <picture>
-  <source media="(max-width: 600px)" srcset="assets/hero-ru-mobile.png" />
-  <img src="assets/hero-ru.png" alt="No Type — ваш голос, готовый текст. Бесплатная диктовка для macOS и Windows, локально и в облаке." width="100%" />
-</picture>
-</p>
+# No Type
+
+**Скажите сообщение — получите текст в приложении, где работаете.** Бесплатная диктовка для дизайнеров, разработчиков и всех, кто пишет сообщения, письма и заметки на macOS и Windows.
+
+[**Скачать для macOS или Windows**](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest) · [**Сайт**](https://notype.tech/?utm_source=github&utm_medium=readme&utm_campaign=first-users&utm_content=quickstart-ru) · [**Обратная связь**](https://github.com/Darlingfxx02/no-tipe-releases/issues/new/choose)
+
+<img src="assets/no-type-dictation.gif" alt="Демонстрация No Type: голосовая фраза о переносе встречи превращается в текст. Постановочная композиция с настоящим рекордером, синтетическим голосом и результатом локального распознавания." width="100%" />
+
+<sub>Постановочный сценарий с настоящим интерфейсом рекордера и локально распознанной синтетической речью. Окно сообщения иллюстративное; последовательность смонтирована и не показывает задержку распознавания. [Видео со звуком](https://github.com/Darlingfxx02/no-tipe-releases/blob/main/assets/no-type-dictation.mp4).</sub>
+
+## Первая диктовка
+
+1. Установите [последний релиз](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest) для macOS 13+ на Apple Silicon или Windows 10/11 x64. Ограничения подписи и платформ описаны ниже в разделе установки.
+2. Разрешите доступ к микрофону; на macOS также включите Универсальный доступ для вставки текста.
+3. Скачайте подходящую модель речи внутри приложения, например Whisper, или подключите облачного провайдера со своим API-ключом. Для первого теста выключите улучшение и перевод.
+4. Поставьте курсор в текстовое поле, используйте хоткей из настроек и скажите: «Перенесём встречу на завтра. Сегодня нужно закончить макет». Завершите запись и проверьте текст.
+
+Смысл результата должен совпадать с фразой; пунктуация зависит от модели. [Расскажите о первой попытке](https://github.com/Darlingfxx02/no-tipe-releases/issues/new?template=first-dictation.yml).
+
+
 
 <p align="center">
   <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.6/NoType_0.1.6_darwin-aarch64.dmg"><img src="assets/macos-ru.png" alt="Скачать No Type 0.1.6 для macOS — Apple Silicon" width="248" /></a>

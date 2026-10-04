@@ -1,0 +1,21 @@
+name: Feature request
+description: Describe a writing task No Type could handle better.
+title: "[Idea] "
+body:
+  - type: textarea
+    id: task
+    attributes:
+      label: What task are you trying to complete?
+      description: Include your app and workflow, without personal text or recordings.
+    validations:
+      required: true
+  - type: textarea
+    id: friction
+    attributes:
+      label: What gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What change would help?
