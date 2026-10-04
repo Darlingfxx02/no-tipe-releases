@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.4 for macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.4 for Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.5 for macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.5 for Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="248" /></a>
 </p>
 
@@ -95,14 +95,14 @@ Pick waves or a pixel companion, adjust the size, and choose a palette. The robo
 
 ## Download and get started
 
-### Build 0.1.4
+### Build 0.1.5
 
-The project is now **No Type**. Published 0.1.4 installers still use the earlier **No Tipe** name.
+The app and installers now use the **No Type** name. Updates preserve your library, preferences and saved credentials.
 
 | Platform | Requirements | Installer |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.4/NoTipe_0.1.4_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.5/NoType_0.1.5_windows-x86_64-setup.exe) |
 
 The Windows local text-model runtime requires AVX2. This release has no installers for Intel Mac, Windows ARM, or Linux. Find the newest version on the [releases page](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
@@ -114,11 +114,11 @@ The Windows local text-model runtime requires AVX2. This release has no installe
 <details>
 <summary><strong>Installation and update notes</strong></summary>
 
-The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.4 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.4) for details and limitations.
+The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.5 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.5) for details and limitations.
 
 Windows builds and automated tests run in CI; installation and dictation on physical Windows hardware remain unverified.
 
-Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.4 update preserves your library, settings, and saved credentials.
+Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.5 update preserves your library, settings, and saved credentials.
 
 The `.app.tar.gz`, `.sig`, and `latest.json` files serve the updater. Use the DMG or EXE in the table above for your first installation.
 
