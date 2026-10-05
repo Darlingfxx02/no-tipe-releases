@@ -8,8 +8,8 @@
 </picture>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.8/NoType_0.1.8_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.8 for macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.8/NoType_0.1.8_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.8 for Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.9/NoType_0.1.9_darwin-aarch64.dmg"><img src="assets/macos-en.png" alt="Download No Type 0.1.9 for macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.9/NoType_0.1.9_windows-x86_64-setup.exe"><img src="assets/windows-en.png" alt="Download No Type 0.1.9 for Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-en.png" alt="Support the project on Boosty" width="248" /></a>
 </p>
 
@@ -45,6 +45,7 @@ Windows defaults to Right Ctrl: hold it while speaking and release to finish. Up
 | :--- | :--- |
 | **Local and cloud models** | Download a speech model to your computer or connect a cloud provider using your own API key. |
 | **Writing modes** | Set instructions for messages, emails, notes, and tasks; enable enhancement, shortening, or translation. |
+| **Empowerments** | Append your own instruction to one dictation, choose a color and preview its recorder effect. |
 | **Personal dictionary** | Add names, terms, and your own corrections. |
 | **Snippets** | Keep frequently used text fragments at hand. |
 | **History and audio** | Revisit dictations. Audio is retained for the ten latest recognition failures without text so you can retry them. |
@@ -95,14 +96,14 @@ Pick waves or a pixel companion, adjust the size, and choose a palette. The robo
 
 ## Download and get started
 
-### Build 0.1.8
+### Build 0.1.9
 
-This update adds Parakeet v3, more reliable model downloads, optional usage statistics and recorder fixes. Updates preserve your library, preferences and saved credentials.
+This update adds one-message empowerments with custom instructions, colors and recorder effects, and improves focused-field recovery on macOS. Updates preserve your library, preferences and saved credentials.
 
 | Platform | Requirements | Installer |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.8/NoType_0.1.8_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.8/NoType_0.1.8_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 or later · Apple Silicon | [Download DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.9/NoType_0.1.9_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Download EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.9/NoType_0.1.9_windows-x86_64-setup.exe) |
 
 The Windows local text-model runtime requires AVX2. This release has no installers for Intel Mac, Windows ARM, or Linux. Find the newest version on the [releases page](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
@@ -114,11 +115,11 @@ The Windows local text-model runtime requires AVX2. This release has no installe
 <details>
 <summary><strong>Installation and update notes</strong></summary>
 
-The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.8 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.8) for details and limitations.
+The macOS build is signed with Apple Development and has not yet been notarized. The Windows installer does not yet have an Authenticode publisher certificate. Your operating system may display a warning during the first installation. See the [0.1.9 release notes](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.9) for details and limitations.
 
 Windows Whisper uses a compatible GPU through Vulkan and retains CPU fallback when a GPU is unavailable. The runtime is included in the installer; no SDK installation is needed. Builds, recognition and the installer are tested in CI. Recognition on an RTX 3050 is checked separately; interactive installation and text delivery on physical Windows hardware remain unverified.
 
-Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.8 update preserves your library, settings, and saved credentials.
+Check for updates in **Settings → General → App updates**. Updater packages are signed separately; updater signatures do not replace Apple notarization or a Windows publisher certificate. The 0.1.9 update preserves your library, settings, and saved credentials.
 
 The `.app.tar.gz`, `.sig`, and `latest.json` files serve the updater. Use the DMG or EXE in the table above for your first installation.
 
