@@ -8,8 +8,8 @@
 </picture>
 
 <p align="center">
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.11/NoType_0.1.11_darwin-aarch64.dmg"><img src="assets/macos-ru.png" alt="Скачать No Type 0.1.11 для macOS — Apple Silicon" width="248" /></a>
-  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.11/NoType_0.1.11_windows-x86_64-setup.exe"><img src="assets/windows-ru.png" alt="Скачать No Type 0.1.11 для Windows — x64" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.12/NoType_0.1.12_darwin-aarch64.dmg"><img src="assets/macos-ru.png" alt="Скачать No Type 0.1.12 для macOS — Apple Silicon" width="248" /></a>
+  <a href="https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.12/NoType_0.1.12_windows-x86_64-setup.exe"><img src="assets/windows-ru.png" alt="Скачать No Type 0.1.12 для Windows — x64" width="248" /></a>
   <a href="https://boosty.to/notipe"><img src="assets/boosty-ru.png" alt="Поддержать проект на Boosty" width="248" /></a>
 </p>
 
@@ -96,14 +96,14 @@
 
 ## Скачать и начать
 
-### Сборка 0.1.11
+### Сборка 0.1.12
 
-В этом обновлении рекордер можно перемещать с сохранением положения и запасом места для полного раскрытия. Скрытие при наведении действует только в ожидании; добавлены удаление последней точки и проверка локальной модели перед включением обработки. Обновление сохраняет библиотеку, настройки и учётные данные.
+В этом обновлении добавлено колесо состояний предпросмотра рекордера, доработаны материалы и переходы, появилась палитра «Графит» и упрощена навигация скрытых страниц. Оригинальный код и документация теперь доступны по Apache License 2.0. Обновление сохраняет библиотеку, настройки и учётные данные.
 
 | Платформа | Требования | Установщик |
 | :--- | :--- | :--- |
-| **macOS** | macOS 13 или новее · Apple Silicon | [Скачать DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.11/NoType_0.1.11_darwin-aarch64.dmg) |
-| **Windows** | Windows 10/11 · x64 | [Скачать EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.11/NoType_0.1.11_windows-x86_64-setup.exe) |
+| **macOS** | macOS 13 или новее · Apple Silicon | [Скачать DMG](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.12/NoType_0.1.12_darwin-aarch64.dmg) |
+| **Windows** | Windows 10/11 · x64 | [Скачать EXE](https://github.com/Darlingfxx02/no-tipe-releases/releases/download/v0.1.12/NoType_0.1.12_windows-x86_64-setup.exe) |
 
 Локальный движок текстовых моделей на Windows требует AVX2. В текущем релизе нет установщиков для Intel Mac, Windows ARM и Linux. Самую новую версию всегда можно найти на [странице релизов](https://github.com/Darlingfxx02/no-tipe-releases/releases/latest).
 
@@ -115,11 +115,11 @@
 <details>
 <summary><strong>Примечания к установке и обновлениям</strong></summary>
 
-Сборка macOS подписана Apple Development, но пока не нотарифицирована. Установщик Windows пока без сертификата издателя Authenticode. Поэтому при первой установке система может показать предупреждение. Подробности и ограничения приведены в [заметках к версии 0.1.11](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.11).
+Сборка macOS подписана Apple Development, но пока не нотарифицирована. Установщик Windows пока без сертификата издателя Authenticode. Поэтому при первой установке система может показать предупреждение. Подробности и ограничения приведены в [заметках к версии 0.1.12](https://github.com/Darlingfxx02/no-tipe-releases/releases/tag/v0.1.12).
 
 Whisper на Windows использует совместимую видеокарту через Vulkan и сохраняет работу на CPU, если GPU недоступен. Необходимая библиотека входит в установщик; отдельно устанавливать SDK не нужно. Сборка, распознавание и установщик проверяются в CI. Проверка распознавания на RTX 3050 выполняется отдельно; интерактивная установка и доставка текста на физическом Windows пока не проверены.
 
-Обновления можно проверять в **Settings → General → App updates**. Пакеты обновлений подписаны отдельно; эта подпись не заменяет нотарификацию Apple или сертификат издателя Windows. Обновление 0.1.11 сохраняет библиотеку, настройки и сохранённые ключи доступа.
+Обновления можно проверять в **Settings → General → App updates**. Пакеты обновлений подписаны отдельно; эта подпись не заменяет нотарификацию Apple или сертификат издателя Windows. Обновление 0.1.12 сохраняет библиотеку, настройки и сохранённые ключи доступа.
 
 Файлы `.app.tar.gz`, `.sig` и `latest.json` предназначены для механизма обновления. Для первой установки используйте DMG или EXE из таблицы выше.
 
