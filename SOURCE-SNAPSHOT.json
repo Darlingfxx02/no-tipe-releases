@@ -1,6 +1,6 @@
 {
   "snapshotDate": "2026-10-13",
-  "applicationVersion": "0.1.11",
+  "applicationVersion": "0.1.12",
   "files": {
     "CrossPlatform/.cargo/config.toml": "3d06ee57e8648ba2f09fc2e607582a47ee538ff798eccced50b0ae8595f60089",
     "CrossPlatform/.gitignore": "b1babf8b1cedf74ff6689c107cc3581db2c25b4e3a4f4c7b135031f5f37670ef",
@@ -47,8 +47,8 @@
     "CrossPlatform/notch-demo.html": "1bdec5d8aaedac40b296b14f63dcab836ca285ef348f677ded2ac29db74753bb",
     "CrossPlatform/notch.html": "ab403996ac5aafa8a04d046bbe73890c6e2fe9ae146a52ba3ac50174be6aaa91",
     "CrossPlatform/onboarding-preview.html": "a235e57810f12819af433600b19ff36ae611708c8c6d557584f696a1078b7e4d",
-    "CrossPlatform/package-lock.json": "7fd4c8156ae850743195227a098ffc5097831c4b0fb569041677a15c94efc9e2",
-    "CrossPlatform/package.json": "74c5d6e692c4d49d4aa1ec012dd57b4c8d5ed941c02bc85df535f58357167945",
+    "CrossPlatform/package-lock.json": "e9a163c4c714994e53b6deb22da1cbf31e8c760b1e15ab07430911ed1cf021e5",
+    "CrossPlatform/package.json": "483131a2793cba50fa56c7b53cca6227b605fc511949e465492b0182490f56b9",
     "CrossPlatform/pixel-preview.html": "af9e7b015f196e9e4673844eefafcb2a58626d9f291494124e10e292256f6d2e",
     "CrossPlatform/public/Qwen-LICENSE.txt": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
     "CrossPlatform/public/assets/boosty-mark.svg": "23a59dd6c71c3d21cb637593099263e53010274933d00ccc4e2421cba2766667",
@@ -136,8 +136,8 @@
     "CrossPlatform/scripts/update-local.py": "1596cfac46a86763499f41d2440d9458074b3367a533bc12f20741ffb5889194",
     "CrossPlatform/scripts/verify-distribution.py": "2011908a164e2c5b3c0c9c9fc111a4c4ef50de462ede6f5740f2cadfdf1a0b38",
     "CrossPlatform/side-preview.html": "6233bffa76e8dc474a314782348edf75ce45a55fe088588883138b50864f88b3",
-    "CrossPlatform/src-tauri/Cargo.lock": "fa0ef507189e938235c24c8811061360a39c380080101e7cf1ec610b0d847a22",
-    "CrossPlatform/src-tauri/Cargo.toml": "8dbcc697673ac86972a41d49c7cb6b8fbe4ab477594c582604a314fbc76d80f4",
+    "CrossPlatform/src-tauri/Cargo.lock": "f87e0fdc8b2516436ad435d90a620f7b0ce394d2ffe623f519785bf34fe97af1",
+    "CrossPlatform/src-tauri/Cargo.toml": "c76237a3a1211c3506df7f5ed79b41d9538ffccff377a3470c5749c8b8b69636",
     "CrossPlatform/src-tauri/Entitlements.plist": "a222e5a62c7d3b3439b662dbca88e1f3c3d1f6bf86cd8ac67a3a71600d9775aa",
     "CrossPlatform/src-tauri/Info.plist": "6633c9bea495f1c748f84c01c064ec1f7a8fc80399f6d5632a7d556d7e904580",
     "CrossPlatform/src-tauri/analytics-catalog.json": "88c82272d6dcbec93f9bb4f201b447fac36ce9431f8da1e7f8da99d5bde9533f",
@@ -261,7 +261,7 @@
     "CrossPlatform/src-tauri/src/voice_profile.rs": "80f0830d6ecbf2938722d7281dab91e998e3d5e999f5a5f883917b5d78d4209d",
     "CrossPlatform/src-tauri/src/whisper_benchmark.rs": "2af2f1a3f291dba358ea889a92c03c9f6611c49b6c20659efa373a13257b6c8a",
     "CrossPlatform/src-tauri/src/whisper_runtime.rs": "3fa4d4ecfcb572d6f16c5577479952f7e059701a59480cd3f1d27f0438fa1848",
-    "CrossPlatform/src-tauri/tauri.conf.json": "b391790cb760f37914fd0d458d9a956254d942e7c420e2b465026eb24946744f",
+    "CrossPlatform/src-tauri/tauri.conf.json": "9ccd22bced2003c9df67c4e56ad934387df596c6bd7f65c1a1b11f8397ee510f",
     "CrossPlatform/src-tauri/tauri.dev.conf.json": "9168e4f29bfbc1c3c8b29db461906770793ed3d28fed3ed18d077502565be50c",
     "CrossPlatform/src-tauri/tauri.macos.conf.json": "9d41d25f0feff7f3331fa8e01a1f22c01bc17d990a6d5caa04e3f32e6f2eae33",
     "CrossPlatform/src-tauri/tauri.windows.conf.json": "4966486da52c35945c770b2420a1a05ec0a534449fd58decef48f5f762952c4c",
@@ -480,6 +480,6 @@
     "Scripts/export-public-source.py": "364a56a1fed11ed1c587841188d6a11aeea2d627af5c847fbcb92d2dc03ab948",
     "THIRD-PARTY-NOTICES.md": "45a7fdeb76a0f85e6a800ec8d0d539f18ae79b97ee054f73f53ee19e1dac9f6d",
     "docs/public-source/BUILDING.md": "fdf2751e59b1caf1c58c36071e5858d5ebc2f9df63833ebda94eba73b0ed6b39",
-    "docs/public-source/SOURCE.md": "c85f6b5e7795c6bc018f4dc5ff6720e1824e68a9fa778190530a16a91e094028"
+    "docs/public-source/SOURCE.md": "8fdc980db600a12c2c7c597f440f7887e5e689dbd2c29833f5486d1c5fdfe69a"
   }
 }

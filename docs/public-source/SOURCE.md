@@ -21,3 +21,11 @@ installers. Future stable binary releases should identify the exact public
 source commit used to build them.
 
 Build instructions: [BUILDING.md](BUILDING.md).
+
+## Stable 0.1.12
+
+The `v0.1.12` source tag identifies the reviewed source used for the macOS and
+Windows 0.1.12 packages. It promotes the 2026-10-13 snapshot into the stable
+channel, including recorder preview states, material and transition refinements,
+simplified hidden-page navigation and Apache 2.0 notices. `SOURCE-SNAPSHOT.json`
+records the exported application inputs and their SHA-256 hashes.
