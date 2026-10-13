@@ -1,0 +1,46 @@
+.dictation-setup .onboarding-steps{display:flex;justify-content:center;flex:none;gap:8px;list-style:none;margin:0 0 12px;padding:0}
+.dictation-setup .onboarding-steps li{width:64px;height:6px;border-radius:999px;background:#ffffff12;transition:background .2s}
+.dictation-setup .onboarding-steps li.filled{background:var(--accent)}
+.dictation-setup .onboarding-settings{margin-top:0;padding-top:0;border-top:0}
+.dictation-setup .onboarding-settings>h3{margin-bottom:8px}
+.dictation-setup .onboarding-settings>h3,.dictation-setup .onboarding-settings>.muted,.dictation-setup .onboarding-recorder-settings>h3{text-align:center}
+.dictation-setup .onboarding-settings>.muted{font-size:13px}
+.dictation-setup .onboarding-settings .setting-row{gap:16px}
+.dictation-setup .onboarding-settings .setting-row:has(.shortcut-recorder){display:grid;grid-template-columns:minmax(0,1fr) minmax(150px,220px);column-gap:16px;row-gap:8px;align-items:center;padding:12px 0}
+.dictation-setup .onboarding-settings .setting-row:has(.shortcut-recorder) .setting-copy{grid-column:1;grid-row:1;min-width:0}
+.dictation-setup .onboarding-settings .setting-row:has(.shortcut-recorder) :is(.row-value,.shortcut-recorder){display:contents}
+.dictation-setup .onboarding-settings .shortcut-capture{grid-column:2;grid-row:1;width:100%;min-width:0;min-height:42px;line-height:20px;white-space:normal;overflow-wrap:anywhere}
+.dictation-setup .onboarding-settings .shortcut-recorder .field-error{grid-column:1/-1;grid-row:2;max-width:none;margin:0;font-size:12px;line-height:18px;color:#e5a4a6;overflow-wrap:anywhere;text-align:left}
+.dictation-setup .onboarding-settings .row-value{max-width:65%}
+.dictation-setup .onboarding-settings .select-trigger{max-width:100%;white-space:normal;text-align:left}
+.onboarding-theme-picker{display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.onboarding-swatches{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:8px}
+.onboarding-swatches button{width:28px;height:28px;min-width:0;min-height:0;padding:0;border-radius:50%;border:2px solid transparent;box-shadow:inset 0 0 0 1px #ffffff20}
+.onboarding-swatches button[aria-pressed=true]{border-color:#101012;outline:2px solid var(--accent);outline-offset:2px}
+.onboarding-screen{position:relative;isolation:isolate;display:flex;width:100%;height:100dvh;overflow:hidden;padding:64px 32px;background:radial-gradient(ellipse at 50% 15%,color-mix(in srgb,var(--accent),transparent 96%),transparent 65%),#101012}
+.onboarding-screen>.loading{margin:auto;padding:24px}
+.onboarding-drag-region{position:fixed;top:0;left:0;right:0;height:40px;z-index:1}
+.dictation-setup{display:flex;flex-direction:column;width:100%;max-width:520px;height:100%;min-height:0;margin:0 auto;flex:none}
+.onboarding-companion{width:360px;max-width:100%;height:192px;margin:0 auto 16px;flex:none;pointer-events:none}
+.onboarding-companion iframe{display:block;width:100%;height:100%;border:0;pointer-events:none}
+.onboarding-companion[data-placement=notch] iframe{position:fixed;inset:0;width:100%;height:100dvh;z-index:-1}
+.dictation-setup>header{position:relative;display:flex;align-items:center;justify-content:center;min-height:34px;flex:none;gap:16px;margin-bottom:24px;text-align:center}
+.dictation-setup>header h1{max-width:calc(100% - 64px)}
+.dictation-setup>header .icon-button{position:absolute;right:0;top:0}
+.dictation-setup h1{font-size:28px;line-height:1.2;font-weight:600;letter-spacing:-.7px}
+.onboarding-content{flex:1;min-height:0;overflow:auto;padding:0 4px;scrollbar-width:thin;scrollbar-color:#ffffff20 transparent}
+.dictation-setup>footer{display:flex;justify-content:center;flex:none;gap:8px;margin-top:24px}
+.dictation-setup>footer button{width:160px;min-width:0;height:40px;flex:0 1 160px;padding:0 16px}
+.dictation-setup .permission-step{width:100%;max-width:360px;margin:0 auto;gap:16px;padding:14px 0}
+.dictation-setup .permission-step:last-of-type{border-bottom:0}
+.dictation-setup .permission-step button{min-height:36px}
+.onboarding-content>.inline-error{margin-top:16px}
+@media(max-width:540px){.onboarding-screen{padding:56px 24px 32px}.dictation-setup>header{height:60px}.dictation-setup h1{font-size:25px}.dictation-setup .onboarding-settings .setting-row{align-items:flex-start;flex-direction:column;gap:10px}.dictation-setup .onboarding-settings .row-value{max-width:100%}}
+@media(max-width:540px){.dictation-setup .onboarding-settings .setting-row:has(.shortcut-recorder){grid-template-columns:minmax(0,1fr)}.dictation-setup .onboarding-settings .setting-row:has(.shortcut-recorder) .shortcut-capture{grid-column:1;grid-row:2}.dictation-setup .onboarding-settings .shortcut-recorder .field-error{grid-row:3}}
+
+.analytics-checkbox{width:18px;height:18px;accent-color:var(--control-top);cursor:pointer;flex:none}
+.dictation-setup[data-step=permissions] .onboarding-companion{height:144px}
+.dictation-setup[data-step=permissions]>header{margin-bottom:16px}
+.dictation-setup[data-step=permissions]>footer{margin-top:16px}
+.dictation-setup[data-step=permissions] .setting-row{max-width:360px;margin:0 auto;gap:16px;padding:14px 0}
+.dictation-setup[data-step=permissions] .setting-copy{min-width:0}

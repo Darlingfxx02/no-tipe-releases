@@ -1,0 +1,80 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "No Type",
+  "version": "0.1.11",
+  "identifier": "app.no-tipe.desktop",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run prepare:installer && npm run prepare:text && npm run build",
+    "beforeBundleCommand": "npm run prepare:installer",
+    "devUrl": "http://127.0.0.1:1420",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "withGlobalTauri": true,
+    "macOSPrivateApi": true,
+    "windows": [
+      {
+        "label": "main",
+        "title": "No Type",
+        "width": 1354,
+        "height": 936,
+        "minWidth": 950,
+        "minHeight": 680,
+        "titleBarStyle": "Overlay",
+        "trafficLightPosition": {
+          "x": 20,
+          "y": 26
+        },
+        "hiddenTitle": true,
+        "devtools": false,
+        "backgroundColor": "#080808",
+        "visible": true
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset: http://asset.localhost; media-src 'self' asset: http://asset.localhost blob:; connect-src 'self' ipc: http://ipc.localhost; frame-src 'self'; object-src 'none'; base-uri 'self'",
+      "devCsp": "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: asset: http://asset.localhost; media-src 'self' asset: http://asset.localhost blob:; connect-src 'self' ipc: http://ipc.localhost http://127.0.0.1:1420 ws://127.0.0.1:1420; frame-src 'self'; object-src 'none'; base-uri 'self'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "license": "Apache-2.0",
+    "targets": "all",
+    "icon": [
+      "icons/icon.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "macOS": {
+      "signingIdentity": "Apple Development: timohae@outlook.com (G5PL8V7P9M)",
+      "minimumSystemVersion": "13.0",
+      "infoPlist": "Info.plist",
+      "entitlements": "Entitlements.plist"
+    },
+    "windows": {
+      "nsis": {
+        "displayLanguageSelector": true,
+        "languages": [
+          "English",
+          "Russian"
+        ]
+      }
+    },
+    "resources": {
+      "local-text/llama.cpp-LICENSE.txt": "local-text/llama.cpp-LICENSE.txt",
+      "speech-runtime/sherpa-onnx-NOTICES.txt": "speech-runtime/sherpa-onnx-NOTICES.txt",
+      "../../LICENSE": "LICENSE",
+      "../../NOTICE": "NOTICE",
+      "../../THIRD-PARTY-NOTICES.md": "THIRD-PARTY-NOTICES.md"
+    },
+    "createUpdaterArtifacts": true
+  },
+  "plugins": {
+    "updater": {
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDVENkY3OEIwNjM5NjVDOTgKUldTWVhKWmpzSGh2WFhua0JsdGo4RGQwMlp6VHMwTGVDc3haYUNVbFhFQTBNbldPZWN2Q3Z6TFkK",
+      "endpoints": [],
+      "requireSignedVersion": true
+    }
+  }
+}

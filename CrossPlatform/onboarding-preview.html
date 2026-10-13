@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>No Type · Онбординг</title>
+    <link rel="icon" type="image/png" href="/assets/no-tipe-icon.png" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Development preview: real application components, in-memory native
+      // responses. This entry is excluded from Vite's production build inputs.
+      const parameters = new URLSearchParams(location.search);
+      const platform = parameters.get('platform') === 'macos' ? 'macos' : 'windows';
+      const language = parameters.get('lang') === 'en' ? 'en' : 'ru';
+      Object.defineProperty(navigator, 'platform', { get: () => platform === 'windows' ? 'Win32' : 'MacIntel' });
+      Object.defineProperty(navigator, 'userAgent', { get: () => platform === 'windows' ? 'Windows NT 10.0' : 'Macintosh' });
+      let callbackId = 0;
+      let preferences;
+      let onboardingComplete = false;
+      const access = { microphone: 'notDetermined', accessibility: platform === 'macos' ? 'notDetermined' : 'notRequired' };
+      window.__TAURI_EVENT_PLUGIN_INTERNALS__ = { unregisterListener() {} };
+      window.__TAURI_INTERNALS__ = {
+        metadata: { currentWindow: { label: 'main' }, currentWebview: { label: 'main' } },
+        transformCallback() { return ++callbackId; },
+        unregisterCallback() {},
+        async invoke(command, args = {}) {
+          if (command === 'plugin:event|listen') return ++callbackId;
+          if (command === 'bootstrap') {
+            const { preview } = await import('/src/api.ts');
+            preferences ??= { ...preview.preferences, uiLanguage: language };
+            return { ...preview, platform, preferences: { ...preferences }, onboardingComplete };
+          }
+          if (command === 'save_preferences') {
+            Object.assign(preferences, args.patch);
+            if ('usageAnalytics' in args.patch) preferences.usageAnalyticsVersion = 2;
+            return { ...preferences };
+          }
+          if (command === 'permission_status') return { ...access };
+          if (command === 'request_permissions') { access[args.kind] = 'granted'; return; }
+          if (command === 'complete_onboarding') { onboardingComplete = true; return; }
+          return null;
+        },
+      };
+    </script>
+    <script type="module">import('/src/main.tsx');</script>
+  </body>
+</html>

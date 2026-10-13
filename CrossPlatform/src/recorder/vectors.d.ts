@@ -1,0 +1,9 @@
+export interface VectorShape{contours:number[][][]}
+export interface VectorPlan{source:VectorShape;target:VectorShape;contours:{from:number[][];to:number[][]}[];bow:number[]}
+export function pixelContours(mask:Uint8Array,width?:number,height?:number,scale?:number):VectorShape[];
+export function pixelPongContours(pong:{ball:{x:number;y:number};left:number;right:number}):VectorShape[];
+export function pixelEqualizerContours(heights:number[]):VectorShape[];
+export function pixelPoseContours(shapes:VectorShape[],pose:import('./motion.js').FacePose):VectorShape[];
+export function pixelVectorPlan(from:VectorShape[],to:VectorShape[]):VectorPlan[];
+export function pixelVectorFrame(plan:VectorPlan[],progress:number):VectorShape[];
+export function pixelCompletionContours(kind:string):VectorShape[];

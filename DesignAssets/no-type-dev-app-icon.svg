@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>No Type Dev</title>
+  <desc>The No Type waveform drawn as a blueprint, with a cobalt drafting grid and construction guides.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#2488FA"/><stop offset=".55" stop-color="#0960D8"/><stop offset="1" stop-color="#0642A8"/></linearGradient>
+    <linearGradient id="rim" x2="0" y2="1"><stop stop-color="#70B9FF"/><stop offset="1" stop-color="#032D79"/></linearGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse"><path d="M56 0H0V56" fill="none" stroke="#C3E6FF" stroke-opacity=".22" stroke-width="2"/></pattern>
+    <clipPath id="face"><rect x="80" y="80" width="864" height="852" rx="160"/></clipPath>
+    <filter id="shadow"><feGaussianBlur stdDeviation="12"/></filter>
+  </defs>
+  <rect x="64" y="80" width="896" height="896" rx="168" fill="#042659" opacity=".28" filter="url(#shadow)"/>
+  <rect x="64" y="64" width="896" height="896" rx="168" fill="url(#rim)"/>
+  <rect x="80" y="80" width="864" height="852" rx="160" fill="url(#paper)"/>
+  <g clip-path="url(#face)">
+    <rect x="80" y="80" width="864" height="852" fill="url(#grid)"/>
+    <g fill="none" stroke="#C7E8FF" stroke-width="2" opacity=".4">
+      <circle cx="512" cy="498" r="310"/>
+      <circle cx="512" cy="498" r="224" stroke-dasharray="8 12"/>
+      <path d="M132 498H892M512 124V870" stroke-dasharray="18 10 3 10"/>
+      <path d="M270 280H754M270 716H754M292 250V746M732 250V746"/>
+    </g>
+    <g fill="#87C8FF" fill-opacity=".14" stroke="#F0FAFF" stroke-width="7">
+      <rect x="276" y="449" width="48" height="98" rx="24"/>
+      <rect x="382" y="371" width="48" height="254" rx="24"/>
+      <rect x="488" y="280" width="48" height="436" rx="24"/>
+      <rect x="594" y="371" width="48" height="254" rx="24"/>
+      <rect x="700" y="449" width="48" height="98" rx="24"/>
+    </g>
+    <g fill="none" stroke="#DFF3FF" stroke-width="3" opacity=".8">
+      <path d="M248 798H776M248 782V814M776 782V814M248 798l14-8m-14 8 14 8M776 798l-14-8m14 8-14 8"/>
+      <path d="M206 280V716M190 280H222M190 716H222M206 280l-8 14m8-14 8 14M206 716l-8-14m8 14 8-14"/>
+      <path d="M168 170h40m-20-20v40M816 170h40m-20-20v40"/>
+    </g>
+    <g fill="none" stroke="#E8F7FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M760 858v-28h10q14 0 14 14t-14 14zM818 830h-18v28h18m-18-14h14M831 830l11 28 11-28"/>
+    </g>
+  </g>
+  <rect x="81" y="81" width="862" height="850" rx="159" fill="none" stroke="#B3DFFF" stroke-opacity=".45" stroke-width="2"/>
+</svg>

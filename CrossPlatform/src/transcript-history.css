@@ -1,0 +1,7 @@
+.recent-heading{padding:16px 20px;border-bottom:1px solid #ffffff0c}
+.recent-heading h2{font-size:16px;line-height:22px}
+.recent-end{height:1px}
+.recent-footer{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:12px;min-height:64px;padding:16px 20px;border-top:1px solid #ffffff0c;font-size:12px;text-align:center}
+.recent-footer.is-initial{min-height:320px;border-top:0}
+.recent-footer button{font-size:12px;padding:6px 12px}
+@media(max-width:600px){.recent-heading,.recent-footer{padding-inline:16px}}

@@ -1,0 +1,126 @@
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#eeeef2;font-synthesis:none}
+*{box-sizing:border-box}html,body,#root{margin:0;width:100%;height:100%;overflow:hidden;background:transparent}button{font:inherit;color:inherit;cursor:default;-webkit-tap-highlight-color:transparent}button:focus-visible{outline:1px solid #c5c5d2;outline-offset:-3px}button:disabled{cursor:default}svg{width:18px;height:18px;fill:currentColor;display:block;flex:none}
+.notch-anchor{position:absolute;left:50%;transform:translateX(-50%);width:0;height:0}
+html[data-customization-preview]{background:#0a0a0a}
+.onboarding-recorder-preview .notch-anchor{transform:translateX(-50%) scale(2);transform-origin:50% 0;animation:onboarding-notch-arrive .35s cubic-bezier(.2,.8,.2,1)}
+.onboarding-recorder-preview{background:radial-gradient(ellipse at 50% 15%,color-mix(in srgb,var(--accent),transparent 96%),transparent 65%),#101012}
+@keyframes onboarding-notch-arrive{from{transform:translateX(-50%) translateY(64px) scale(2)}to{transform:translateX(-50%) scale(2)}}
+@media(prefers-reduced-motion:reduce){.onboarding-recorder-preview .notch-anchor{animation:none}}
+.notch-surface{position:relative;transform:translateX(-50%);background:#060607;border:1px solid #ffffff14;border-top:0;border-radius:0 0 14px 14px;isolation:isolate;overflow:hidden;box-shadow:0 5px 12px #0003;transition:width .24s cubic-bezier(.2,.8,.2,1),height .24s cubic-bezier(.2,.8,.2,1),border-radius .24s;user-select:none}
+.notch-surface.is-open{border-radius:0 0 18px 18px}
+.notch-shading{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 35%,#ffffff02);transition:background .2s}
+.notch-surface[data-phase=result] .notch-shading,.notch-surface[data-phase=copied] .notch-shading{background:radial-gradient(ellipse at 50% 130%,#7deab91a,transparent 70%)}
+.notch-surface[data-phase=failed] .notch-shading{background:radial-gradient(ellipse at 50% 130%,#ed8a8a18,transparent 70%)}
+.notch-wave-zone{position:absolute;left:44px;right:44px;bottom:3px;height:36px;opacity:.8;transition:opacity .16s,left .24s,right .24s,bottom .24s;pointer-events:none;overflow:hidden}
+.notch-wave{width:100%;height:100%;display:block;pointer-events:none}
+.notch-wave[data-fallback=true]{background:url('/assets/wave.png') center/100% 100% no-repeat;opacity:calc(.45 * var(--wave-brightness,.35))}
+.notch-wave[data-wave-visible=false]{opacity:0}
+.notch-surface:not(.is-open) .notch-wave-zone{left:6px;right:6px;bottom:-12px;opacity:.4}
+.notch-surface:is([data-phase=preparing],[data-phase=busy],[data-phase=result],[data-phase=copied],[data-phase=failed]) .notch-wave-zone{opacity:0}
+.notch-peek{position:absolute;inset:0;background:none;border:0;padding:0;width:100%;height:100%}
+.notch-controls{position:absolute;bottom:3px;left:10px;right:10px;height:36px;display:grid;grid-template-columns:28px minmax(0,1fr) 28px;align-items:center;gap:6px;opacity:0;transform:translateY(5px);transition:opacity .12s,transform .2s}
+.is-open .notch-controls{opacity:1;transform:none;transition-delay:.055s}
+.notch-control{padding:5px;border:0;background:transparent;display:grid;place-items:center;width:28px;height:28px;border-radius:8px;color:#d6d6df}
+.notch-control:hover{color:#fff}.notch-control:active{transform:scale(.9)}
+.notch-finish{height:32px;padding:0;border:0;background:transparent;border-radius:8px;min-width:0}
+.notch-status{grid-column:1/-1;display:flex;align-items:center;justify-content:center;gap:8px;height:34px;padding:0 10px;background:transparent;border:0;border-radius:8px;font-size:11px;font-weight:500;color:#a6a6b5}
+.notch-status.complete{animation:notch-resolve .2s cubic-bezier(.2,.8,.2,1);color:#99d9b8}
+[data-phase=failed] .notch-status{color:#e7a09f}
+.notch-spinner{transform-origin:12px 12px;animation:notch-spin .8s linear infinite}
+.notch-surface .notch-text{font-size:13px;font-weight:450;line-height:20px;position:absolute;top:15px;left:18px;right:18px;opacity:0;transition:height .18s cubic-bezier(.2,.8,.2,1),opacity .14s}
+.has-text .notch-text{opacity:1;transition-delay:.1s}
+.notch-options{position:absolute;inset:14px 16px 47px;animation:notch-options .2s cubic-bezier(.2,.8,.2,1)}
+.notch-languages{display:flex;gap:4px;margin-bottom:10px;min-width:0}
+.notch-languages button{border:0;background:transparent;min-width:0;flex:1;padding:6px 3px;border-radius:7px;font-size:11px;line-height:16px;font-weight:500;white-space:nowrap;color:#b1b1ba}
+.notch-languages button[aria-checked=true]{background:#ffffff0d;color:#fff}
+.notch-setting{display:flex;align-items:center;justify-content:space-between;gap:8px;background:none;border:0;width:100%;height:36px;padding:0;font-size:12px;font-weight:450;text-align:left}
+.notch-setting i{display:block;width:32px;height:20px;flex:none;border-radius:12px;background:#ffffff0a;position:relative;transition:background .16s}
+.notch-setting i b{position:absolute;top:3px;left:3px;display:block;width:14px;height:14px;background:#fff;border-radius:50%;transition:transform .16s}
+.notch-setting[aria-checked=true] i{background:var(--accent,#5e6ad2)}.notch-setting[aria-checked=true] i b{transform:translateX(12px)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@keyframes notch-spin{to{transform:rotate(360deg)}}
+@keyframes notch-resolve{from{opacity:0;transform:perspective(120px) rotateY(-30deg) scale(.88)}to{opacity:1;transform:none}}
+@keyframes notch-options{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+html.notch-demo,html.notch-demo body,html.notch-demo #root{background:#17171b}
+.notch-demo-hardware{position:absolute;top:0;left:50%;transform:translateX(-50%);width:184px;height:32px;border-radius:0 0 8px 8px;background:#000;pointer-events:none;z-index:5}
+
+/* Two independent circles emerge from behind the fixed hardware cutout. */
+.notch-controls{pointer-events:none}
+.is-open .notch-controls{pointer-events:auto}
+.wraps-cutout .notch-surface{background:transparent;border:0;border-radius:0;box-shadow:none;overflow:visible;transform:translateX(-50%)}
+.wraps-cutout .notch-shading{display:none}
+.wraps-cutout .notch-cutout-exclusion{position:absolute;z-index:4;left:50%;top:0;transform:translateX(-50%);width:var(--cutout-width);height:var(--cutout-height);background:#000;border-radius:0 0 8px 8px;pointer-events:none}
+.wraps-cutout .notch-surface{--notch-control-side:calc(var(--cutout-width)/2 - 14px + 38px * var(--notch-reveal,1))}
+.wraps-cutout .notch-controls{top:0;bottom:auto;left:0;right:auto;width:100%;height:var(--compact-height);display:block;transform:none;opacity:1;transition:none}
+.wraps-cutout .notch-menu{position:absolute;top:calc(50% - 16px);left:calc(50% - var(--notch-control-side) - 16px);width:32px;height:32px;padding:7px;border-radius:50%;color:#cccdd9;background:radial-gradient(ellipse at 50% 120%,#171621,#060608 70%);box-shadow:inset 0 0 0 1px #ffffff0d;transition:color .12s}
+.wraps-cutout .notch-menu svg{width:15px;height:15px}
+.wraps-cutout .notch-menu:hover{color:#fff}
+.wraps-cutout .notch-voice{position:absolute;right:calc(50% - var(--notch-control-side) - 16px);top:calc(50% - 16px);width:32px;height:32px;border:0;padding:0;background:none;border-radius:50%;display:grid;place-items:center}
+.wraps-cutout .notch-voice-icon{display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:radial-gradient(closest-side,#000b,#0000);opacity:0;transform:scale(.8);transition:opacity .12s,transform .16s}
+.wraps-cutout .notch-voice:hover .notch-voice-icon,.wraps-cutout .notch-voice:focus-visible .notch-voice-icon{opacity:1;transform:none}
+.wraps-cutout .notch-voice-icon svg{width:16px;height:16px}
+.wraps-cutout .notch-wave-zone{left:calc(50% + var(--cutout-width)/2 + 8px);right:auto;top:calc(var(--compact-height)/2 - 16px);bottom:auto;width:32px;height:32px;border-radius:50%;background:radial-gradient(ellipse at 50% 120%,#141222,#030305 75%);box-shadow:inset 0 0 0 1px #bbbaff26,0 1px 4px #0003;overflow:hidden;opacity:1;transform:none;transition:transform .24s cubic-bezier(.2,.8,.2,1),opacity .15s}
+.wraps-cutout .notch-surface:not(.is-open) .notch-wave-zone{left:calc(50% + var(--cutout-width)/2 + 8px);right:auto;top:calc(var(--compact-height)/2 - 16px);bottom:auto;opacity:1;transform:translateX(-38px) scale(.82)}
+.wraps-cutout .notch-surface:is([data-phase=preparing],[data-phase=busy],[data-phase=result],[data-phase=copied],[data-phase=failed]) .notch-wave-zone{opacity:0}
+.wraps-cutout .notch-options{top:calc(var(--compact-height) + 8px);bottom:0;left:0;right:0;padding:12px 16px;border:1px solid #ffffff10;border-radius:16px;background:linear-gradient(165deg,#0b0b0f,#070708);box-shadow:0 5px 16px #0003;transform-origin:top center}
+.wraps-cutout .notch-text{top:calc(var(--compact-height) + 8px);left:0;right:0;padding:8px 12px;box-sizing:content-box}
+.wraps-cutout .notch-text .live-transcript-overflow{left:12px;top:-2px}
+.wraps-cutout .notch-status{position:absolute;right:calc(50% - var(--notch-control-side) - 16px);top:calc(50% - 16px);height:32px;width:32px;padding:0;display:grid;place-items:center;border-radius:50%;background:radial-gradient(ellipse at 50% 110%,#1a2822,#060808 75%);box-shadow:inset 0 0 0 1px #ffffff14}
+.wraps-cutout [data-phase=failed] .notch-status{background:radial-gradient(ellipse at 50% 110%,#2d191b,#080607 75%)}
+.wraps-cutout .notch-status svg{width:18px;height:18px}
+
+/* One SDF material paints the detached circles, collision blend and menu. */
+.notch-material{position:absolute;left:50%;top:0;transform:translateX(-50%);width:560px;height:260px;pointer-events:none;z-index:0}
+.wraps-cutout .notch-controls,.wraps-cutout .notch-options{z-index:2}
+.wraps-cutout .notch-menu,.wraps-cutout .notch-options,.wraps-cutout .notch-status{background:transparent!important;box-shadow:none;border:0}
+.wraps-cutout .notch-options{top:calc(var(--compact-height) + 8px)}
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) .notch-menu,
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) .notch-options,
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) .notch-voice{background:#09090c!important;box-shadow:inset 0 0 0 1px #ffffff18}
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]){--notch-reveal:0!important}
+.wraps-cutout .notch-surface.is-open:has(.notch-material[data-fallback=true]){--notch-reveal:1!important}
+.wraps-cutout .notch-surface:is(.has-settings,.has-text):has(.notch-material[data-fallback=true]){--notch-control-side:calc(50% - 20px)!important}
+
+.wraps-cutout .notch-menu,.wraps-cutout .notch-voice{transform:scale(calc(.82 + .18 * var(--notch-reveal,1)))}
+
+/* Match the lower recorder: a translation bubble and two detachable chips,
+   mirrored beneath the top dock so they stay within the screen. */
+.notch-language-row{position:absolute;inset:0;z-index:6;pointer-events:none}
+.notch-language-chip{position:absolute;left:calc(50% + var(--lobe-x,0px));top:var(--lobe-y,0px);width:var(--lobe-width,36px);height:36px;display:flex;justify-content:center;align-items:center;gap:7px;padding:0 12px;border:0;border-radius:18px;background:transparent;color:#eeeef2;font-size:12px;font-weight:450;line-height:18px;white-space:nowrap;transform:translate(-50%,-50%) scale(var(--lobe-scale,1,1));opacity:var(--lobe-opacity,0);pointer-events:none}
+.notch-language-chip[data-visible=true]{pointer-events:auto}
+.notch-language-chip[data-lobe="0"]{--lobe-x:var(--language0-x);--lobe-y:var(--language0-y);--lobe-width:var(--language0-width);--lobe-scale:var(--language0-scale);--lobe-opacity:var(--language0-opacity)}
+.notch-language-chip[data-lobe="1"]{--lobe-x:var(--language1-x);--lobe-y:var(--language1-y);--lobe-width:var(--language1-width);--lobe-scale:var(--language1-scale);--lobe-opacity:var(--language1-opacity)}
+.notch-language-chip[data-lobe="2"]{--lobe-x:var(--language2-x);--lobe-y:var(--language2-y);--lobe-width:var(--language2-width);--lobe-scale:var(--language2-scale);--lobe-opacity:var(--language2-opacity)}
+.notch-translation-trigger{padding:0;border-radius:50%;transition:color .18s}
+.notch-translation-trigger:not(.notch-empowerment-trigger)[data-enabled=true]{color:#38d67a}
+.notch-translation-trigger svg{width:18px;height:18px}
+.notch-language-check{display:none}.notch-language-chip[aria-checked=true] .notch-language-check{display:inline}
+.notch-language-short{display:none}.notch-language-row[data-short=true] .notch-language-short{display:inline}.notch-language-row[data-short=true] .notch-language-full{display:none}
+/* Flat displays have a virtual camera-width body with a central finish target. */
+.notch-anchor[data-display-kind=flat] .notch-controls{opacity:0}
+.notch-anchor[data-display-kind=flat] .is-open .notch-controls{opacity:var(--notch-reveal,1)}
+.notch-anchor[data-display-kind=flat] .notch-voice-icon{opacity:1;transform:none}
+.notch-anchor[data-display-kind=flat] .notch-surface:has(.notch-material[data-fallback=true])::before{content:"";position:absolute;top:0;left:50%;transform:translateX(-50%);width:var(--cutout-width);height:var(--cutout-height);background:#09090c;border:1px solid #ffffff18;border-top:0;border-radius:0 0 8px 8px;pointer-events:none}
+.notch-anchor[data-display-kind=flat] .notch-finish{position:absolute;top:2px;left:50%;transform:translateX(-50%);width:var(--cutout-width);height:calc(var(--compact-height) - 2px);border-radius:0 0 8px 8px}
+.notch-anchor[data-display-kind=flat] .notch-finish:hover{background:#ffffff05}
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) .notch-language-row{top:calc(100% + 8px);bottom:auto;height:36px;display:flex;gap:8px}
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) #notch-language-options{display:contents}
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) .notch-language-chip{position:static;flex:none;transform:none;width:auto;min-width:36px;background:#09090d;box-shadow:inset 0 0 0 1px #ffffff18;opacity:0}
+.wraps-cutout .notch-surface:has(.notch-material[data-fallback=true]) .notch-language-chip[data-visible=true]{opacity:1}
+
+[data-recorder-style=pixel] .notch-status svg{opacity:0}
+.notch-pixel-face{position:absolute;left:calc(50% + var(--notch-control-side) - 40px);top:calc(var(--compact-height)/2 - 34px);width:80px;height:68px;pointer-events:none;z-index:1;transform:scale(calc(.82 + .18 * var(--notch-reveal,1)))}
+/* With no camera cutout, the effect stays in the middle as controls emerge. */
+.notch-anchor[data-display-kind=flat] .notch-pixel-face{left:50%;transform:translateX(-50%)}
+.notch-pixel-face[data-hidden=true]{opacity:0}
+.pixel-control-icon{display:block;flex:none;width:18px;height:18px;pointer-events:none}
+.notch-menu .pixel-control-icon{width:18px;height:18px}
+
+.notch-language-chip[data-lobe="3"]{--lobe-x:var(--language3-x);--lobe-y:var(--language3-y);--lobe-width:var(--language3-width);--lobe-scale:var(--language3-scale);--lobe-opacity:var(--language3-opacity)}
+.notch-choice-list .notch-setting{height:24px}
+
+.notch-choice-list{max-height:72px;overflow-y:auto;scrollbar-width:thin}
+.notch-choice-name{display:flex;align-items:center;gap:8px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.empowerment-dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex:none}

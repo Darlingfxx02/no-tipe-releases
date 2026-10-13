@@ -1,0 +1,169 @@
+/* Figma C04 / Linear library, 91:1096. Share the component tokens between Settings and Customization;
+   the approved dashboard and WebGL recorder retain their own styling. */
+@font-face{font-family:No Type Inter;src:url('/fonts/Inter-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:No Type Inter;src:url('/fonts/Inter-Medium.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+@font-face{font-family:No Type Inter Title;src:url('/fonts/Inter-Title.ttf') format('truetype');font-style:normal;font-weight:500;font-display:swap}
+
+.settings-page{
+  --settings-control:#232325;
+  --settings-hover:#1d1e20;
+  --settings-border:#28282b;
+  --settings-divider:#1a1b1d;
+  --settings-primary:#fff;
+  --settings-secondary:#e3e4e6;
+  --settings-muted:#959597;
+  --settings-accent:var(--accent);
+  font-family:No Type Inter,Inter,sans-serif;
+  font-size:13px;line-height:20px;font-weight:400;color:var(--settings-primary);
+  max-width:800px;gap:24px;
+}
+.settings-page>.page-header{padding:8px 0 0}
+.settings-page>.page-header h1{font-family:No Type Inter Title,No Type Inter,sans-serif;font-size:24px;line-height:32px;font-weight:500;letter-spacing:-.16px}
+.settings-layout{display:flex;flex-direction:column;gap:24px;min-width:0}
+.page-body{display:contents}
+.settings-tabs{--settings-divider:var(--surface-divider);--settings-muted:var(--surface-muted);--settings-hover:var(--surface-hover);--settings-primary:var(--surface-primary);--settings-control:var(--surface-control);--settings-accent:var(--accent);display:flex;align-items:center;gap:4px;padding-bottom:12px;border-bottom:1px solid var(--settings-divider)}
+.settings-tabs button{display:grid;place-items:center;flex:none;height:28px;padding:0 10px;border:0;border-radius:8px;background:transparent;white-space:nowrap;font:400 13px/20px No Type Inter,sans-serif;color:var(--settings-muted)}
+/* Reserve both label weights so selection never changes tab widths or wrapping. */
+.settings-tabs button>span{grid-area:1 / 1}
+.settings-tabs .settings-tab-sizer{visibility:hidden;font-weight:500}
+.settings-tabs button:hover{background:var(--settings-hover);color:var(--settings-primary)}
+.settings-tabs button[aria-selected=true]{background:var(--settings-control);color:var(--settings-primary);font-weight:500}
+.settings-tabs button:focus-visible{outline:2px solid var(--settings-accent);outline-offset:2px}
+.settings-page button:active{transform:none}
+.settings-detail{min-width:0;width:100%;display:flex;flex-direction:column;gap:24px;padding:0 0 40px}
+.settings-detail>.panel{background:transparent;border:0;padding:0;border-radius:0}
+.settings-detail>.panel+.panel{padding-top:24px;border-top:1px solid var(--settings-divider)}
+.settings-detail>.panel>h2{font:500 15px/23px No Type Inter,sans-serif;color:var(--settings-primary);margin-bottom:8px}
+.settings-detail>.panel>.panel-heading{display:flex;align-items:center;gap:8px}
+.settings-detail>.panel>.panel-heading>.icon{color:var(--settings-muted)}
+
+/* Grouped settings: keep each heading above one quiet, outlined surface. */
+.settings-detail:has(>.settings-section){gap:32px}
+.settings-detail>.settings-section+.settings-section{padding-top:0;border-top:0}
+.settings-detail>.settings-section>h2{margin:0 0 12px}
+.settings-group{min-width:0;background:#ffffff08;border:1px solid #ffffff08;border-radius:14px}
+.settings-detail .settings-group>.setting-row{min-height:60px;padding:12px 18px;gap:20px;border:0}
+.settings-detail .settings-group>.setting-row.has-description{min-height:74px;padding-block:16px}
+.settings-detail .settings-group>.setting-row~.setting-row{border-top:1px solid #ffffff05}
+.settings-detail .settings-group .setting-copy{gap:4px}
+.settings-detail .settings-group .row-value{justify-content:flex-end;flex-wrap:wrap;gap:8px}
+.settings-detail .settings-group>.text-button{margin:0 18px 16px}
+.settings-detail .settings-group>.field-error{margin:0;padding:0 18px 16px}
+.settings-group>.audio-input-level{padding:0 18px 12px}
+.settings-detail .settings-group .input-meter{margin:0}
+
+@container panel (max-width:800px){
+  .settings-detail .settings-group>.setting-row:not(:has(.switch)){flex-direction:column;align-items:flex-start;gap:10px}
+  .settings-detail .settings-group>.setting-row:not(:has(.switch)) .row-value{max-width:100%;justify-content:flex-start}
+}
+
+/* C04 / Setting row: compact 56; description 66; 12 px control gap. */
+.settings-detail .setting-row{min-height:56px;padding:8px 0;gap:12px;border:0}
+.settings-detail .setting-row.has-description{min-height:66px}
+.settings-detail .setting-copy{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.settings-detail .setting-row label{font:500 13px/20px No Type Inter,sans-serif;color:var(--settings-primary)}
+.settings-detail .setting-row p{font:400 12px/16px No Type Inter,sans-serif;color:var(--settings-muted);margin:0;max-width:none}
+.settings-detail .row-value{max-width:49%;gap:8px;flex:none}
+.settings-detail .muted,.settings-detail .permission-ok{font-size:12px;line-height:16px}
+.settings-detail .muted{color:var(--settings-muted)}
+
+/* C04 / Button and Select. Inset focus stroke keeps geometry unchanged. */
+.settings-detail button:where(:not(.switch):not(.swatch):not([role=tab]):not(.model-metric):not(.icon-button)),.settings-detail select,.settings-detail input{
+  height:30px;border:1px solid var(--settings-border);border-radius:8px;
+  background-color:var(--settings-control);color:var(--settings-primary);
+  font:500 13px/20px No Type Inter,sans-serif;box-shadow:none;outline:none;
+  transition:background-color .12s,border-color .12s;
+}
+.settings-detail button:where(:not(.switch):not(.swatch):not([role=tab]):not(.model-metric):not(.icon-button)){padding:0 12px;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+.settings-detail select{appearance:none;-webkit-appearance:none;width:140px;max-width:100%;padding:0 34px 0 10px;background-image:url('/assets/settings/chevron-down.svg');background-repeat:no-repeat;background-position:right 10px center;background-size:16px 16px;text-overflow:ellipsis}
+.settings-detail input{width:220px;padding:0 10px;font-weight:400}
+.settings-detail input[type=number]{width:76px}
+.recorder-style-control{display:flex;gap:2px;min-width:0;max-width:100%;padding:3px;border:1px solid var(--settings-border);border-radius:10px;background:#151517}
+.settings-detail .recorder-style-control label{position:relative;display:flex;min-width:0;cursor:pointer}
+.settings-detail .recorder-style-control input{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.recorder-style-control span{display:block;min-width:0;flex:1;height:26px;padding:0 10px;border-radius:6px;font-size:13px;line-height:26px;text-align:center;white-space:nowrap;color:var(--settings-muted);transition:background-color .12s,color .12s}
+.recorder-style-control label:hover span{color:var(--settings-primary)}
+.recorder-style-control input:checked+span{background:var(--settings-control);color:var(--settings-primary);box-shadow:0 1px 3px #0003,inset 0 0 0 1px #ffffff08}
+.recorder-style-control input:focus-visible+span{box-shadow:inset 0 0 0 2px var(--settings-accent)}
+.appearance-slider{display:flex;align-items:center;gap:12px;width:220px;max-width:100%}
+.settings-detail .appearance-slider input[type=range]{width:172px;height:30px;padding:0;border:0;background:transparent;accent-color:var(--settings-accent);cursor:pointer;box-shadow:none}
+.settings-detail .appearance-slider input[type=range]:focus-visible{outline:2px solid var(--settings-accent);outline-offset:3px}
+.appearance-slider output{min-width:36px;text-align:right;font-size:12px;font-variant-numeric:tabular-nums;color:var(--settings-muted)}
+.settings-detail input[type=number]::-webkit-inner-spin-button,.settings-detail input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}
+.settings-detail button:where(:not(.switch):not(.swatch):not([role=tab]):not(.model-metric):not(.icon-button)):hover,.settings-detail select:hover,.settings-detail input:hover{background-color:var(--settings-hover)}
+.settings-detail button:where(:not(.switch):not(.swatch):not([role=tab]):not(.model-metric):not(.icon-button)):focus-visible,.settings-detail select:focus-visible,.settings-detail input:focus-visible{outline:none;border-color:var(--settings-accent);box-shadow:inset 0 0 0 1px var(--settings-accent)}
+.settings-detail button:where(:not(.switch):not(.swatch):not([role=tab]):not(.model-metric):not(.icon-button)):active{background-color:var(--settings-control)}
+.settings-detail button:disabled,.settings-detail select:disabled,.settings-detail input:disabled{opacity:.35;cursor:default}
+.settings-detail button.primary{background:var(--primary-fill);border-color:transparent;color:var(--control-ink)}
+.settings-detail button.primary:hover{background:var(--control-hover)}
+.settings-detail button.primary:active{background:var(--control-bottom)}
+.settings-detail button.primary:disabled{background:var(--control-disabled);color:var(--control-ink);opacity:1}
+
+/* Larger 40 × 26 switch, within a 48 × 40 pointer target. */
+.settings-detail .switch{position:relative;width:48px;height:40px;padding:0;border:0;border-radius:14px;outline:none;background:transparent;flex:none;box-shadow:none}
+.settings-detail .switch::before{content:"";position:absolute;width:40px;height:26px;left:4px;top:7px;border-radius:13px;background:#29292c;box-shadow:inset 0 0 0 1px #ffffff0a;transition:background .16s}
+.settings-detail .switch span{display:block;position:absolute;left:7px;top:10px;width:20px;height:20px;border-radius:50%;background:#fff;box-shadow:0 1px 3px #0003;transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.settings-detail .switch[aria-checked=true]::before{background:var(--settings-accent)}
+.settings-detail .switch[aria-checked=true] span{transform:translateX(14px)}
+.settings-detail .switch:hover::before{box-shadow:inset 0 0 0 1px #ffffff26}
+.settings-detail .switch:hover,.settings-detail .switch[aria-checked=true]:hover{background:transparent}
+.settings-detail .switch:focus-visible::before{outline:2px solid #c1c3d0;outline-offset:3px}
+.settings-detail .switch:disabled{opacity:.35}
+
+/* C04 / Keycap: intrinsic width, 24 px high, 8 px horizontal inset. */
+.settings-detail button.shortcut-capture{min-width:0;height:24px;padding:0 8px;border:0;border-radius:6px;font:400 12px/16px No Type Inter,sans-serif;background:var(--settings-control)}
+.settings-detail button.shortcut-capture.listening{outline:none;box-shadow:inset 0 0 0 2px var(--settings-accent)}
+.shortcut-capture kbd{font:inherit}
+.shortcut-recorder p{max-width:225px}
+.settings-detail button.text-button{align-self:flex-start;height:auto;border:0;background:none;padding:0;color:var(--settings-muted);font-size:12px;line-height:16px;font-weight:400}
+.settings-detail button.text-button:hover{background:none;color:var(--settings-primary)}
+.settings-detail .panel>.text-button,.settings-detail .panel>.section-note{margin-top:12px}
+.section-note{font-size:12px;line-height:16px;color:#959597}
+.setting-input{min-width:0}
+.setting-input>div{display:flex;align-items:center;gap:8px}
+.setting-input input[aria-invalid=true]{border-color:#b76e70}
+.setting-input .field-error,.field-error{font-size:12px;line-height:16px;color:#e5a4a6;margin-top:7px;max-width:270px}
+.settings-detail .setting-row .field-error{color:#e5a4a6;margin-top:7px}
+.settings-detail .recorder-preview{height:336px;background:transparent;margin:0;border:1px solid var(--settings-divider);border-radius:12px;overflow:hidden}
+.settings-detail .input-meter{margin:12px 0 8px}
+.settings-detail .input-meter+p{font-size:12px;line-height:16px}
+@media(max-width:1100px){.settings-detail .row-value{max-width:52%}}
+
+.recorder-preview iframe[data-placement=notch]{top:0;bottom:auto;height:100%;max-width:100%}
+.recorder-preview-frame{opacity:0;pointer-events:none;transition:opacity .18s ease}
+.recorder-preview-frame[data-visible=true]{opacity:1;pointer-events:auto}
+
+
+.settings-models[hidden]{display:none}
+.customization-page .customization-detail{padding-bottom:40px}
+.customization-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.recorder-placement-control{display:flex;flex:none;gap:2px;margin-left:auto;padding:3px;border:1px solid var(--settings-border);border-radius:10px;background:color-mix(in srgb,var(--settings-control) 45%,transparent)}
+.recorder-placement-control>button{height:26px;padding:0 12px;border:0;border-radius:6px;background:transparent;font:400 13px/20px No Type Inter,Inter,sans-serif;color:var(--settings-muted);white-space:nowrap}
+.recorder-placement-control>button:hover{color:var(--settings-primary)}
+.recorder-placement-control>button[aria-checked=true]{background:var(--settings-control);color:var(--settings-primary);box-shadow:0 1px 3px #0003,inset 0 0 0 1px #ffffff08}
+.recorder-placement-control>button:focus-visible{outline:2px solid var(--focus-ring,var(--settings-accent));outline-offset:2px}
+.customization-preview{min-width:0;position:relative;container:recorder-preview / inline-size}
+.scroll-area-viewport:has(.customization-page){scroll-padding-top:24px}
+.customization-preview .recorder-preview iframe{top:0;bottom:auto;height:100%;max-width:100%;pointer-events:none}
+.preview-state-wheel{position:absolute;z-index:2;inset:16px auto 16px 28px;width:200px;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none;mask-image:linear-gradient(transparent,#000 16%,#000 84%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 16%,#000 84%,transparent)}
+:root .settings-page .settings-detail .preview-state-wheel>button{position:absolute;top:50%;left:0;display:flex;align-items:center;height:36px;margin-top:-18px;padding:0 12px;border:0;border-radius:4px;background:transparent;box-shadow:none;font:500 15px/24px No Type Inter,Inter,sans-serif;letter-spacing:-.15px;color:var(--settings-primary);white-space:nowrap;transform:translate(var(--state-x),var(--state-y)) scale(var(--state-scale));transform-origin:left center;opacity:var(--state-opacity);transition:none}
+:root .settings-page .settings-detail .preview-state-wheel>button:hover{background:transparent;color:var(--settings-primary);text-shadow:0 0 14px #ffffff30}
+:root .settings-page .settings-detail .preview-state-wheel>button[aria-checked=false]{color:var(--settings-muted)}
+:root .settings-page .settings-detail .preview-state-wheel>button[aria-checked=true]{opacity:1}
+.settings-detail .preview-state-wheel>button:active{transform:translate(var(--state-x),var(--state-y)) scale(var(--state-scale))}
+.settings-detail .preview-state-wheel>button:focus-visible{outline:1px solid var(--settings-muted);outline-offset:3px}
+.preview-state-wheel>button[data-hidden=true]{pointer-events:none}
+@container recorder-preview (max-width:640px){.preview-state-wheel{left:20px;width:184px}.customization-preview .recorder-preview iframe{left:calc(50% + 70px);max-width:calc(100% - 140px)}}
+.sidebar-settings-list{list-style:none;padding:0;margin:0}
+.sidebar-settings-list>li{position:relative;display:flex;align-items:center;gap:12px;min-height:52px;padding:8px 18px 8px 10px;border-bottom:1px solid var(--surface-divider)}
+.sidebar-settings-list>li:last-child{border-bottom-color:transparent}
+.sidebar-settings-list>li>.icon{color:var(--surface-muted);flex:none}
+.sidebar-settings-label{flex:1;min-width:0}
+.sidebar-settings-list+span[role=status]{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.sidebar-settings-list[data-reordering=true]{user-select:none}
+.sidebar-settings-list[data-reordering=true]>li{transition:transform .18s cubic-bezier(.2,.8,.2,1)}
+.sidebar-settings-list>li[data-dragging=true]{z-index:1;background:var(--surface-control);border-color:transparent;border-radius:10px;box-shadow:0 8px 24px #0004,inset 0 0 0 1px var(--surface-border)}
+.sidebar-settings-list>li[data-dragging=true][data-settling=false]{transition:none;will-change:transform}
+:root button.notype-button.sidebar-drag-handle{cursor:grab;touch-action:none;height:32px;width:24px;padding:0;color:var(--surface-muted);background:transparent;border-color:transparent;flex:none}
+:root button.notype-button.sidebar-drag-handle:active{cursor:grabbing}
+.settings-tabs{flex-wrap:wrap}

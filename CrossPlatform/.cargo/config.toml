@@ -1,0 +1,5 @@
+# Prepared by prepare-installer.py before a Windows Tauri build. Cargo also
+# finds this configuration when Windows tests are run from CrossPlatform/.
+[env]
+VULKAN_SDK = { value = "src-tauri/target/vulkan-sdk", relative = true, force = true }
+CMAKE_TOOLCHAIN_FILE_x86_64_pc_windows_msvc = { value = "cmake/windows-whisper.cmake", relative = true }

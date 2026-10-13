@@ -1,0 +1,7 @@
+.live-transcript{position:relative;min-width:0;height:var(--transcript-height,1lh);transition:height .18s cubic-bezier(.2,.8,.2,1)}
+.live-transcript-viewport{height:100%;overflow:clip;overflow-anchor:none}
+.live-transcript-content{white-space:pre-wrap;overflow-wrap:anywhere;will-change:transform}
+.live-transcript-overflow{position:absolute;left:0;top:-10px;height:7px;display:flex;align-items:center;gap:3px;opacity:0;transition:opacity .12s;pointer-events:none}
+.live-transcript-overflow i{display:block;width:3px;height:3px;background:currentColor;border-radius:50%;opacity:.65}
+.live-transcript[data-overflow=true] .live-transcript-overflow{opacity:1}
+@media(prefers-reduced-motion:reduce){.live-transcript,.live-transcript-overflow{transition:none}}

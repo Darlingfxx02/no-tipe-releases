@@ -1,0 +1,170 @@
+[
+  {
+    "kind": "speech",
+    "repository": "csukuangfj/sherpa-onnx-nemo-parakeet-tdt-0.6b-v3-int8",
+    "revision": "2bda32ec70b097a55adaa07d9a7173915b43cc78",
+    "file": "encoder.int8.onnx",
+    "size": 670478772,
+    "sha256": "acfc2b4456377e15d04f0243af540b7fe7c992f8d898d751cf134c3a55fd2247",
+    "name": "Parakeet v3",
+    "languages": "Multilingual",
+    "languageCodes": [
+      "bg",
+      "hr",
+      "cs",
+      "da",
+      "nl",
+      "en",
+      "et",
+      "fi",
+      "fr",
+      "de",
+      "el",
+      "hu",
+      "it",
+      "lv",
+      "lt",
+      "mt",
+      "pl",
+      "pt",
+      "ro",
+      "sk",
+      "sl",
+      "es",
+      "sv",
+      "ru",
+      "uk"
+    ],
+    "description": "NVIDIA · 25 languages including Russian · offline speech recognition",
+    "license": "cc-by-4.0",
+    "architecture": "nemo_transducer",
+    "quantization": "INT8",
+    "files": [
+      {
+        "path": "encoder.int8.onnx",
+        "size": 652184281,
+        "sha256": "acfc2b4456377e15d04f0243af540b7fe7c992f8d898d751cf134c3a55fd2247"
+      },
+      {
+        "path": "decoder.int8.onnx",
+        "size": 11845275,
+        "sha256": "179e50c43d1a9de79c8a24149a2f9bac6eb5981823f2a2ed88d655b24248db4e"
+      },
+      {
+        "path": "joiner.int8.onnx",
+        "size": 6355277,
+        "sha256": "3164c13fc2821009440d20fcb5fdc78bff28b4db2f8d0f0b329101719c0948b3"
+      },
+      {
+        "path": "tokens.txt",
+        "size": 93939,
+        "sha256": "d58544679ea4bc6ac563d1f545eb7d474bd6cfa467f0a6e2c1dc1c7d37e3c35d"
+      }
+    ]
+  },
+  {
+    "kind": "speech",
+    "repository": "Alexxerm/gigaam-v3-e2e-rnnt-sherpa-onnx",
+    "revision": "c0acd38c8aeb2bdc04da221bd661ffcdb9645f7d",
+    "file": "encoder.int8.onnx",
+    "size": 226431823,
+    "sha256": "aa4e9bd1d8f1b30534c0b56d743970be53fd102dba639c2b1cc06e2aa898ada0",
+    "name": "GigaAM v3 · ONNX",
+    "languages": "Russian",
+    "languageCodes": [
+      "ru"
+    ],
+    "description": "Sber · Russian dictation with punctuation and text normalization · offline",
+    "license": "mit",
+    "architecture": "nemo_transducer",
+    "quantization": "INT8",
+    "files": [
+      {
+        "path": "encoder.int8.onnx",
+        "size": 224571327,
+        "sha256": "aa4e9bd1d8f1b30534c0b56d743970be53fd102dba639c2b1cc06e2aa898ada0"
+      },
+      {
+        "path": "decoder.onnx",
+        "size": 1159351,
+        "sha256": "ea08443676485385c0dd31d938233bffaed6e52d47d84844c9b568589f1c9b27"
+      },
+      {
+        "path": "joiner.onnx",
+        "size": 687791,
+        "sha256": "ade116563dbf66e503b0994efab6b5861412743e52bf31c39fc3fffa3783d5d1"
+      },
+      {
+        "path": "tokens.txt",
+        "size": 13354,
+        "sha256": "39abae20e692998290c574e606f11a9edef2902a1995463fcff63d1490cf22b7"
+      }
+    ]
+  },
+  {
+    "kind": "speech",
+    "repository": "fussraider/GigaAM-Multilingual-sherpa-onnx-ctc",
+    "revision": "9f5a77e8975211abe8511693accd3a63ee1e9f43",
+    "file": "model.int8.onnx",
+    "size": 224762915,
+    "sha256": "2d94f93ffd4ef58e7899c9de885c25bbbc8c9f1073618868d118a674450ba5f7",
+    "name": "GigaAM Multilingual · 220M",
+    "languages": "Multilingual",
+    "languageCodes": [
+      "ru",
+      "en",
+      "kk",
+      "ky",
+      "uz"
+    ],
+    "description": "Sber · Russian, English, Kazakh, Kyrgyz and Uzbek · offline",
+    "license": "mit",
+    "architecture": "nemo_ctc",
+    "quantization": "INT8",
+    "files": [
+      {
+        "path": "model.int8.onnx",
+        "size": 224762524,
+        "sha256": "2d94f93ffd4ef58e7899c9de885c25bbbc8c9f1073618868d118a674450ba5f7"
+      },
+      {
+        "path": "tokens.txt",
+        "size": 391,
+        "sha256": "9b5df7987cb4ca52c1a468649ce897fab1cd182067416e29fef49dfaa7a856c2"
+      }
+    ]
+  },
+  {
+    "kind": "speech",
+    "repository": "fussraider/GigaAM-Multilingual-sherpa-onnx-ctc",
+    "revision": "9f5a77e8975211abe8511693accd3a63ee1e9f43",
+    "file": "large/model.int8.onnx",
+    "size": 591646033,
+    "sha256": "6b6f195026b0f90721cd4593c664becf009a71131550b664eec71446ec351c81",
+    "name": "GigaAM Multilingual · 600M",
+    "languages": "Multilingual",
+    "languageCodes": [
+      "ru",
+      "en",
+      "kk",
+      "ky",
+      "uz"
+    ],
+    "description": "Sber · Larger multilingual speech model · offline",
+    "license": "mit",
+    "architecture": "nemo_ctc",
+    "quantization": "INT8",
+    "files": [
+      {
+        "path": "large/model.int8.onnx",
+        "size": 591645642,
+        "sha256": "6b6f195026b0f90721cd4593c664becf009a71131550b664eec71446ec351c81"
+      },
+      {
+        "path": "large/tokens.txt",
+        "size": 391,
+        "sha256": "9b5df7987cb4ca52c1a468649ce897fab1cd182067416e29fef49dfaa7a856c2"
+      }
+    ]
+  }
+]

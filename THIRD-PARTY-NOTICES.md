@@ -1,14 +1,14 @@
 # Third-party notices
 
-No Tipe's original application code is proprietary, copyright 2026 Darlingfxx02. Third-party packages retain their own license and copyright notices; No Tipe's proprietary notice does not replace or restrict their licenses.
+No Type's original application code and documentation are licensed under Apache License 2.0, copyright 2026 Darlingfxx02. See LICENSE and NOTICE. Third-party software, model weights, fonts and icons retain their own license and copyright notices; No Type's license does not replace or restrict those licenses.
 
-The private source repository is `Darlingfxx02/no-tipe`. The separate public release repository is `Darlingfxx02/no-tipe-releases` and contains no application source.
+Private collaborative development is in `Darlingfxx02/no-tipe`; reviewed stable source snapshots are prepared separately for publication. The public binary release repository is `Darlingfxx02/no-tipe-releases` and contains no application source.
 
 The earlier native implementation uses whisper.cpp, FluidAudio, Sparkle, KeyboardShortcuts, LaunchAtLogin, MediaRemoteAdapter, Zip, SelectedTextKit and Swift Atomics. Preserve each dependency's own license and copyright notice.
 
 The current app retains the bundled media adapter's notice in `CrossPlatform/native/mediaremote-adapter/NOTICE.txt` and `CrossPlatform/src-tauri/platform/MediaRemote-NOTICE.txt`. Dependency source URLs identify those third-party packages; they are not No Tipe's repository or update destination.
 
-Each production build generates `CrossPlatform/public/THIRD-PARTY-LICENSES.txt` from the locked runtime Rust and JavaScript dependency graph and original package license files. This generated notice, the Inter font license, the media adapter notice and No Tipe's proprietary license are included in the application. JavaScript legal comments remain present after obfuscation.
+Each production build generates `CrossPlatform/public/THIRD-PARTY-LICENSES.txt` from the locked runtime Rust and JavaScript dependency graph and original package license files. This generated notice, the Inter font license, the media adapter notice and No Type's LICENSE and NOTICE are included in the application. JavaScript legal comments remain present after obfuscation.
 
 Mode icons use eight original Iconsax Linear SVGs by Vuesax / Lusaxweb, bundled within the application. Their source revision and original usage notice are preserved in `CrossPlatform/public/assets/mode-icons/LICENSE.txt` and included in the generated third-party licenses. Iconsax retains ownership of its artwork.
 

@@ -1,0 +1,12 @@
+<!-- Official Boosty brand mark: https://boosty.to/app/brand -->
+<svg width="70" height="86" viewBox="0 0 70 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.774 0L2.22841 51.2823L1.70686 53.0858C-3.30363 70.7204 2.42009 85.625 22.8276 85.8566C25.4398 79.1698 29.0565 69.9406 33.6777 58.169H22.6136L34.4667 16.1856C34.496 16.0865 34.5349 15.9907 34.5826 15.8994L39.0983 0H16.774ZM49.815 46.3626L22.9081 85.8566H23.3227C43.2042 85.8566 63.625 70.8658 68.6711 53.0812C73.3696 36.5504 65.3769 22.8815 48.3305 21.0644L38.3987 46.3626H49.815Z" fill="url(#paint0_linear)"/>
+  <defs>
+    <linearGradient id="paint0_linear" x1="6.4215" y1="-6.46875" x2="-34.5379" y2="88.1523" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EF7829"/>
+      <stop offset="0.28" stop-color="#F0692A"/>
+      <stop offset="0.63" stop-color="#F15E2C"/>
+      <stop offset="1" stop-color="#F15A2C"/>
+    </linearGradient>
+  </defs>
+</svg>

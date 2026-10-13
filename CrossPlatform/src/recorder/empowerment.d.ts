@@ -1,0 +1,10 @@
+export interface EmpowermentSelection{id:string;color:string}
+export const empowermentDefaultColor:string;
+export function empowermentColor(value?:string|null):number[];
+export class EmpowermentEffect{key:string;age:number;amount:number;color:number[];update(selection?:EmpowermentSelection|null,delta?:number,reduced?:boolean):{age:number;amount:number;color:number[]}}
+export function empowermentLayout(width:number,height:number,reduced?:boolean):{size:number[];count:number};
+export function empowermentStars(time:number,reduced?:boolean,extent?:number[],count?:number):Array<{x:number;y:number;size:number;opacity:number}>;
+export const empowermentUniforms:string;
+export const empowermentPixelShader:string;
+export const empowermentWaveShader:string;
+export function empoweredWaveFragment(source:string,pulse?:boolean):string;

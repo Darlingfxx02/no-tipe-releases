@@ -1,0 +1,85 @@
+.page-content.transcribe-page{gap:16px;font-size:15px;line-height:24px}
+.transcribe-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.transcribe-page button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:36px;font-size:15px;line-height:22px;border-radius:8px;white-space:nowrap}
+.transcribe-page button svg{width:18px;height:18px;flex:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.transcribe-page .transcribe-settings-link{width:36px;height:36px;padding:8px;background:transparent;border-color:transparent;color:var(--muted)}
+.transcribe-page .transcribe-settings-link:hover{background:#ffffff0a;color:var(--text)}
+.transcribe-options{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 24px;padding:0}
+.transcribe-model-control{min-width:0;max-width:45%;margin-left:-10px}
+.transcribe-output-controls{display:flex;align-items:center;justify-content:flex-end;flex-wrap:wrap;gap:8px;margin-left:auto;margin-right:-10px}
+.transcribe-page .select-transcription{font-size:15px;line-height:22px;min-height:38px;padding:7px 11px;justify-content:space-between}
+.transcribe-page .select-inline{width:auto;min-width:0;max-width:100%;background:transparent;border-color:transparent;padding:7px 9px;box-shadow:none;gap:10px;color:var(--text)}
+.transcribe-page .select-inline>span:first-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.transcribe-page .select-inline:hover,.transcribe-page .select-inline[data-state=open],.transcribe-page .select-inline:focus-visible{background:#ffffff0a;border-color:var(--border)}
+.transcribe-page .select-inline .select-chevron{opacity:.5;transition:opacity .15s}
+.transcribe-model-control .select-inline .select-chevron{opacity:0}
+.transcribe-page .select-inline:hover .select-chevron,.transcribe-page .select-inline[data-state=open] .select-chevron,.transcribe-page .select-inline:focus-visible .select-chevron{opacity:1}
+.select-transcription-menu .select-item{font-size:15px;line-height:22px;min-height:38px;padding:8px 38px 8px 12px}
+.select-transcription-menu .select-check{right:12px}
+.transcribe-upload{min-height:330px;border:1px dashed var(--border);border-radius:12px;text-align:center;transition:border-color .16s,background .16s}
+.transcribe-upload>.empty-state{min-height:330px}
+.transcribe-file-icon svg{display:block;width:100%;height:100%;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.transcribe-upload h2,.transcribe-result h2{font-size:18px;line-height:26px;font-weight:500;letter-spacing:-.2px}
+.transcribe-upload.drop-targeted{border-color:var(--accent-text);background:var(--accent-soft)}
+.transcribe-file{display:flex;align-items:center;gap:16px;padding:8px 0 24px;border-bottom:1px solid var(--border);min-width:0}
+.transcribe-file.drop-targeted{border-bottom-color:var(--accent-text)}
+.transcribe-file-icon{width:28px;height:32px;flex:none;color:var(--accent-text)}
+.transcribe-file-info{flex:1;min-width:0}
+.transcribe-file-info strong{display:block;font-size:15px;line-height:24px;font-weight:500;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.transcribe-file-actions,.transcribe-result-actions{display:flex;align-items:center;gap:8px;flex:none}
+.transcribe-page .transcribe-secondary{border-color:transparent;background:none;color:var(--muted)}
+.transcribe-page .transcribe-secondary:hover{background:#ffffff0a;color:var(--text)}
+.transcribe-page .transcribe-remove{font-size:24px;line-height:1;min-height:36px;width:36px;margin-left:2px}
+.transcribe-file-actions .primary{box-shadow:none}
+.transcribe-spinner{width:14px;height:14px;flex:none;border:1.5px solid currentColor;border-right-color:transparent;border-radius:50%;animation:transcribe-spin .8s linear infinite}
+.transcribe-result{min-width:0;padding-bottom:12px}
+.transcribe-result>header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.transcribe-result-title{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.transcribe-saved{display:inline-flex;align-items:center;gap:6px;font-size:13px;line-height:20px;color:#94b5a3}
+.transcribe-saved.is-working{color:var(--muted)}
+.transcribe-result-meta{display:flex;align-items:center;gap:8px;margin-top:8px;color:var(--muted);font-size:13px;line-height:20px}
+.transcribe-text{white-space:pre-wrap;overflow-wrap:anywhere;user-select:text;font-size:15px;line-height:26px;color:var(--text);margin-top:24px;max-width:760px}
+.transcribe-page .inline-error{font-size:15px;line-height:24px}
+.transcribe-result .inline-error{margin-top:20px}
+.transcribe-result progress{display:block;width:100%;height:3px;accent-color:var(--accent-text);margin-top:16px;border:none;background:var(--border);border-radius:2px;overflow:hidden}
+.transcribe-result progress::-webkit-progress-bar{background:var(--border)}
+.transcribe-result progress::-webkit-progress-value{background:var(--accent-text)}
+.transcribe-waiting{font-size:15px;line-height:24px;color:var(--muted);margin-top:24px}
+.transcribe-setup{display:flex;align-items:center;justify-content:space-between;gap:16px;font-size:15px;color:var(--muted)}
+.transcription-settings{max-width:760px;width:100%;align-self:center}
+.transcribe-page .transcription-back{align-self:flex-start;border:0;background:none;padding:0;min-height:28px;color:var(--muted)}
+.transcription-settings>.page-header{margin-top:14px;padding-bottom:24px}
+.transcription-settings fieldset{padding:0;border:0;margin:0;min-width:0}
+.transcription-settings fieldset:disabled{opacity:.5}
+.transcription-settings-section{display:flex;flex-direction:column;gap:20px;padding:24px 0;border-top:1px solid var(--border)}
+.transcription-settings-section h2{font-size:18px;font-weight:500;line-height:26px}
+.transcription-settings-section>.select-trigger{align-self:flex-start;min-width:220px;max-width:100%}
+.transcription-setting-row{display:flex;align-items:center;justify-content:space-between;font-size:15px;gap:20px}
+.transcribe-page button.switch{width:44px;height:26px;min-height:0;padding:3px;border-radius:20px;display:block}
+.transcribe-page button.switch span{width:20px;height:20px}
+.transcribe-page button.switch[aria-checked=true] span{transform:translateX(18px)}
+.transcribe-format-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.transcribe-field{display:flex;flex-direction:column;gap:8px;min-width:0}
+.transcribe-field>span{font-size:15px;line-height:22px;color:var(--muted)}
+.transcribe-field .select-trigger{width:100%}
+.transcribe-field input,.transcribe-field textarea{width:100%;font-size:15px;line-height:24px;border-radius:8px;background:#ffffff04;padding:8px 11px;border:1px solid var(--border);color:var(--text);font-family:inherit}
+.transcribe-field textarea{resize:vertical;min-height:120px}
+.transcribe-field textarea:focus,.transcribe-field input:focus{outline:1px solid var(--accent-text);outline-offset:1px}
+.transcribe-edit-options{display:flex;gap:24px;flex-wrap:wrap;font-size:15px;color:var(--muted)}
+.transcribe-edit-options label{display:flex;align-items:center;gap:8px}
+.transcribe-edit-options input{accent-color:var(--accent-text);width:16px;height:16px}
+.transcribe-page .transcription-credentials,.transcription-settings .processing-model-picker .text-button{align-self:flex-start;background:none;border:0;padding:0;color:var(--muted);min-height:28px}
+.transcription-settings .processing-model-picker .text-button{margin-top:8px}
+.transcription-settings .field-error{font-size:14px;line-height:22px}
+@keyframes transcribe-spin{to{transform:rotate(360deg)}}
+@container panel (max-width:650px){
+  .transcribe-model-control{max-width:100%}
+  .transcribe-options{gap:12px}
+  .transcribe-output-controls{gap:4px}
+  .transcribe-format-grid{grid-template-columns:1fr;gap:16px}
+  .transcribe-result>header{align-items:flex-start;flex-wrap:wrap;gap:12px}
+  .transcribe-file{flex-wrap:wrap}
+  .transcribe-file-actions{width:100%;justify-content:flex-end}
+  .transcribe-upload,.transcribe-upload>.empty-state{min-height:300px}
+}
+@media(prefers-reduced-motion:reduce){.transcribe-spinner{animation:none}.transcribe-page .select-chevron{transition:none}}

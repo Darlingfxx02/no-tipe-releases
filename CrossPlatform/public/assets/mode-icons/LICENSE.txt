@@ -1,0 +1,11 @@
+Iconsax Linear icons by Vuesax / Lusaxweb
+Source: https://github.com/lusaxweb/iconsax
+Revision: e5dba15361f69d34d0f3f3f35408a28fe74c5727
+Original artwork: static/Iconsax/Svg/All/linear/
+Original usage notice: components/License.vue at the revision above
+
+Iconsax are the official icons of the Vuesax framework, these icons can be used for personal and commercial use for free, but they cannot be sold and distributed under another name, they cannot be used to create templates or ui kits without permission, if desired to use the iconsax icon pack for these purposes, you should contact: https://lusaxweb.net/contact
+
+Eight original SVGs are bundled as interface assets within No Type.
+Iconsax ownership and usage terms remain separate from No Type's Apache 2.0 license.
+Current license information: https://docs.iconsax.io/license-and-terms/license

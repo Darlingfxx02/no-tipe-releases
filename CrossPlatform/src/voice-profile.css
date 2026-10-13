@@ -1,0 +1,53 @@
+.voice-profile{display:flex;flex-direction:column;gap:24px;min-width:0}
+.voice-progress-track{height:6px;border-radius:9px;background:#ffffff09;overflow:hidden}
+.voice-progress-track i{display:block;height:100%;border-radius:9px;background:var(--insight-fill);transition:width .3s ease}
+.voice-progress-track.is-building i{width:100%!important;animation:voice-building 1.6s ease-in-out infinite}
+.voice-progress-caption{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:12px;min-height:28px;font-size:13px;color:#a6a6b1}
+.voice-progress-caption>span{color:#c7c7d0;white-space:nowrap}
+.voice-progress-caption>div{display:flex;align-items:center;gap:7px}
+.voice-create{margin-left:9px;padding:6px 10px;min-height:28px;font-size:13px;background:#ffffff08;border-color:#ffffff13;white-space:nowrap}
+.voice-create:enabled:hover{background:#ffffff10;border-color:#ffffff20}
+.voice-label{display:flex;align-items:center;gap:6px;color:#a6a6b1;font-size:14px;font-weight:400;line-height:20px}
+.insights-page .panel.voice-hero{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:30px;min-height:228px;position:relative;isolation:isolate}
+.voice-hero-copy{position:relative;z-index:1;min-width:0;max-width:710px}
+.voice-hero-wave{position:absolute;inset:0;overflow:hidden;border-radius:inherit;pointer-events:none;z-index:0}
+.voice-hero h2{font-size:32px;line-height:1.25;font-weight:500;letter-spacing:-.7px;margin-bottom:10px}
+.voice-hero p,.voice-peak p{color:#b6b6c1;font-size:15px;line-height:1.8;margin-top:22px;overflow-wrap:anywhere}
+.voice-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;min-width:0}
+.voice-findings{display:flex;flex-direction:column;gap:20px;min-width:0}
+.insights-page .panel.voice-finding{padding:24px 26px;min-height:115px;display:flex;flex-direction:column;justify-content:center;gap:11px}
+.voice-finding-value{display:flex;flex-wrap:wrap;align-items:baseline;column-gap:12px;row-gap:4px;font-size:24px;line-height:1.3;font-weight:500;letter-spacing:-.4px;overflow-wrap:anywhere}
+.voice-finding-value>span{min-width:0}
+.voice-replacement{font-size:16px;color:#868691;font-weight:400;letter-spacing:0}
+.voice-no-finding{color:#5f5f6b}
+.insights-page .panel.voice-peak{padding:26px 30px;display:flex;flex-direction:column;min-width:0}
+.voice-peak-icon{width:40px;height:40px;padding:10px;box-sizing:border-box;border-radius:10px;background:#ffffff06;color:#9999a5;margin-bottom:22px}
+.voice-peak-icon svg{width:100%;height:100%}
+.voice-peak h2{font-size:30px;line-height:1.3;font-weight:500;letter-spacing:-.6px;margin-bottom:10px}
+.voice-finding .insight-hint-content,.voice-hero .insight-hint-content{left:0;right:auto}
+.voice-progress-caption .insight-hint-content{right:0;left:auto}
+.voice-profile .insight-error>span{display:flex;align-items:center;gap:7px}
+.insight-more{margin-top:0;border-top:1px solid #ffffff09;padding-top:16px}
+.insight-more>summary{cursor:pointer;color:#93939f;font-size:13px;list-style:none;display:flex;align-items:center;gap:8px;width:max-content;user-select:none}
+.insight-more>summary::-webkit-details-marker{display:none}
+.insight-more>summary::before{content:'›';font-size:17px;line-height:12px;transition:transform .15s}
+.insight-more[open]>summary::before{transform:rotate(90deg)}
+.insight-more>div{display:flex;flex-direction:column;gap:20px;padding-top:20px}
+.insight-more .panel{padding:24px}
+@keyframes voice-building{50%{opacity:.35}}
+@container insights (max-width:730px){
+ .voice-profile{gap:20px}.voice-details{gap:16px}.voice-findings{gap:16px}
+ .insights-page .panel.voice-hero{padding:24px;gap:16px;min-height:218px}
+ .voice-hero h2{font-size:28px}.voice-hero p,.voice-peak p{font-size:15px;margin-top:18px}
+ .insights-page .panel.voice-finding{padding:20px;min-height:108px}
+ .insights-page .panel.voice-peak{padding:24px}.voice-peak h2{font-size:25px}
+ .voice-finding-value{font-size:21px}.voice-replacement{font-size:14px}
+}
+@container insights (max-width:540px){
+ .voice-details{grid-template-columns:1fr}
+ .voice-hero h2{font-size:24px}.voice-hero p{font-size:15px}
+ .voice-progress-caption{align-items:flex-start;font-size:13px}.voice-progress-caption>div{justify-content:flex-end;flex-wrap:wrap}
+ .voice-progress-caption>span{max-width:110px;white-space:normal}.voice-create{margin-left:0}
+ .voice-peak p{margin-top:18px}
+}
+@media(prefers-reduced-motion:reduce){.voice-progress-track i{transition:none}.voice-progress-track.is-building i{animation:none}}

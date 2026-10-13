@@ -1,0 +1,314 @@
+{
+  "vertex": "#version 300 es\nprecision highp float;\nconst vec2 POSITIONS[3] = vec2[3](\n  vec2(-1.0, -1.0), vec2(3.0, -1.0), vec2(-1.0, 3.0)\n);\nvoid main() { gl_Position = vec4(POSITIONS[gl_VertexID], 0.0, 1.0); }\n",
+  "fragment": "#version 300 es\nprecision highp float;\n\nuniform vec2 uResolution;\nuniform float uTime;\nuniform vec4 uMouse;\nuniform float uResolved;\nuniform float uLayerOpacity;\nuniform float uUnresolvedScale;\nuniform float uEffectScale;\nuniform vec2 uAnchor;\nuniform float uAmplitude;\nuniform float uFreq;\nuniform float uAberrationFreq;\nuniform float uWavePhase;\nuniform float uWaveSpeed;\nuniform float uWaveScale;\nuniform float uAberration;\nuniform float uThickness;\nuniform float uIntensity;\nuniform float uFalloff;\nuniform float uEdgeMask;\nuniform float uEdgeMaskInset;\nuniform float uBandFill;\nuniform float uBandFillThickness;\nuniform float uSoftness;\nuniform float uLow;\nuniform float uMid;\nuniform float uHigh;\nuniform float uLowAmplitude;\nuniform float uLowIntensity;\nuniform float uBrightnessLow;\nuniform float uAudioBrightnessResponse;\nuniform float uMidAberration;\nuniform float uMidAberrationAmplitude;\nuniform float uMidBandFill;\nuniform float uMidSoftness;\nuniform float uHighAberration;\nuniform float uHighAberrationAmplitude;\nuniform float uWhiteClip;\nuniform vec3 uWaveColor0;\nuniform vec3 uWaveColor1;\nuniform vec3 uWaveColor2;\nuniform vec3 uWaveHighlightColor0;\nuniform vec3 uWaveHighlightColor1;\nuniform vec3 uWaveHighlightColor2;\nuniform float uWaveCount;\nuniform float uChromatic;\nuniform float uWaveBrightness;\nout vec4 outColor;\n\nfloat saturate(float value) { return clamp(value, 0.0, 1.0); }\nvec3 wavePaletteColor(int index) {\n  int paletteIndex = index % 3;\n  if (paletteIndex == 0) return uWaveColor0;\n  if (paletteIndex == 1) return uWaveColor1;\n  return uWaveColor2;\n}\nvec3 waveHighlightColor(int index) {\n  int paletteIndex = index % 3;\n  if (paletteIndex == 0) return uWaveHighlightColor0;\n  if (paletteIndex == 1) return uWaveHighlightColor1;\n  return uWaveHighlightColor2;\n}\nfloat smoothUnit(float value) { return value * value * (3.0 - 2.0 * value); }\n\nvoid main() {\n  vec2 gid = vec2(gl_FragCoord.x, uResolution.y - gl_FragCoord.y);\n  float tw = mod(uWavePhase, 62.831848) * uWaveSpeed;\n  float lo = saturate(uLow);\n  float md = saturate(uMid);\n  float hi = saturate(uHigh);\n  float res = saturate(uResolved);\n  float c52 = uThickness * 0.01;\n  float brightnessLow = saturate(uBrightnessLow);\n  float c55 = (brightnessLow * uLowIntensity * uAudioBrightnessResponse + uIntensity) * 0.01;\n  float c58 = max(0.0, md * uMidSoftness + uSoftness);\n  float c61 = (md * uMidBandFill + uBandFill) * 0.0001;\n  float c64 = (uLowAmplitude * 0.01) * lo + uAmplitude;\n  float c68 = c64 + md * uMidAberrationAmplitude + hi * uHighAberrationAmplitude;\n  float c72 = (md * uMidAberration + uAberration) + hi * uHighAberration;\n  float c73 = c72 * res;\n  float c76 = lo * 14.0;\n  float c75 = md * 10.0 + 4.0;\n  float n77 = mix(0.1, c52, res);\n  float n78 = mix(0.1, c55, res);\n  float n80 = (res * 0.01) * c58;\n  float n81 = mix(c75, 1.0, res);\n  float omr = 1.0 - res;\n\n  vec2 uv = (gid + 0.5) * 2.0 / uResolution - 1.0;\n  float aspect = uResolution.x / uResolution.y;\n  uv.x *= aspect;\n  vec2 q = uv - vec2(aspect, 1.0) * (uAnchor * 2.0 - 1.0);\n  float ws = max(uWaveScale * uEffectScale, 0.01);\n  vec2 p = q / ws;\n  float base = mix(0.14, uUnresolvedScale, res);\n  float r = length(p);\n  float edge = max(r - base, 0.0);\n  float aC = max(aspect, 1.0);\n  float px = p.x / aC;\n  float cw = min(abs(px * 0.9), 1.0);\n  float cw2 = pow(cos(cw * 1.5707964), 2.0);\n  float eps = 0.0001;\n  float atArg = atan(px * eps) * aC / eps;\n  float waveBase = (cw2 * res * c68) * sin(atArg * uFreq + tw);\n  float negBase = -c73;\n  float atArg2 = atArg * uAberrationFreq + tw;\n  float py = p.y;\n  float n80sq = n80 * n80;\n  float bft = max(uBandFillThickness, 0.0001);\n  float n139 = (c61 * res) * n78;\n  float env68 = cw2 * c68;\n  vec2 mouseUv = uMouse.xy / max(uResolution, vec2(1.0));\n  float mouseLift = uMouse.z * 0.035 * exp(-pow((mouseUv.x * 2.0 - 1.0) * 2.4, 2.0));\n\n  vec3 colAcc = vec3(0.0);\n  vec3 highlightAcc = vec3(0.0);\n  vec3 spectralAcc = vec3(0.0);\n  float achromaticCore = 0.0;\n  float baseWeightSum = 0.0;\n  float highlightWeightSum = 0.0;\n  float waveCount = clamp(floor(uWaveCount + 0.5), 1.0, 8.0);\n  for (int i = 0; i < 8; i += 1) {\n    float fi = float(i);\n    if (fi >= waveCount) continue;\n    float t13 = (waveCount > 1.0) ? fi / (waveCount - 1.0) : 0.5;\n    // Geometry and opacity may resolve from 0 to 1, but the palette must not.\n    // Mixing from white here caused the visible pastel flash after an answer.\n    vec3 hue = wavePaletteColor(i);\n    vec3 highlightHue = waveHighlightColor(i);\n    baseWeightSum += max(max(hue.r, hue.g), hue.b);\n    highlightWeightSum += max(max(highlightHue.r, highlightHue.g), highlightHue.b);\n    float ph = atArg2 + mix(negBase, c73, t13);\n    float w2 = env68 * sin(ph) + mouseLift;\n    // Split the same physical wave into RGB sampling positions. The shared\n    // overlap remains white; only the displaced contours carry colour.\n    float split = (0.026 + 0.020 * lo) * cw2;\n    vec3 spectralDistance = abs(vec3(py - w2) + vec3(-split, 0.0, split));\n    vec3 spectralEnergy = vec3(n78) / (sqrt(spectralDistance * spectralDistance + vec3(n80sq)) + vec3(n77));\n    spectralAcc += pow(spectralEnergy, vec3(1.5));\n    achromaticCore += exp(-pow((py - w2) / 0.024, 2.0));\n    float dist = mix(edge, abs(py - w2), res);\n    float rad = sqrt(dist * dist + n80sq) + n77;\n    float k = dist * 0.02;\n    float soft = mix(1.0 / (k * k + 1.0), 1.0, res);\n    float glowL = (soft * n78) / rad;\n    float band = max(0.0, max(py - max(waveBase, w2), min(waveBase, w2) - py));\n    float fill = n139 / (band + bft);\n    float layerEnergy = n81 * (fill + glowL);\n    colAcc += hue * layerEnergy;\n    highlightAcc += highlightHue * layerEnergy;\n  }\n  vec3 col = colAcc / max(baseWeightSum, 0.0001);\n  vec3 highlightCol = highlightAcc / max(highlightWeightSum, 0.0001);\n  float tail = omr * (c76 + 4.0);\n  float dC = mix(edge, abs(py - waveBase), res);\n  float radC = dC + n77;\n  float kC = dC * 0.02;\n  float softC = mix(1.0 / (kC * kC + 1.0), 1.0, res);\n  float cg = (n78 * 0.5 * (softC + tail)) / radC;\n  vec3 cgl = pow(vec3(cg) + col, vec3(1.5));\n  float glowEnergy = max(max(cgl.r, cgl.g), cgl.b);\n  float iceWhiteMix = smoothstep(0.35, 0.95, saturate(glowEnergy));\n  float paletteEnergy = max(max(col.r, col.g), col.b);\n  vec3 paletteColor = col / max(paletteEnergy, 0.0001);\n  paletteColor = mix(uWaveColor0, paletteColor, step(0.0001, paletteEnergy));\n  float highlightEnergy = max(max(highlightCol.r, highlightCol.g), highlightCol.b);\n  vec3 highlightColor = highlightCol / max(highlightEnergy, 0.0001);\n  highlightColor = mix(\n    uWaveHighlightColor0,\n    highlightColor,\n    step(0.0001, highlightEnergy)\n  );\n  cgl = mix(paletteColor, highlightColor, iceWhiteMix) * glowEnergy;\n  vec3 spectrum = spectralAcc / waveCount;\n  float whiteCore = min(min(spectrum.r, spectrum.g), spectrum.b);\n  spectrum = (vec3(whiteCore) + (spectrum - vec3(whiteCore)) * 2.3) * 7.0;\n  spectrum = mix(spectrum, vec3(max(max(spectrum.r, spectrum.g), spectrum.b)), saturate(achromaticCore));\n  cgl = mix(cgl, spectrum, uChromatic);\n  float ndcY = gid.y * 2.0 / uResolution.y - 1.0;\n  float emC = max(clamp(uEdgeMask, 0.0, 1.0), 0.0001);\n  float emMask = clamp((abs(ndcY) - 1.0 + clamp(uEdgeMaskInset, 0.0, 1.0)) / (-emC), 0.0, 1.0);\n  emMask = smoothUnit(emMask);\n  float fall = exp(-pow(px * uFalloff, 2.0));\n  col = cgl * mix(1.0, emMask * fall, res) * res * saturate(uLayerOpacity);\n  // Keep the original energy response; the UI maps its new 100% to 4.0.\n  // Extra energy passes through the soft limit without clipping crests white.\n  float brightness = clamp(uWaveBrightness, 0.0, 4.0);\n  col *= max(1.0, brightness);\n  // Soft-limit energy before the RGBA8 target. Per-channel clipping turned\n  // overlapping wave crests into a razor-thin, pure-white stripe.\n  float peak = max(max(col.r, col.g), col.b);\n  float mappedPeak = min(peak, 0.55) + 0.29 * (1.0 - exp(-max(peak - 0.55, 0.0) / 0.29));\n  col *= mappedPeak / max(peak, 0.0001);\n  col *= min(brightness, 1.0);\n  float alpha = saturate(max(max(col.r, col.g), col.b) * 1.15);\n  outColor = vec4(col, alpha);\n}\n",
+  "materialLight": "// Fixed curved sources: the slider changes radiance, never source position,\n// gradient width or a moving cutoff. Both energy curves are smooth at 100%.\nvec2 materialLightField(vec2 uv) {\n  float intensity = clamp(uLightIntensity, 0.0, 2.0);\n  float directEnergy = intensity * (0.60 + intensity * (0.30 + 0.10 * intensity));\n  float diffuseEnergy = 1.25 * intensity * intensity / (1.0 + 0.25 * intensity);\n  float x = (uv.x - 0.5) * 2.0;\n  // The lower source bends up at the shoulders; its broad Gaussian tails\n  // merge with side reflections instead of making a horizontal band.\n  float arc = 0.94 - 0.22 * x * x;\n  vec2 lowerDelta = vec2(x * 0.82, (uv.y - arc) * 2.15);\n  float lowerPool = exp(-2.0 * dot(lowerDelta, lowerDelta));\n  vec2 sideDelta = vec2((abs(x) - 0.92) * 3.2, (uv.y - 0.62) * 1.65);\n  float sideBounce = exp(-2.0 * dot(sideDelta, sideDelta));\n  vec2 fillDelta = (uv - vec2(0.5, 0.62)) * vec2(1.45, 1.35);\n  float diffusePool = exp(-2.0 * dot(fillDelta, fillDelta));\n  vec2 returnDelta = vec2(x * 1.15, (uv.y - 0.22) * 2.0);\n  float upperReturn = exp(-2.0 * dot(returnDelta, returnDelta));\n  return vec2(directEnergy * (0.78 * lowerPool + 0.22 * sideBounce),\n    diffuseEnergy * (0.16 * diffusePool + 0.06 * upperReturn));\n}\nfloat materialLightEnergy(vec2 irradiance) { return irradiance.x + irradiance.y; }\nfloat materialGlossGain(float irradiance) {\n  // Soft compression keeps the grazing highlight smooth at high exposure.\n  return 1.0 + 0.45 * irradiance / (1.0 + 0.35 * irradiance);\n}",
+  "defaults": {
+    "audioScale": 1,
+    "uWhiteClip": 1,
+    "uUnresolvedScale": 0.14,
+    "uAmplitude": 0.22,
+    "uFreq": 1.1,
+    "uAberrationFreq": 1,
+    "uWaveSpeed": -1,
+    "uWaveScale": 0.9,
+    "uAberration": 2.6,
+    "uThickness": 3,
+    "uIntensity": 2,
+    "uFalloff": 1.7,
+    "uEdgeMask": 0.4,
+    "uEdgeMaskInset": 0,
+    "uBandFill": 12000,
+    "uBandFillThickness": 0.08,
+    "uSoftness": 2.5,
+    "uLowAmplitude": 20,
+    "uLowIntensity": 0.9,
+    "uMidAberration": 0.8,
+    "uMidAberrationAmplitude": 0.085,
+    "uMidBandFill": 0,
+    "uMidSoftness": 0.4,
+    "uHighAberration": 0.5,
+    "uHighAberrationAmplitude": 0.075
+  },
+  "palettes": {
+    "prism": {
+      "accent": "#9f86e7",
+      "colors": [
+        [
+          0.454902,
+          0.207843,
+          0.94902
+        ],
+        [
+          0,
+          0.74902,
+          0.835294
+        ],
+        [
+          1,
+          0.364706,
+          0.607843
+        ]
+      ],
+      "highlights": [
+        [
+          0.658824,
+          0.407843,
+          1
+        ],
+        [
+          0.282353,
+          0.894118,
+          0.917647
+        ],
+        [
+          1,
+          0.686275,
+          0.541176
+        ]
+      ]
+    },
+    "aurora": {
+      "accent": "#61c5ad",
+      "colors": [
+        [
+          0.086275,
+          0.894118,
+          0.603922
+        ],
+        [
+          0.301961,
+          0.65098,
+          0.780392
+        ],
+        [
+          0.113725,
+          0.74902,
+          0.588235
+        ]
+      ],
+      "highlights": [
+        [
+          0.407843,
+          1,
+          0.815686
+        ],
+        [
+          0.509804,
+          0.819608,
+          0.952941
+        ],
+        [
+          0.407843,
+          0.921569,
+          0.756863
+        ]
+      ]
+    },
+    "lagoon": {
+      "accent": "#70a8ac",
+      "colors": [
+        [
+          0.211765,
+          0.576471,
+          0.72549
+        ],
+        [
+          0.917647,
+          0.721569,
+          0.360784
+        ],
+        [
+          0.615686,
+          0.678431,
+          0.67451
+        ]
+      ],
+      "highlights": [
+        [
+          0.537255,
+          0.847059,
+          0.890196
+        ],
+        [
+          1,
+          0.823529,
+          0.517647
+        ],
+        [
+          0.811765,
+          0.87451,
+          0.85098
+        ]
+      ]
+    },
+    "sakura": {
+      "accent": "#e19daf",
+      "colors": [
+        [
+          1,
+          0.384314,
+          0.631373
+        ],
+        [
+          0.403922,
+          0.807843,
+          0.568627
+        ],
+        [
+          0.521569,
+          0.317647,
+          0.858824
+        ]
+      ],
+      "highlights": [
+        [
+          1,
+          0.588235,
+          0.74902
+        ],
+        [
+          0.635294,
+          0.945098,
+          0.737255
+        ],
+        [
+          0.701961,
+          0.529412,
+          0.980392
+        ]
+      ]
+    },
+    "ember": {
+      "accent": "#c8c8c8",
+      "neutral": true,
+      "colors": [
+        [
+          0.24,
+          0.24,
+          0.24
+        ],
+        [
+          0.62,
+          0.62,
+          0.62
+        ],
+        [
+          0.86,
+          0.86,
+          0.86
+        ]
+      ],
+      "highlights": [
+        [
+          0.7,
+          0.7,
+          0.7
+        ],
+        [
+          0.93,
+          0.93,
+          0.93
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "dune": {
+      "accent": "#d5b58a",
+      "colors": [
+        [
+          1,
+          0.768627,
+          0.360784
+        ],
+        [
+          0,
+          0.611765,
+          0.552941
+        ],
+        [
+          0.913725,
+          0.443137,
+          0.298039
+        ]
+      ],
+      "highlights": [
+        [
+          1,
+          0.878431,
+          0.584314
+        ],
+        [
+          0.235294,
+          0.768627,
+          0.67451
+        ],
+        [
+          1,
+          0.678431,
+          0.501961
+        ]
+      ]
+    },
+    "sber": {
+      "accent": "#21a038",
+      "colors": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0.482353,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "highlights": [
+        [
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          0.482353,
+          1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ]
+    },
+    "siri": {
+      "accent": "#8c8bf0",
+      "colors": [
+        [
+          0.18,
+          0.76,
+          1
+        ],
+        [
+          0.9,
+          0.28,
+          0.64
+        ],
+        [
+          0.97,
+          0.63,
+          0.24
+        ]
+      ]
+    }
+  }
+}

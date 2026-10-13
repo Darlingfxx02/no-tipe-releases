@@ -1,0 +1,42 @@
+.main-panel{padding:0;overflow:hidden}
+.scroll-area{position:relative;z-index:1;width:100%;height:100%;min-height:0;min-width:0}
+.scroll-area[hidden]{display:none}
+.scroll-area-viewport{width:100%;height:100%;overflow:auto;scrollbar-width:none;-ms-overflow-style:none}
+.scroll-area-viewport::-webkit-scrollbar{display:none;width:0;height:0}
+.scroll-area-content{display:flow-root;min-width:0}
+.page-scroll{--page-scroll-top-padding:32px;padding:32px}
+/* A short version of the landing header fade. Keep masks and opacity on the
+   sibling layers so their parent never isolates the content being blurred. */
+.scroll-area-top-fade{position:absolute;z-index:2;inset:0 0 auto;height:48px;pointer-events:none}
+.scroll-area-top-fade>span{position:absolute;inset:0;opacity:var(--scroll-fade-opacity,0);-webkit-backdrop-filter:blur(var(--blur));backdrop-filter:blur(var(--blur));-webkit-mask-image:linear-gradient(180deg,#000 0%,#000 var(--fade-start),transparent var(--fade-end));mask-image:linear-gradient(180deg,#000 0%,#000 var(--fade-start),transparent var(--fade-end))}
+.scroll-area-top-fade>span:nth-child(1){--blur:1px;--fade-start:70%;--fade-end:100%}
+.scroll-area-top-fade>span:nth-child(2){--blur:3px;--fade-start:45%;--fade-end:82%}
+.scroll-area-top-fade>span:nth-child(3){--blur:6px;--fade-start:20%;--fade-end:60%}
+.scroll-area-top-fade>span:nth-child(4){--blur:12px;--fade-start:0%;--fade-end:36%}
+.scroll-area-top-fade::after{content:'';position:absolute;inset:0;opacity:var(--scroll-fade-opacity,0);background:linear-gradient(180deg,rgb(10 10 10 / .92),rgb(10 10 10 / .45) 35%,rgb(10 10 10 / .08) 75%,transparent)}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.scroll-area-top-fade>span{display:none}}
+@media(prefers-reduced-transparency:reduce){.scroll-area-top-fade>span{display:none}}
+.scroll-area-track{position:absolute;z-index:4;top:8px;bottom:8px;right:1px;width:14px;pointer-events:none}
+.scroll-area-thumb{position:absolute;top:0;right:0;width:14px;cursor:default;pointer-events:auto;touch-action:none;outline:none}
+.scroll-area-thumb::before{content:"";position:absolute;inset:0 4px;border-radius:6px;background:#ffffff29;transition:background .15s}
+.scroll-area-thumb:hover::before,.scroll-area-thumb:active::before{background:#ffffff45}
+.scroll-area-thumb:focus-visible::before{background:#ffffff60;outline:1px solid #ffffff80}
+@media(max-width:1100px){.main-panel{padding:0}.page-scroll{--page-scroll-top-padding:24px;padding:24px}}
+
+/* Always reserve the shader strip + 12 px of air when an 800 px column
+   cannot already clear it. DashboardWave uses the same 95–156 px reach.
+   Hiding the wave (including Insights) changes no content geometry.
+   Above 800 + 2 × (156 + 12), the existing centered layout has enough room;
+   keeping its original padding also preserves the 1920 px keyboard scaling. */
+.main-panel{container:panel / inline-size}
+@container panel (max-width:1136px){
+  .main-panel > .scroll-area > .scroll-area-viewport{
+    --page-top-space:32px;
+    --wave-clearance:calc(clamp(95px,13.8cqw,156px) + 12px);
+    padding-inline:var(--wave-clearance);
+    --page-scroll-top-padding:clamp(var(--page-top-space),calc(var(--page-top-space) + (1136px - 100cqw) * .35),var(--wave-clearance));
+    padding-top:var(--page-scroll-top-padding);
+  }
+  .main-panel > .scroll-area > .dashboard-scroll{--page-top-space:80px}
+  @media(max-width:1100px){.main-panel > .scroll-area > .dashboard-scroll{--page-top-space:64px}}
+}

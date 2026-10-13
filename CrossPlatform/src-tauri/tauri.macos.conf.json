@@ -1,0 +1,12 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "bundle": {
+    "resources": {
+      "local-text/no-tipe-text": "local-text/no-tipe-text",
+      "platform/no-tipe-platform": "platform/no-tipe-platform",
+      "platform/libno-tipe-media.dylib": "platform/libno-tipe-media.dylib",
+      "platform/mediaremote-run.pl": "platform/mediaremote-run.pl",
+      "platform/MediaRemote-NOTICE.txt": "platform/MediaRemote-NOTICE.txt"
+    }
+  }
+}

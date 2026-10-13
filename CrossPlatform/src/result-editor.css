@@ -1,0 +1,9 @@
+.result-editor{display:flex;flex-wrap:wrap;align-items:flex-start;gap:10px;padding:16px 0;border-top:1px solid var(--border)}
+.result-editor>form,.result-editor>p,.result-editor>details{flex-basis:100%;min-width:0}
+.result-editor .field{margin:0 0 12px}
+.result-editor textarea,.result-editor input{width:100%}
+.result-editor-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:12px}
+.result-editor p{font-size:12px;line-height:20px;overflow-wrap:anywhere}
+.result-editor-notice{color:var(--muted)}
+.result-dictionary-form{padding-top:12px}
+.result-dictionary-form>p{margin-bottom:14px;color:var(--muted)}

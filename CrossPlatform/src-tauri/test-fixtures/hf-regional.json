@@ -1,0 +1,60 @@
+{
+  "id": "m2edt/kazakh-russian-asr-whisper-small-ggml",
+  "sha": "d023bf7929da079c965e5520804c819345793dc0",
+  "pipeline_tag": "automatic-speech-recognition",
+  "tags": [
+    "whisper",
+    "whisper.cpp",
+    "ggml",
+    "audio",
+    "automatic-speech-recognition",
+    "speech-to-text",
+    "kk",
+    "ru",
+    "base_model:KRASR/kazakh-russian-asr-whisper-small-full-ft",
+    "base_model:finetune:KRASR/kazakh-russian-asr-whisper-small-full-ft",
+    "license:apache-2.0",
+    "region:us"
+  ],
+  "cardData": {
+    "language": [
+      "kk",
+      "ru"
+    ],
+    "tags": [
+      "whisper",
+      "whisper.cpp",
+      "ggml",
+      "audio",
+      "automatic-speech-recognition",
+      "speech-to-text"
+    ],
+    "base_model": "KRASR/kazakh-russian-asr-whisper-small-full-ft",
+    "license": "apache-2.0",
+    "pipeline_tag": "automatic-speech-recognition"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "89d7aa8e8f712355b8b4540583be90c3942efae6",
+      "size": 1535
+    },
+    {
+      "rfilename": "ggml-kazakh-russian-small.bin",
+      "blobId": "aa3c17fd017521ba0566439499bc207571576d31",
+      "size": 487622122,
+      "lfs": {
+        "sha256": "c70d1e134c2db846992e1d3e135491a1cf9ce7eb0342d3a8a61d3da14e439318",
+        "size": 487622122,
+        "pointerSize": 134
+      }
+    }
+  ],
+  "private": false,
+  "gated": false
+}

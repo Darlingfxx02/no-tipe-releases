@@ -1,0 +1,27 @@
+:root{color-scheme:dark;--text:#ededf1;--muted:#929296;--accent:#5e6ad2;--surface:#151516;--border:#ffffff0c;--shell-inset:6px;--shell-radius:18px;
+  --control-ink:#fff;
+  /* Figma NoType surface variables; shared by opt-in design components. */
+  --surface-primary:#fff;
+  --surface-muted:#959597;
+  --surface-panel:#141414;
+  --surface-control:#232325;
+  --surface-hover:#29292c;
+  --surface-border:#28282b;
+  --surface-divider:#1a1b1d;
+  --surface-panel-border:rgba(255,255,255,.04);
+  --control-top:#5864c5;
+  --control-bottom:#515cb5;
+  --control-hover:var(--control-top);
+  --control-disabled:#28282b;
+  --primary-fill:linear-gradient(180deg,var(--control-top),var(--control-bottom));
+  --keycap-face-top:#474e92;
+  --keycap-face-bottom:var(--control-top);
+  --keycap-edge-bottom:#373c6d;
+  --accent-bottom:color-mix(in srgb,var(--accent),black 15%);
+  --accent-hover:color-mix(in srgb,var(--accent),white 23%);
+  --accent-soft:color-mix(in srgb,var(--accent),transparent 85%);
+  --accent-border:color-mix(in srgb,var(--accent),transparent 68%);
+  --accent-glow:color-mix(in srgb,var(--accent),transparent 80%);
+  --accent-text:color-mix(in srgb,var(--accent),white 70%);
+  --accent-pale:color-mix(in srgb,var(--accent),#ededf1 86%);
+}

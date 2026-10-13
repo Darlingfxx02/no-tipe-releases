@@ -1,0 +1,25 @@
+.console-header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.developer-console .console-header h2{margin:0;font:500 15px/23px No Type Inter,sans-serif;color:var(--settings-primary)}
+.console-status{display:flex;align-items:center;gap:7px;margin-top:10px;font-size:11px;color:var(--settings-muted)}
+.console-status i{width:6px;height:6px;border-radius:50%;background:#c6ad79}
+.console-status .console-error-count{color:#e5a4a6}
+.console-actions{display:flex;gap:6px;flex-wrap:wrap}
+.console-copy{display:flex}
+.settings-detail .console-copy>button:first-child{border-radius:8px 0 0 8px}
+.settings-detail .console-copy button.console-copy-options{display:flex;align-items:center;justify-content:center;width:28px;min-width:28px;padding:0;border-left:0;border-radius:0 8px 8px 0}
+.console-filters{display:flex;gap:8px;margin-bottom:12px}
+.settings-detail .console-filters input{width:auto;flex:1;min-width:120px}
+.console-log-list{height:clamp(320px,48vh,600px);overflow:auto;overscroll-behavior:contain;border:1px solid var(--settings-border);border-radius:12px;background:#080809;scrollbar-width:thin;scrollbar-color:var(--settings-border) transparent}
+.console-log-list:focus-visible{outline:2px solid var(--settings-accent);outline-offset:2px}
+.console-entry{padding:12px 14px;border-bottom:1px solid var(--settings-divider);font:11px/1.55 ui-monospace,SFMono-Regular,Consolas,monospace;overflow-wrap:anywhere}
+.console-entry:last-child{border-bottom:0}
+.console-entry-meta{display:flex;align-items:center;flex-wrap:wrap;gap:12px;color:var(--settings-muted);font-size:10px;margin-bottom:4px}
+.console-level{font-weight:600;color:#a3b6c9}
+.console-entry[data-level=error] .console-level{color:#e5a4a6}
+.console-entry[data-level=warn] .console-level{color:#d8bd8a}
+.console-entry[data-level=error]{background:#c6656808}
+.console-entry-message{color:var(--settings-primary);white-space:pre-wrap}
+.console-entry pre{margin:5px 0 0;font:inherit;font-size:10px;color:var(--settings-muted);white-space:pre-wrap;word-break:break-word;user-select:text}
+.console-entry,.console-entry-message{user-select:text}
+.console-empty{display:flex;align-items:center;justify-content:center;height:100%;padding:24px;text-align:center;font-size:13px;color:var(--settings-muted)}
+.settings-detail button.console-more{display:flex;margin:14px auto}

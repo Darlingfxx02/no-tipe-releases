@@ -157,7 +157,7 @@ Usage statistics are optional and require your consent during setup or in Settin
 <details>
 <summary><strong>Is No Type free and open source?</strong></summary>
 
-No Type is free for personal and professional use under a [proprietary license](LICENSE). Its source code is closed. This repository contains installers, signed updater packages, release documentation, and presentation images.
+No Type's original source code is available under [Apache License 2.0](LICENSE), © 2026 Darlingfxx02. Commercial use, modification and redistribution, including closed derivatives, are allowed subject to the license terms. See [NOTICE](NOTICE). This repository contains reviewed source snapshots and stable downloads. [Build from source](BUILDING.md) · [Source publication](SOURCE.md).
 
 Third-party dependencies retain their own licenses and notices, available in **Settings → General → License and notices**. See also the [third-party notices](THIRD-PARTY-NOTICES.md).
 

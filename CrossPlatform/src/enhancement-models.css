@@ -1,0 +1,44 @@
+.enhancement-models{display:flex;flex-direction:column;gap:0;min-width:0;font:400 13px/20px No Type Inter,Inter,sans-serif}
+.enhancement-field{display:flex;flex-direction:column;gap:7px;min-width:0}
+.enhancement-field>span{color:var(--surface-muted);font-size:12px}
+.enhancement-field .select-trigger{width:100%;min-width:0}
+.enhancement-library{min-width:0}
+.enhancement-layout-list,.enhancement-layout-table{border:1px solid var(--surface-panel-border);border-radius:12px;background:var(--surface-panel);overflow:hidden}
+.enhancement-model{position:relative;display:grid;align-items:center;min-width:0;column-gap:16px;row-gap:5px;padding:18px}
+.enhancement-layout-list .enhancement-model{grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:'title size actions' 'description description description' 'comparison comparison comparison';min-height:88px}
+.enhancement-model+.enhancement-model{border-top:1px solid var(--surface-divider)}
+.enhancement-model-title{grid-area:title;display:flex;align-items:center;gap:9px;flex-wrap:wrap;min-width:0}
+.enhancement-model h3{margin:0;font-size:14px;line-height:20px;font-weight:500;overflow-wrap:anywhere}
+.enhancement-recommended{font-size:10px;line-height:16px;border-radius:4px;padding:0 5px;color:var(--surface-muted);border:1px solid var(--surface-border)}
+.enhancement-model-size{grid-area:size;font-size:12px;color:var(--surface-muted);white-space:nowrap;font-variant-numeric:tabular-nums;text-align:right}
+.enhancement-model-actions{grid-area:actions;display:flex;align-items:center;justify-content:flex-end;gap:8px;min-width:154px}
+.enhancement-model .model-download-progress{grid-column:1/-1;margin-top:8px}
+.enhancement-layout-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.enhancement-layout-cards .enhancement-model{grid-template-columns:1fr auto;grid-template-areas:'title title' 'size actions' 'comparison comparison';border:1px solid var(--surface-panel-border);border-radius:12px;background:var(--surface-panel);row-gap:12px;min-height:136px}
+.enhancement-layout-cards .enhancement-model-size{text-align:left}
+.enhancement-table-head,.enhancement-layout-table .enhancement-model{grid-template-columns:minmax(130px,1fr) 60px 154px;grid-template-areas:'title size actions'}
+.enhancement-table-head{display:grid;column-gap:16px;padding:10px 18px;color:var(--surface-muted);font-size:11px;border-bottom:1px solid var(--surface-divider)}
+.enhancement-table-head>span:nth-child(n+2){text-align:right}
+.enhancement-layout-table .enhancement-model-title{gap:4px}
+.enhancement-layout-table .enhancement-model{min-height:76px;grid-template-areas:'title size actions' 'comparison comparison comparison'}
+.enhancement-search{width:100%;height:32px;font-size:12px}
+@container panel (max-width:650px){
+  .enhancement-layout-list .enhancement-model{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:'title actions' 'description description' 'size actions' 'comparison comparison';column-gap:12px;padding:16px}
+  .enhancement-layout-list .enhancement-model-size{text-align:left}
+  .enhancement-layout-table .enhancement-model,.enhancement-table-head{grid-template-columns:minmax(100px,1fr) 55px 154px;gap:10px;padding-left:14px;padding-right:14px}
+  .enhancement-layout-table .enhancement-model-actions{min-width:154px;gap:4px}
+  .enhancement-layout-cards .enhancement-model{grid-template-areas:'title title' 'size size' 'comparison comparison' 'actions actions';min-height:168px}
+  .enhancement-layout-cards .enhancement-model-actions{justify-content:flex-start}
+}
+@container panel (max-width:450px){
+  .enhancement-layout-cards{grid-template-columns:1fr}
+  .enhancement-model-title{gap:5px}
+  .enhancement-layout-list .enhancement-model{grid-template-areas:'title title' 'description description' 'size size' 'comparison comparison' 'actions actions';row-gap:8px}
+  .enhancement-layout-list .enhancement-model-actions{justify-content:flex-start}
+}
+
+.enhancement-model-comparison{grid-area:comparison;min-width:0;margin-top:3px}
+
+.enhancement-model-description{grid-area:description;align-self:start;margin:0 0 8px;font-size:12px;line-height:20px;color:var(--surface-muted)}
+.enhancement-layout-table .enhancement-model-description{display:none}
+.enhancement-layout-cards .enhancement-model{grid-template-areas:'title size' 'description description' 'actions actions' 'comparison comparison'}

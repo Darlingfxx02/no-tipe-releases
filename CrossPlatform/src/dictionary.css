@@ -1,0 +1,47 @@
+.page-content.dictionary-page{gap:24px;min-width:0}
+.dictionary-snippets-view:not([hidden]){display:flex;flex-direction:column;gap:24px;min-width:0}
+.dictionary-heading{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.dictionary-heading h1{display:flex;align-items:center;gap:8px;min-width:0}
+.dictionary-heading .dictionary-add{flex:none;min-height:36px;padding:8px 16px;font-size:13px;line-height:18px;font-weight:500;box-shadow:none;white-space:nowrap}
+.dictionary-sections{display:flex;align-items:center;gap:28px;border-bottom:1px solid var(--border)}
+.dictionary-sections [role=tab]{position:relative;padding:8px 0 16px;background:none;border:0;border-radius:0;color:var(--muted);font-size:13px;line-height:20px;font-weight:500;white-space:nowrap}
+.dictionary-sections [role=tab]:hover{color:var(--text);background:none}
+.dictionary-sections [aria-selected=true]{color:var(--text)}
+.dictionary-sections [aria-selected=true]::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--text);border-radius:1px}
+.dictionary-entries{display:flex;flex-direction:column;gap:24px;min-width:0}
+.dictionary-table{border:1px solid var(--border);border-radius:14px;background:#ffffff02;overflow:hidden}
+.dictionary-table ul{list-style:none;margin:0;padding:0}
+.dictionary-row{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;min-height:64px;padding:16px 20px;border-bottom:1px solid var(--border);transition:background .16s}
+.dictionary-row:last-child{border-bottom:0}
+.dictionary-row:hover,.dictionary-row:focus-within{background:#ffffff05}
+.dictionary-word{min-width:0;font-size:14px;line-height:22px;user-select:text}
+.dictionary-word-text{display:block;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.dictionary-row.is-disabled .dictionary-word{opacity:.45}
+.dictionary-arrow{margin-inline:3px;color:var(--muted);user-select:none}
+.dictionary-empty-replacement{color:var(--muted)}
+.dictionary-row-actions{display:flex;align-items:center;gap:8px;flex:none;opacity:0;transition:opacity .16s}
+.dictionary-row:hover .dictionary-row-actions,.dictionary-row:focus-within .dictionary-row-actions{opacity:1}
+.dictionary-row-actions .icon-button{width:30px;height:30px;color:var(--muted)}
+.dictionary-row-actions .icon-button:hover{background:#ffffff0a;color:var(--text)}
+.dictionary-row-actions .dictionary-delete:hover{color:#edaaa3}
+.dictionary-row-actions svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.dictionary-row-actions .dictionary-star[aria-pressed=true]{color:var(--text)}
+.dictionary-editor{position:fixed;inset:0;margin:auto;width:460px;max-width:calc(100vw - 48px);max-height:calc(100vh - 48px);font-family:No Type Inter,Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.dictionary-editor::backdrop{background:#0008;backdrop-filter:blur(12px)}
+.dictionary-editor:not([open]){display:none}
+.dictionary-editor h2{font-size:18px;line-height:26px;font-weight:500}
+.dictionary-correction-option{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:4px 0 20px;min-height:26px}
+.dictionary-correction-label{display:flex;align-items:center;gap:6px;min-width:0;font-size:13px;line-height:20px}
+.dictionary-editor .dictionary-new-word{display:block}
+.dictionary-editor .field>span{color:var(--muted)}
+.dictionary-editor input,.dictionary-editor textarea{width:100%;font-size:13px;line-height:20px}
+.dictionary-editor input:focus-visible,.dictionary-editor textarea:focus-visible{outline:none;border-color:var(--focus-ring);box-shadow:0 0 0 1px var(--focus-ring)}
+.dictionary-editor button{font-size:13px}
+.dictionary-editor header .icon-button{font-size:22px;line-height:1}
+.dictionary-editor footer .primary{box-shadow:none}
+.dictionary-editor .inline-error{font-size:12px}
+@media(hover:none){.dictionary-row-actions{opacity:1}}
+@container panel (max-width:800px){
+  .dictionary-row{gap:12px;min-height:56px;padding:12px 16px}
+  .dictionary-row-actions{gap:4px}
+}

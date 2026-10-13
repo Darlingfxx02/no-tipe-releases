@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>No Type · Пилюля у края</title>
+  <link rel="stylesheet" href="/src/side-preview.css">
+</head>
+<body>
+  <main class="preview">
+    <header class="preview-header">
+      <a class="brand" href="/side-preview.html"><span class="brand-mark">n.</span>No Type<span class="brand-divider">/</span><span class="brand-context">Пилюля у края</span></a>
+      <span class="preview-badge"><i></i>Интерактивный прототип<span>HD</span></span>
+    </header>
+    <section id="screen" class="screen" aria-label="Экран с боковой пилюлей диктовки">
+      <div class="desktop-bar"><span>Заметки</span><span>Файл&nbsp;&nbsp;&nbsp; Правка&nbsp;&nbsp;&nbsp; Вид</span><time>14:32</time></div>
+      <article class="document">
+        <div class="document-toolbar"><span><i></i><i></i><i></i></span><span>Личное / Идеи</span><span class="document-more">•••</span></div>
+        <div class="document-content">
+          <span class="document-date">3 ОКТЯБРЯ 2026</span>
+          <h1>Освободить место<br>для мысли.</h1>
+          <p class="document-lead">Когда мысль приходит, хочется просто<br>сказать её вслух и продолжить работать.</p>
+          <div class="document-rule"></div>
+          <h2>Меньше действий. Больше потока.</h2>
+          <p>Инструмент остаётся рядом и не перекрывает текст.<br>Один жест — и голос становится частью документа.</p>
+          <p id="dictation-copy" class="dictation-copy">Пилюля у края экрана. Всё нужное — под рукой.<span class="caret"></span></p>
+          <div class="document-bottom"><span>Заметка сохранена</span><span>84 слова</span></div>
+        </div>
+      </article>
+      <div class="scene-heading"><span class="eyebrow">EDGE MODE · 90°</span><h2>Голос остаётся рядом.</h2><p>Пауза сверху. Меню снизу.<br>Настройки раскрываются в сторону документа.</p></div>
+      <div id="anchor" class="anchor" data-placement="right" data-menu="true" data-language="false">
+        <div class="actor">
+          <div class="rail">
+            <iframe id="pill-frame" class="pill-frame" title="Пилюля и настройки диктовки"></iframe>
+            <button id="pause" class="hit pause-hit" aria-label="Приостановить диктовку" title="Приостановить диктовку"></button>
+            <button id="finish" class="hit wave-hit" aria-label="Завершить диктовку" title="Завершить диктовку"></button>
+            <button id="menu" class="hit menu-hit" aria-label="Настройки диктовки" aria-expanded="true" aria-controls="pill-frame" title="Настройки диктовки"></button>
+            <button id="language" class="language-orb" aria-label="Выбрать язык перевода" aria-expanded="false" aria-controls="languages" title="Выбрать язык перевода">
+            </button>
+          </div>
+          <div id="languages" class="language-picker" role="group" aria-label="Язык перевода" hidden>
+            <span>Переводить на</span>
+            <button data-language="off" aria-pressed="true">Без перевода<i>✓</i></button>
+            <button data-language="english" aria-pressed="false">Английский<small>EN</small><i>✓</i></button>
+            <button data-language="russian" aria-pressed="false">Русский<small>RU</small><i>✓</i></button>
+          </div>
+        </div>
+      </div>
+      <div class="screen-caption"><span class="recording-dot"></span><span id="phase-label">Диктовка</span><span class="caption-divider"></span><span id="placement-label">У правого края</span><span class="caption-hint">Нажмите четыре квадратика, чтобы свернуть меню</span></div>
+    </section>
+    <footer class="preview-controls">
+      <div class="placement-control"><span>Расположение</span><div class="segmented" role="group" aria-label="Расположение пилюли"><button data-placement="left" aria-pressed="false">Слева</button><button data-placement="bottom" aria-pressed="false">Снизу</button><button data-placement="right" aria-pressed="true">Справа</button></div></div>
+      <div class="scale-control"><label for="scale">Масштаб</label><select id="scale"><option value="1">100%</option><option value="1.5" selected>150%</option><option value="2">200%</option></select></div>
+      <div class="style-control"><span>Пилюля</span><div class="segmented" role="group" aria-label="Стиль пилюли"><button data-style="liquid" aria-pressed="true">Жидкая</button><button data-style="pixel" aria-pressed="false">Пиксельная</button></div></div>
+      <button id="replay" class="replay">↻<span>Показать поворот</span></button>
+      <button id="fullscreen" class="fullscreen" aria-label="Открыть экран на весь экран">⛶</button>
+    </footer>
+  </main>
+  <script type="module" src="/src/side-preview.js"></script>
+</body>
+</html>

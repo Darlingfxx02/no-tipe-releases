@@ -1,0 +1,47 @@
+{
+  "name": "no-tipe-desktop",
+  "version": "0.1.11",
+  "private": true,
+  "license": "Apache-2.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420 --strictPort",
+    "build": "npm run prepare:speech && npm run prepare:whisper && npm run check:locales && npm run prepare:cloud && npm run prepare:notices && tsc --noEmit && vite build && node scripts/harden-frontend.mjs && python3 scripts/verify-distribution.py --frontend dist",
+    "preview": "vite preview --host 127.0.0.1 --port 1420",
+    "tauri": "tauri",
+    "test": "npm run check:locales && node --test scripts/test-cloud-build.mjs scripts/test-recorder-motion.mjs scripts/test-recorder-bridge.mjs scripts/test-recorder-drag.mjs scripts/test-diagnostics.mjs && vitest run --dir src",
+    "prepare:cloud": "node scripts/build-cloud.mjs",
+    "prepare:notices": "python3 scripts/build-notices.py",
+    "prepare:brand": "node scripts/build-brand.mjs",
+    "prepare:installer": "python3 scripts/prepare-installer.py",
+    "prepare:whisper": "python3 scripts/prepare-whisper.py",
+    "prepare:speech": "python3 scripts/prepare-speech.py",
+    "prepare:native": "python3 scripts/build-platform.py",
+    "prepare:text": "python3 scripts/build-local-text.py",
+    "app:update": "python3 scripts/update-local.py",
+    "release:github": "python3 scripts/release-github.py",
+    "check:locales": "node scripts/check-locales.mjs",
+    "app:update:dev": "python3 scripts/update-local.py --channel dev",
+    "release:dev": "python3 scripts/release-github.py --channel dev --repo Darlingfxx02/no-tipe-dev-releases",
+    "prepare:brand:dev": "node scripts/build-dev-brand.mjs"
+  },
+  "dependencies": {
+    "@radix-ui/react-select": "^2.3.7",
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-dialog": "^2.0.0",
+    "i18next": "^26.4.2",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "react-i18next": "^17.0.15"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "2.12.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "latest",
+    "javascript-obfuscator": "5.8.1",
+    "typescript": "^5.9.0",
+    "vite": "8.3.1",
+    "vitest": "latest"
+  }
+}

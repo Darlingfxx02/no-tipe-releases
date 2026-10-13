@@ -1,0 +1,35 @@
+/* Primary actions are white; secondary actions retain translucent surfaces. */
+:root[data-palette] :is(.primary,.notype-button-primary){background:var(--primary-fill);border-color:rgb(255 255 255 / .08);color:var(--control-ink)}
+:root[data-palette] :is(.primary,.notype-button-primary):hover:not(:disabled){background:var(--primary-hover-fill)}
+:root[data-palette] :is(.primary,.notype-button-primary):active:not(:disabled){background:var(--primary-active-fill)}
+:root[data-palette] :is(.primary,.notype-button-primary):disabled{background:var(--control-disabled);color:var(--control-disabled-ink);opacity:1;box-shadow:none}
+
+/* Ordinary buttons already use a translucent surface; keep component variants consistent. */
+:root[data-palette] :is(.secondary,.notype-button:not(.notype-button-primary),.settings-detail button:where(:not(.primary,.notype-button-primary,.switch,.swatch,.text-button,.select-trigger,.shortcut-capture,.model-metric,.icon-button,[role=tab]))){background:var(--secondary-fill);border-color:rgb(255 255 255 / .08);color:var(--secondary-ink)}
+:root[data-palette] :is(.secondary,.notype-button:not(.notype-button-primary),.settings-detail button:where(:not(.primary,.notype-button-primary,.switch,.swatch,.text-button,.select-trigger,.shortcut-capture,.model-metric,.icon-button,[role=tab]))):hover:not(:disabled){background:var(--secondary-hover-fill)}
+:root[data-palette] :is(.secondary,.notype-button:not(.notype-button-primary),.settings-detail button:where(:not(.primary,.notype-button-primary,.switch,.swatch,.text-button,.select-trigger,.shortcut-capture,.model-metric,.icon-button,[role=tab]))):active:not(:disabled){background:var(--secondary-active-fill)}
+:root[data-palette] .switch[aria-checked=true]{background:var(--accent-fill);box-shadow:inset 0 0 0 1px rgb(255 255 255 / .08)}
+:root[data-palette] .switch[aria-checked=true]:hover{background:var(--accent-hover-fill)}
+:root[data-palette] .settings-detail .switch[aria-checked=true]{background:transparent;box-shadow:none}
+:root[data-palette] .settings-detail .switch[aria-checked=true]::before{background:var(--accent-fill);box-shadow:inset 0 0 0 1px rgb(255 255 255 / .08)}
+:root[data-palette] .settings-detail .switch[aria-checked=true]:hover::before{background:var(--accent-hover-fill)}
+:root[data-palette] .notch-setting[aria-checked=true] i{background:var(--accent-fill);box-shadow:inset 0 0 0 1px rgb(255 255 255 / .08)}
+:root[data-palette] :is(.input-meter span,.model-metric-segment>span){background:var(--accent-fill)}
+:root[data-palette] .bar-chart span{background:var(--chart-fill);box-shadow:inset 0 0 0 .5px var(--chart-rim)}
+:root[data-palette] :is(.tabs button.selected,.shortcut-capture.listening,.update-symbol){background:var(--accent-fill-soft)}
+:root[data-palette] .mode-grid .panel.active-mode{background:var(--accent-fill-faint),#151516}
+:root[data-palette] .migration-card{background:var(--accent-fill-faint),#151516}
+:root[data-palette] .transcribe-upload.drop-targeted{background:var(--accent-fill-soft)}
+:root[data-palette] progress::-webkit-progress-value{background:var(--accent-fill)}
+:root[data-palette] progress::-moz-progress-bar{background:var(--accent-fill)}
+
+/* Keep the native range input's keyboard and pointer behavior. */
+:root[data-palette] .appearance-slider{--slider-fill:var(--accent-fill)}
+/* Chromium's dark glass suits large surfaces; small controls need silver ink. */
+:root[data-palette=ember] .appearance-slider{--slider-fill:linear-gradient(180deg,#e8e8e8,#a8a8a8)}
+:root[data-palette] .settings-detail .appearance-slider input[type=range]{appearance:none;-webkit-appearance:none}
+:root[data-palette] .appearance-slider input::-webkit-slider-runnable-track{height:5px;border-radius:5px;background:linear-gradient(90deg,transparent var(--range-fill),#29292c var(--range-fill)),var(--slider-fill)}
+:root[data-palette] .appearance-slider input::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:14px;height:14px;border-radius:50%;margin-top:-4.5px;background:var(--slider-fill);border:1px solid rgb(255 255 255 / .08);box-shadow:0 1px 3px #0005}
+:root[data-palette] .appearance-slider input::-moz-range-track{height:5px;border-radius:5px;background:#29292c}
+:root[data-palette] .appearance-slider input::-moz-range-progress{height:5px;border-radius:5px;background:var(--slider-fill)}
+:root[data-palette] .appearance-slider input::-moz-range-thumb{width:14px;height:14px;border-radius:50%;background:var(--slider-fill);border:1px solid rgb(255 255 255 / .08)}

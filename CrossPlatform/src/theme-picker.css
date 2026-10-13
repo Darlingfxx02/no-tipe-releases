@@ -1,0 +1,15 @@
+.customization-themes{min-width:0;container:themes / inline-size;--theme-card-surface:color-mix(in srgb,var(--settings-primary) 2%,transparent);--theme-card-hover:color-mix(in srgb,var(--settings-primary) 4%,transparent);--theme-card-border:color-mix(in srgb,var(--settings-primary) 6%,transparent)}
+.customization-themes>h2{margin:0 0 12px;font:500 15px/23px No Type Inter,Inter,sans-serif;color:var(--settings-primary)}
+.theme-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.theme-card{position:relative;min-width:0;display:flex;align-items:center;gap:10px;padding:12px;border:1px solid var(--theme-card-border);border-radius:10px;background:var(--theme-card-surface);cursor:pointer;transition:background .12s,border-color .12s}
+.theme-card:hover{background:var(--theme-card-hover);border-color:var(--settings-border)}
+.customization-themes .theme-card>input{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.theme-card-previews{display:flex;align-items:center;gap:8px;flex:none}
+.theme-card-preview{position:relative;display:block;flex:none;width:24px;height:24px}
+.theme-card-orb{display:block;width:100%;height:100%;border-radius:50%;background:radial-gradient(circle at 28% 20%,#ffffff40,transparent 58%),radial-gradient(circle at 80% 90%,#0009,transparent 72%),var(--theme-swatch);box-shadow:inset 0 0 0 1px #ffffff14,inset -3px -4px 8px #0003,0 2px 5px #0004}
+.theme-card-name{flex:1;min-width:0;font:500 13px/20px No Type Inter,Inter,sans-serif;color:var(--settings-primary)}
+.theme-card[data-selected=true]{border-color:var(--settings-accent)}
+.theme-card[data-selected=true] .theme-card-orb{outline:2px solid var(--settings-accent);outline-offset:2px}
+.theme-card:has(input:focus-visible){outline:2px solid var(--focus-ring,var(--settings-accent));outline-offset:3px}
+@container themes (max-width:600px){.theme-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container themes (max-width:420px){.theme-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}

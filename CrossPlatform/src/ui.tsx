@@ -1,0 +1,13 @@
+import { t, useLocale } from './i18n';
+import type { ComponentProps, ReactNode } from 'react';
+import { HelpHint } from './HelpHint';
+const iconAssets:Record<string,string>={activity:'/assets/settings/activity.svg'};
+export function Icon({name,size=20,src}:{name:string;size?:number;src?:string}) { const asset=src??iconAssets[name]??`/assets/cloud-nav-${name}.svg`;return <span className="icon" aria-hidden="true" style={{width:size,height:size,maskImage:`url('${asset}')`,WebkitMaskImage:`url('${asset}')`}}/>; }
+export function Switch({value,onChange,label,disabled=false}:{value:boolean;onChange:(value:boolean)=>void;label:string;disabled?:boolean}) {return <button type="button" className="switch" role="switch" aria-checked={value} aria-label={label} disabled={disabled} onClick={()=>onChange(!value)}><span/></button>;}
+export function Row({title,description,help,children}:{title:string;description?:string;help?:string;children:ReactNode}) {return <div className={`setting-row ${description?'has-description':'compact'}`}><div className="setting-copy"><div className="setting-title"><label>{title}</label>{help&&<HelpHint label={title}>{help}</HelpHint>}</div>{description&&<p>{description}</p>}</div><div className="row-value">{children}</div></div>;}
+export function Panel({title,titleIcon,help,children,className=''}:{title?:string;titleIcon?:ReactNode;help?:string;children:ReactNode;className?:string}) {return <section className={`panel ${className}`}>{title&&<h2 className={titleIcon||help?'panel-heading':undefined}>{titleIcon||help?<>{titleIcon}<span>{title}</span>{help&&<HelpHint label={title}>{help}</HelpHint>}</>:title}</h2>}{children}</section>;}
+export function SettingsGroup({children,className='',...heading}:ComponentProps<typeof Panel>) {return <Panel {...heading} className={`settings-section ${className}`}><div className="settings-group">{children}</div></Panel>;}
+export { Empty } from './EmptyState';
+export function Modal({title,onClose,children,className='',scrimClassName='',closeIcon='×'}:{title:string;onClose:()=>void;children:ReactNode;className?:string;scrimClassName?:string;closeIcon?:ReactNode}) {
+  useLocale();return <div className={`modal-scrim ${scrimClassName}`} onMouseDown={e=>{if(e.target===e.currentTarget)onClose();}}><dialog open className={className} aria-label={title} onKeyDown={e=>{if(e.key==='Escape')onClose();}}><header><h2>{title}</h2><button className="icon-button" aria-label={t('common.close')} onClick={onClose}>{closeIcon}</button></header>{children}</dialog></div>;}
+export function Field({label,children}:{label:string;children:ReactNode}) {return <label className="field"><span>{label}</span>{children}</label>;}

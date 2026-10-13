@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "bundle": {
+    "resources": {
+      "local-text/no-tipe-text.exe": "local-text/no-tipe-text.exe",
+      "target/vulkan-runtime/vulkan-1.dll": "vulkan-1.dll",
+      "target/vulkan-runtime/Vulkan-NOTICES.txt": "Vulkan-NOTICES.txt"
+    },
+    "targets": ["nsis"],
+    "licenseFile": "../../LICENSE",
+    "windows": {
+      "nsis": {
+        "template": "installer/installer.nsi",
+        "installerHooks": "installer/generated/no-tipe-ui.nsh",
+        "displayLanguageSelector": false,
+        "installerIcon": "icons/icon.ico",
+        "uninstallerIcon": "icons/icon.ico",
+        "installMode": "currentUser"
+      }
+    }
+  },
+  "plugins": {
+    "updater": {
+      "windows": {
+        "installMode": "passive"
+      }
+    }
+  }
+}

@@ -1,0 +1,30 @@
+/* Figma 229:11171, header 233:11350. One shared horizontal inset. */
+.sidebar{--sidebar-inset:8px;--sidebar-card-fill:#0a0a0a;--sidebar-card-rim:linear-gradient(180deg,rgba(166,164,216,.23),rgba(119,118,148,.055) 45%,rgba(133,131,158,.12));padding:14px var(--sidebar-inset) 12px;gap:16px}
+.sidebar .window-toolbar{height:28px;padding:0 8px 0 12px;margin:0;align-items:center}
+.sidebar-header{position:relative;isolation:isolate;display:flex;align-items:center;gap:10px;flex:none;width:100%;height:46px;padding:6px;border:1px solid #191919;border-radius:11px;background:#121212;overflow:hidden;user-select:none}
+/* The pattern's original tile is 8 × 8, radius 2, with 0.3 px spacing. */
+.sidebar-header-matrix{position:absolute;inset:-1px;z-index:-1;display:grid;grid-template-columns:repeat(25,8px);grid-auto-rows:8px;gap:.3px;overflow:hidden;pointer-events:none;mask-image:linear-gradient(90deg,transparent 45.192%,#000 100%);-webkit-mask-image:linear-gradient(90deg,transparent 45.192%,#000 100%)}
+.sidebar-header-matrix i{background:#ffffff08;border-radius:2px}
+.sidebar-brand-key{width:32px;height:32px;flex:none;padding:1px 1px 2px;border-radius:6px;background:linear-gradient(#fff,#b0b0b0);box-shadow:inset 0 -1px 0 rgba(0,0,0,.25);color:#000;transition:opacity .12s}
+.sidebar-brand-key span{display:flex;align-items:center;justify-content:center;width:30px;height:29px;border:1px solid transparent;border-radius:7px;background:linear-gradient(#b0b0b0,#fff) padding-box,linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.02) 50%,rgba(0,0,0,.1)) border-box;font:590 14px/20px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:-.112px}
+.sidebar-brand-key .brand-mark{display:block;width:21px;height:21px}
+.sidebar-brand-name{align-self:stretch;display:flex;align-items:flex-end;flex:1;min-width:0;color:#fff;font-size:14px;font-weight:590;line-height:20px;letter-spacing:-.112px;white-space:nowrap;transition:opacity .12s}
+.sidebar-divider{height:2px;flex:none;margin:0 6px;border-radius:1px;background:#ffffff14}
+.sidebar nav{width:100%;flex:none}
+.sidebar .nav-item{width:100%;height:36px;padding:8px 8px 8px 12px;gap:12px;border-radius:8px;font-weight:510;line-height:20px;flex:none;overflow:hidden}
+.sidebar .nav-item:hover,.sidebar .nav-item.selected{background:transparent}
+.sidebar .nav-item.selected{color:#fff}
+.sidebar .nav-item.selected .icon{filter:none}
+.sidebar .nav-item span{display:block;flex:none;white-space:nowrap;transition:opacity .12s}
+.sidebar-bottom{width:100%;gap:16px;padding-top:0}
+.sidebar-bottom .shortcut-row{height:40px;min-width:0;overflow:hidden;line-height:16px;letter-spacing:-.096px}
+.sidebar-bottom .shortcut-row kbd{height:28px;min-width:65px;flex:none;padding:5px 9px;color:#fff;text-align:center}
+.sidebar-bottom .shortcut-row kbd,.sidebar-bottom .author-support{border:1px solid transparent;background:linear-gradient(var(--sidebar-card-fill),var(--sidebar-card-fill)) padding-box,var(--sidebar-card-rim) border-box}
+.sidebar-bottom .author-support{display:flex;align-items:center;gap:8px;width:100%;height:40px;flex:none;padding:7px 9px;border-radius:12px;text-align:left;color:#e8e8eb}
+.sidebar-bottom .author-support:hover{background:linear-gradient(#181818,#181818) padding-box,var(--sidebar-card-rim) border-box}
+.author-support .support-boosty{display:block;flex:none;object-fit:contain}
+.author-support .support-title{min-width:0;white-space:nowrap;font-size:12px;font-weight:510;line-height:16px}
+.sidebar .settings-nav,.sidebar .settings-nav.selected{padding:8px;gap:8px;font-size:14px;font-weight:400;letter-spacing:-.112px}
+.sidebar .settings-nav span{opacity:.76}
+.sidebar .settings-nav.selected span{opacity:1}
+.sidebar-bottom .shortcut-row,.sidebar-bottom .author-support{transition:opacity .12s}

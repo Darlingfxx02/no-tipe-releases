@@ -1,0 +1,15 @@
+kissfft febd4caeed32e33ad8b2e0bb5ea77542c40f18ec
+Source: https://codeload.github.com/mborgerding/kissfft/tar.gz/febd4caeed32e33ad8b2e0bb5ea77542c40f18ec
+
+kissfft-febd4caeed32e33ad8b2e0bb5ea77542c40f18ec/COPYING
+Copyright (c) 2003-2010 Mark Borgerding . All rights reserved.
+
+KISS FFT is provided under:
+
+  SPDX-License-Identifier: BSD-3-Clause
+
+Being under the terms of the BSD 3-clause "New" or "Revised" License,
+according with:
+
+  LICENSES/BSD-3-Clause
+

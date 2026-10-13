@@ -1,0 +1,17 @@
+/* Selected-item alignment, neutral highlight and check mirror Linear menus. */
+.select-trigger,.settings-detail button.select-trigger{height:30px;min-width:140px;max-width:100%;padding:0 10px;border:1px solid #28282b;border-radius:8px;background:#232325;color:#fff;display:inline-flex;align-items:center;justify-content:space-between;gap:12px;font:500 13px/20px No Type Inter,Inter,sans-serif;outline:none;box-shadow:none;cursor:default;transform:none}
+.select-trigger>span:first-child{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;text-align:left}
+.select-chevron{width:16px;height:16px;flex:none;display:flex;align-items:center}
+.select-trigger:hover,.settings-detail button.select-trigger:hover,.select-trigger[data-state=open],.settings-detail button.select-trigger[data-state=open]{background:#29292c;border-color:#3b3b3f;box-shadow:none;outline:none}
+.select-trigger:focus-visible,.settings-detail button.select-trigger:focus-visible{border-color:#96969d;box-shadow:0 0 0 1px #96969d;outline:none}
+.select-trigger[data-state=open]:focus,.settings-detail button.select-trigger[data-state=open]:focus{border-color:#3b3b3f;box-shadow:none;outline:none}
+.select-trigger:disabled,.settings-detail button.select-trigger:disabled{opacity:.35;cursor:default}
+.select-menu{z-index:1000;min-width:160px;max-width:calc(100vw - 24px);max-height:min(360px,var(--radix-select-content-available-height));background:#232326;border:1px solid #ffffff14;border-radius:10px;box-shadow:0 10px 32px #0007,0 2px 6px #0005;overflow:hidden;color:#f4f4f5;font:400 13px/20px No Type Inter,Inter,sans-serif;animation:select-reveal .1s ease-out}
+.select-viewport{padding:4px}
+.select-item{position:relative;min-height:30px;display:flex;align-items:center;padding:5px 32px 5px 10px;border-radius:6px;outline:none;cursor:default;user-select:none;white-space:nowrap}
+.select-item[data-highlighted]{background:#ffffff0e}
+.select-item[data-disabled]{opacity:.35;pointer-events:none}
+.select-check{position:absolute;right:8px;top:50%;transform:translateY(-50%);width:16px;height:16px;display:flex}
+.select-scroll{height:20px;display:flex;align-items:center;justify-content:center;color:#a6a6af;background:#232326}
+@keyframes select-reveal{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.select-menu{animation:none}}

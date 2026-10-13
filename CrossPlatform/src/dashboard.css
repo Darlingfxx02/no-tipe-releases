@@ -1,0 +1,76 @@
+/* Figma 229:11170. Keyboard baseline: 996 × 240 at a 1920 px window.
+   At 1440 and below it aligns with the 800 px transcript column. */
+.main-panel{position:relative;isolation:isolate}
+.main-panel.dashboard-panel{padding:0;overflow:hidden}
+.dashboard-scroll{position:relative;z-index:1;height:100%;overflow:auto;padding:80px 32px 32px;scrollbar-width:none}
+.dashboard{container-type:inline-size;display:flex;flex-direction:column;gap:32px}
+.dashboard-wave{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0}
+.dashboard-wave[data-visible=false]{visibility:hidden}
+.dashboard-wave[data-fallback=true]{background:url('/assets/wave.png') center top / 100% 280px no-repeat;opacity:calc(.5 * var(--wave-brightness,.35))}
+.dashboard-hero{container-type:inline-size;display:flex;align-items:center;flex-direction:column;gap:20px;width:100%;flex:none}
+.saved-time{padding:32px 0;text-align:center}
+.saved-time p{color:#e3e4e6c2;font-size:14px;line-height:20px;letter-spacing:-.112px;margin-bottom:10px}
+.saved-time h1{font-size:72px;font-weight:600;line-height:80px;letter-spacing:-2.16px;background:linear-gradient(180deg,#fff,#f5f5f7 55%,var(--accent-pale));background-clip:text;-webkit-background-clip:text;color:transparent}
+.keyboard{container-type:inline-size;width:min(100%,clamp(800px,calc(40.8333cqw + 330.417px),996px));display:flex;flex-direction:column;gap:0;user-select:none}
+.keyboard-row{display:grid;gap:1.20482cqw;grid-auto-rows:7.228916cqw}
+.keyboard-row+.keyboard-row{margin-top:1.20482cqw}
+.keyboard-row-top{grid-template-columns:repeat(12,minmax(0,1fr))}
+.keyboard-row-middle{grid-template-columns:minmax(0,2.75fr) repeat(7,minmax(0,1fr)) minmax(0,2.75fr)}
+.keyboard-row-bottom{grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,6.833333fr) repeat(3,minmax(0,1fr))}
+.keyboard-key{min-width:0;border-radius:1.104418cqw;padding:1.20482cqw;border:1px solid transparent;display:flex;align-items:flex-end;text-align:left;font-size:1.405622cqw;font-weight:600;line-height:2.008032cqw;transition:transform 110ms cubic-bezier(.2,.8,.2,1),box-shadow 110ms,filter 160ms;position:relative}
+/* Continue the row-to-row fade, reaching transparency 80% up each top key. */
+.keyboard-row-top .keyboard-blank{background:linear-gradient(to top,#ffffff05 0%,#ffffff00 80%)}
+.keyboard-row-middle .keyboard-blank{background:linear-gradient(#ffffff05,#ffffff0a)}
+.keyboard-row-bottom .keyboard-blank{background:linear-gradient(#ffffff0a,#ffffff0f)}
+/* Prevent the gradient's bright bottom from repeating into the top border. */
+.keyboard-row .keyboard-blank{background-origin:border-box;background-repeat:no-repeat}
+.keyboard-key.keyboard-insights{background:var(--insights-rim);color:var(--insights-ink)}
+.keyboard-key.keyboard-star{background:linear-gradient(#ffffff0a,#ffffff0f);border-color:#ffffff08;color:#ffffff66;padding:.803213cqw}
+.keyboard-key.keyboard-copy{background:linear-gradient(180deg,#fff,#b0b0b0);color:#000}
+.keyboard-key:where(button):hover{filter:brightness(1.08)}
+.keyboard-key:where(button):focus-visible{outline:2px solid var(--accent-text);outline-offset:4px}
+.keyboard-key:where(button):active{transform:translateY(.401606cqw);box-shadow:0 .1004cqw .502cqw var(--accent-soft),inset 0 -.1004cqw 0 #0006}
+/* Figma 310:8607 / 322:8726, measured at the 800 px keyboard width.
+   The outer edge stays in place while the inset face depresses. */
+.keyboard-key:is(.keyboard-insights,.keyboard-copy){border:0;border-radius:.75cqw;padding:.125cqw .125cqw .25cqw;box-shadow:inset 0 -.125cqw 0 rgb(0 0 0 / .25);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:1.5cqw;font-weight:590;line-height:2.5cqw;letter-spacing:-.012cqw;transition:padding 110ms cubic-bezier(.2,.8,.2,1),filter 160ms}
+.keyboard-key-face{position:relative;display:flex;justify-content:space-between;align-items:flex-start;gap:1cqw;width:100%;height:100%;min-width:0;padding:1cqw;border:.125cqw solid transparent;border-radius:.875cqw;background:linear-gradient(180deg,var(--keycap-face-top),var(--keycap-face-bottom))}
+.keyboard-insights .keyboard-key-face{background:var(--insights-face);background-repeat:no-repeat}
+/* The Figma paint's 10% opacity also multiplies its middle stop's 20% alpha. */
+.keyboard-key-face::after{content:"";position:absolute;inset:-.125cqw;border-radius:inherit;padding:.125cqw;pointer-events:none;background:linear-gradient(180deg,rgb(0 0 0 / .1),rgb(0 0 0 / .02) 50%,rgb(0 0 0 / .1));mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);mask-composite:exclude;-webkit-mask-composite:xor}
+.keyboard-copy .keyboard-key-face{background:linear-gradient(180deg,#b0b0b0,#fff)}
+.keyboard-key-label{align-self:flex-end;white-space:nowrap;text-box-trim:trim-both;text-box-edge:cap alphabetic}
+.keyboard-key-face .keyboard-key-icon{position:static;flex:none;align-self:flex-start;opacity:1}
+.keyboard-key:is(.keyboard-insights,.keyboard-copy):active{transform:none;box-shadow:inset 0 -.125cqw 0 rgb(0 0 0 / .25);padding-top:.25cqw;padding-bottom:.125cqw}
+.keyboard-copy:disabled{opacity:1;cursor:default;filter:none}
+.keyboard-copy:disabled .keyboard-key-label{opacity:.45}
+.keyboard-insights:disabled{opacity:1;filter:none;background:var(--control-disabled);color:var(--control-disabled-ink)}
+.keyboard-insights:disabled .keyboard-key-face{background:var(--control-disabled)}
+.dashboard-content{width:min(100%,clamp(800px,calc(40.8333cqw + 330.417px),996px));max-width:none}
+.page-content,.page-content.settings-page{width:100%;max-width:800px}
+.page-content.insights-page{max-width:none}
+.sidebar-bottom .settings-nav{flex:none;color:#929296}
+.sidebar-bottom .settings-nav.selected{color:#fff}
+
+.dashboard-scroll>.scroll-area-content>.preview-note{position:absolute;top:12px;left:32px;right:32px;margin:0}
+@media(max-width:1100px){.dashboard-scroll{padding:64px 24px 24px}}
+
+/* Figma 229:11202: the rim sits above the wave without taking layout space. */
+.main-panel::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;border:1px solid color-mix(in srgb,var(--accent-text),transparent 92.5%);border-radius:inherit}
+.dashboard-scroll::-webkit-scrollbar{display:none;width:0;height:0}
+.keyboard-key-icon{position:absolute;right:1.20482cqw;top:1.20482cqw;width:2.008032cqw;height:2.008032cqw;opacity:var(--key-icon-opacity,.78);pointer-events:none;color:inherit}
+.keyboard-key-icon .icon{width:100%!important;height:100%!important}
+.keyboard-insights .keyboard-key-icon{filter:none}
+.keyboard-star .keyboard-key-icon{opacity:.65}
+.sidebar-bottom .shortcut-row{cursor:default;flex:none;user-select:none}
+.brand img{width:100%;height:100%;mix-blend-mode:normal}
+
+/* Dashboard text stays selectable; copy and delete are independent buttons. */
+.dashboard .transcript-body{cursor:text}
+@media(max-width:600px){.dashboard .recent>h2{padding-inline:16px}}
+
+.keyboard-key.keyboard-stat-arrow{align-items:center;justify-content:center;background:linear-gradient(#ffffff0a,#ffffff0f);border-color:#ffffff08;padding:0}
+.keyboard-stat-arrow .icon{width:2.008032cqw;height:2.008032cqw;opacity:.65;transition:opacity .16s}
+.keyboard-stat-arrow:hover .icon{opacity:1}
+.dashboard-metric.is-changing{animation:metric-enter .24s cubic-bezier(.2,.8,.2,1) both}
+.metric-forward{--metric-offset:10px}.metric-backward{--metric-offset:-10px}
+@keyframes metric-enter{from{opacity:0;transform:translateX(var(--metric-offset))}to{opacity:1;transform:translateX(0)}}

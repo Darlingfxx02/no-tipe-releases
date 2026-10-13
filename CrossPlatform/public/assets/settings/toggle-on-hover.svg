@@ -1,0 +1,6 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="30" height="20" viewBox="0 0 30 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="C04/Toggle">
+<path d="M0 10C0 4.47715 4.47715 0 10 0H20C25.5228 0 30 4.47715 30 10V10C30 15.5228 25.5228 20 20 20H10C4.47715 20 0 15.5228 0 10V10Z" fill="#737DE3"/>
+<circle id="Thumb" cx="20" cy="10" r="7" fill="white"/>
+</g>
+</svg>

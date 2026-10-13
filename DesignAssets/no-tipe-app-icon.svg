@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <title>No Type</title>
+  <desc>Silver voice button adapted from Figma node 377:8599. The outer radius is 6 units, the inner radius 7 units, with a deeper lower rim.</desc>
+  <defs>
+    <filter id="dock-shadow" x="0" y="0" width="1024" height="1024" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+  <rect x="64" y="76" width="896" height="896" rx="168" fill="#000" opacity="0.18" filter="url(#dock-shadow)"/>
+  <!-- Original 32 × 32 Figma vector, scaled 28× within a transparent 1024 px canvas. -->
+  <g transform="translate(64 64) scale(28)">
+    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="Container" filter="url(#filter0_i_377_8599)">
+    <path d="M0 6C0 2.68629 2.68629 0 6 0H26C29.3137 0 32 2.68629 32 6V26C32 29.3137 29.3137 32 26 32H6C2.68629 32 0 29.3137 0 26V6Z" fill="url(#paint0_linear_377_8599)"/>
+    <g id="Text">
+    <path d="M1 8C1 4.13401 4.13401 1 8 1H24C27.866 1 31 4.13401 31 8V23C31 26.866 27.866 30 24 30H8C4.13401 30 1 26.866 1 23V8Z" fill="url(#paint1_linear_377_8599)"/>
+    <path d="M1 8C1 4.13401 4.13401 1 8 1H24C27.866 1 31 4.13401 31 8V23C31 26.866 27.866 30 24 30H8C4.13401 30 1 26.866 1 23V8Z" fill="url(#paint2_linear_377_8599)"/>
+    <g id="Icon">
+    <path id="Vector" d="M9 13.75V17.25M12.5 11.125V19.875M16 8.5V22.5M19.5 11.125V19.875M23 13.75V17.25" stroke="black" stroke-width="2.1875" stroke-linecap="round"/>
+    </g>
+    </g>
+    </g>
+    <defs>
+    <filter id="filter0_i_377_8599" x="0" y="0" width="32" height="32" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+    <feOffset dy="-1"/>
+    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_377_8599"/>
+    </filter>
+    <linearGradient id="paint0_linear_377_8599" x1="16" y1="0" x2="16" y2="32" gradientUnits="userSpaceOnUse">
+    <stop stop-color="white"/>
+    <stop offset="1" stop-color="#B0B0B0"/>
+    </linearGradient>
+    <linearGradient id="paint1_linear_377_8599" x1="16" y1="1" x2="16" y2="30" gradientUnits="userSpaceOnUse">
+    <stop stop-opacity="0.1"/>
+    <stop offset="0.5" stop-opacity="0.02"/>
+    <stop offset="1" stop-opacity="0.1"/>
+    </linearGradient>
+    <linearGradient id="paint2_linear_377_8599" x1="16" y1="1" x2="16" y2="30" gradientUnits="userSpaceOnUse">
+    <stop stop-color="#B0B0B0"/>
+    <stop offset="1" stop-color="white"/>
+    </linearGradient>
+    </defs>
+    </svg>
+  </g>
+</svg>

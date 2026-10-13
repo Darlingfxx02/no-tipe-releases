@@ -1,0 +1,19 @@
+/* NoType/Button 272:943 and NoType/Tab 272:1008. Opt-in components only. */
+.notype-button{height:30px;padding:0 12px;display:inline-flex;align-items:center;justify-content:center;gap:6px;border:1px solid var(--surface-border);border-radius:8px;background:var(--surface-control);color:var(--surface-primary);font:500 13px/20px No Type Inter,Inter,sans-serif;box-shadow:none;white-space:nowrap;transform:none;flex:none}
+.notype-button:hover{background:var(--surface-hover)}
+.notype-button:active{transform:none;background:var(--surface-control)}
+.notype-button:focus-visible{outline:2px solid var(--focus-ring,var(--accent));outline-offset:2px}
+.notype-button:disabled{opacity:.35;cursor:default}
+.notype-button-primary{background:var(--control-top);border-color:transparent;color:var(--control-ink)}
+.notype-button-primary:hover{background:var(--control-hover)}
+.notype-button-primary:active{background:var(--control-bottom)}
+.notype-tabs{display:flex;align-items:flex-start;gap:4px;min-width:0;padding-bottom:12px;border-bottom:1px solid var(--surface-divider)}
+.notype-tabs [role=tab]{height:28px;padding:0 10px;border:0;border-radius:8px;background:transparent;color:var(--surface-muted);font:400 13px/20px No Type Inter,Inter,sans-serif;white-space:nowrap;transform:none}
+.notype-tabs [role=tab]:hover{background:var(--surface-hover);color:var(--surface-primary)}
+.notype-tabs [aria-selected=true]{background:var(--surface-control);color:var(--surface-primary);font-weight:500}
+.notype-tabs [role=tab]:focus-visible{outline:2px solid var(--focus-ring,var(--accent));outline-offset:2px}
+
+.notype-segmented-control{align-items:center;gap:2px;padding:3px;border:1px solid var(--settings-border,var(--surface-border));border-radius:10px;background:#151517;width:max-content;max-width:100%}
+.notype-segmented-control [role=tab]{height:26px;min-width:0;padding:0 12px;border-radius:6px;font-weight:400;flex:none}
+.notype-segmented-control [aria-selected=true]{background:var(--settings-control,var(--surface-control));font-weight:400;box-shadow:0 1px 3px #0003,inset 0 0 0 1px #ffffff08}
+.notype-segmented-control [role=tab]:focus-visible{outline:none;box-shadow:inset 0 0 0 2px var(--focus-ring,var(--accent))}
