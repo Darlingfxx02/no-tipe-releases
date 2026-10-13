@@ -172,6 +172,8 @@ For diagnostics, enable **Settings → General → Diagnostics → Developer mod
 
 </details>
 
+Thanks to [@redheadesign](https://github.com/redheadesign) for helping improve the interface.
+
 ---
 
 <p align="center">
